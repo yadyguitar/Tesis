@@ -5,61 +5,55 @@ import cv2
 import frame_convert
 import numpy as np
 
+class Deteccion:
+	def __init__(self):
+		self.threshold = 173
+		self.current_depth = 320
 
-threshold = 173
-current_depth = 320
+	def change_threshold(self,value):
+		self.threshold = value
 
+	def change_depth(self,value):
+		self.current_depth = value
 
-def change_threshold(value):
-    global threshold
-    threshold = value
+	def get_depth(self):
+		depth, timestamp = freenect.sync_get_depth()
+		depth = 255 * np.logical_and(depth >= self.current_depth - self.threshold,
+                                 depth <= self.current_depth + self.threshold)
+		depth = depth.astype(np.uint8)
+		return depth
 
-
-def change_depth(value):
-    global current_depth
-    current_depth = value
-
-
-def get_depth():
-    global threshold
-    global current_depth
-
-    depth, timestamp = freenect.sync_get_depth()
-    depth = 255 * np.logical_and(depth >= current_depth - threshold,
-                                 depth <= current_depth + threshold)
-    depth = depth.astype(np.uint8)
-    return depth
-    
-   
-
-
-def get_video():
-	frame,_ = freenect.sync_get_video()
-	frame = cv2.cvtColor(frame,cv2.COLOR_RGB2BGR)
-	return frame
-	
-
-cv2.namedWindow('Depth')
-cv2.createTrackbar('threshold','Depth',threshold,500,change_threshold)
-cv2.createTrackbar('depth','Depth',current_depth,2048,change_depth)
-
+	def get_video(self):
+		frame,_ = freenect.sync_get_video()
+		frame = cv2.cvtColor(frame,cv2.COLOR_RGB2BGR)
+		return frame
 
 print('Press ESC in window to stop')
+d=Deteccion()
+cv2.namedWindow('Depth')
+cv2.createTrackbar('threshold','Depth',d.threshold,500,d.change_threshold)
+cv2.createTrackbar('depth','Depth',d.current_depth,2048,d.change_depth)
 
 
-while 1:
-	frame=get_video()
-	depth=get_depth()
-	cv2.imshow("Video",frame)
-	cv2.imshow('Depth',depth)
-	
-	
-	contours, hierarchy = cv2.findContours(depth,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
-	print contours
-	cv2.drawContours(frame, contours, -1, (0,255,0), 2)
-	cv2.imshow("Contorno",frame)
-	
-	if cv.WaitKey(5) & 0xFF == 27:
-		break
 
-freenect.sync_stop() #para liberar kinect
+if __name__=="__main__":
+	while 1:
+		frame=d.get_video()
+		depth=d.get_depth()
+		cv2.imshow("Video",frame)
+		cv2.imshow('Depth',depth)
+		contours, hierarchy = cv2.findContours(depth,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+		areas = [cv2.contourArea(c) for c in contours]
+		print areas
+		i=0
+		for elementos in contours:
+			x,y=np.round(np.median(elementos,axis=0)[0] ,decimals=0,out=None)
+			punto_medio=(int(x),int(y))
+			cv2.circle(frame, punto_medio ,2,(0,0,255),-1)
+
+		
+		cv2.drawContours(frame, contours, -1, (0,255,0), 2)
+		cv2.imshow("Contorno",frame)
+		if cv.WaitKey(5) & 0xFF == 27:
+			break
+	freenect.sync_stop() #para liberar kinect
