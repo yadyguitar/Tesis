@@ -1,59 +1,78 @@
 #!/usr/bin/env python
 import freenect
-import cv
 import cv2
-import frame_convert
 import numpy as np
+from Persona import Persona
+
 
 class Deteccion:
-	def __init__(self):
+	def __init__(self, persona):
+		self.frameRGB=None
+		self.frameDepth=None		
 		self.threshold = 173
-		self.current_depth = 320
+		self.persona=persona
+		cv2.namedWindow('Thres')
+		#Creo dos trackbar, uno con el minimo, y otro con el maximo (Sublime no permite acentos ):)
+		cv2.createTrackbar('Threshold','Thres',self.threshold,500,self.change_threshold)
 
 	def change_threshold(self,value):
 		self.threshold = value
 
-	def change_depth(self,value):
-		self.current_depth = value
+	def setFrames(self,rgb,depth):
+		self.frameRGB=rgb
+		self.frameDepth=depth
 
-	def get_depth(self):
-		depth, timestamp = freenect.sync_get_depth()
-		depth = 255 * np.logical_and(depth >= self.current_depth - self.threshold,
-                                 depth <= self.current_depth + self.threshold)
-		depth = depth.astype(np.uint8)
-		return depth
+	def showFrameContorno(self,nombre,frame): #Imagen rgb con el contorno ya dibujado
+		contours=persona.contornos
+		cv2.drawContours(frame, contours, -1, (0,255,0), 2)
+		cv2.imshow(nombre,frame)
 
-	def get_video(self):
-		frame,_ = freenect.sync_get_video()
-		frame = cv2.cvtColor(frame,cv2.COLOR_RGB2BGR)
-		return frame
+	def binarizarFrame(self,frame):
+		ret, threshold = cv2.threshold(frame,self.threshold,255,cv2.THRESH_BINARY_INV) #Refinamiento
+		return threshold
 
-print('Press ESC in window to stop')
-d=Deteccion()
-cv2.namedWindow('Depth')
-cv2.createTrackbar('threshold','Depth',d.threshold,500,d.change_threshold)
-cv2.createTrackbar('depth','Depth',d.current_depth,2048,d.change_depth)
+	def buscaContornos(self,frame):
+		contours, hierarchy = cv2.findContours(frame,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE) #Refinamiento: investigar mas de esto
+		#contours, hierarchy = cv2.findContours(frame,cv2.RETR_TREE,cv2.CHAIN_APPROX_NONE)
+		return contours
 
+	def showRotatedRectangle(self,frame,cnt):
+		rect = cv2.minAreaRect(cnt)
+		box = cv2.boxPoints(rect)
+		box = np.int0(box)
+		cv2.drawContours(frame,[box],0,(0,0,255),2)
+		cv2.imshow('Rectangulo',frame)
 
+	def setContornoPersona(self,contours):
+		try:
+			indexContorno=self.getIndexContornoAreaMayor(contours)#indice donde se encuentra la persona
+			self.persona.contornos=contours[indexContorno]
+		except:
+			print "no hay contornos"
+		
+	def getIndexContornoAreaMayor(self,contornos): #Obtengo el area de contornos, la mas grande se supone sera la persona
+		areas=[]
+		for cont in contornos:
+			areas.append(cv2.contourArea(cont))
+		maximo=max(areas)
+		return areas.index(maximo)
+
+	def deteccionManual(self):#primera propuesta de deteccion
+		#Filtrado y tratamiento imagen
+		depth=cv2.GaussianBlur(self.frameDepth, (5, 5), 0)
+		depth=cv2.medianBlur(depth,5)
+		#depth = cv2.blur(depth,(5,5))
+
+		thres=self.binarizarFrame(depth)
+		cv2.imshow('Thres',thres) #muestra la ventana donde ajustare manualmente el thres
+
+		contours=self.buscaContornos(thres.copy())
+		self.setContornoPersona(contours)
+		cv2.drawContours(self.frameRGB,[self.persona.contornos],0, (0,255,0), 2)
+		
+		cv2.imshow('Imagen RGB',self.frameRGB)
+		cv2.imshow('Imagen Depth',self.frameDepth)
+		#self.showRotatedRectangle(self.frameRGB,self.persona.contornos)
 
 if __name__=="__main__":
-	while 1:
-		frame=d.get_video()
-		depth=d.get_depth()
-		cv2.imshow("Video",frame)
-		cv2.imshow('Depth',depth)
-		contours, hierarchy = cv2.findContours(depth,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
-		areas = [cv2.contourArea(c) for c in contours]
-		print areas
-		i=0
-		for elementos in contours:
-			x,y=np.round(np.median(elementos,axis=0)[0] ,decimals=0,out=None)
-			punto_medio=(int(x),int(y))
-			cv2.circle(frame, punto_medio ,2,(0,0,255),-1)
-
-		
-		cv2.drawContours(frame, contours, -1, (0,255,0), 2)
-		cv2.imshow("Contorno",frame)
-		if cv.WaitKey(5) & 0xFF == 27:
-			break
-	freenect.sync_stop() #para liberar kinect
+	print('Press ESC in window to stop')
