@@ -31,4 +31,4 @@ class Posicion:
 		self.showPointCentral()
 
 if __name__ == "__main__":
-	print "estoy en la clase posicion"
+	print ("estoy en la clase posicion")

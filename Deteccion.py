@@ -48,7 +48,7 @@ class Deteccion:
 			indexContorno=self.getIndexContornoAreaMayor(contours)#indice donde se encuentra la persona
 			self.persona.contornos=contours[indexContorno]
 		except:
-			print "no hay contornos"
+			print ("no hay contornos")
 		
 	def getIndexContornoAreaMayor(self,contornos): #Obtengo el area de contornos, la mas grande se supone sera la persona
 		areas=[]
@@ -64,14 +64,16 @@ class Deteccion:
 		#depth = cv2.blur(depth,(5,5))
 
 		thres=self.binarizarFrame(depth)
-		cv2.imshow('Thres',thres) #muestra la ventana donde ajustare manualmente el thres
+		#*********************************************************************************#
+		#cv2.imshow('Thres',thres) #muestra la ventana donde ajustare manualmente el thres
 
 		contours=self.buscaContornos(thres.copy())
 		self.setContornoPersona(contours)
 		cv2.drawContours(self.frameRGB,[self.persona.contornos],0, (0,255,0), 2)
+		#*********************************************************************************#
+		#cv2.imshow('Imagen RGB',self.frameRGB)
+		#cv2.imshow('Imagen Depth',self.frameDepth)
 		
-		cv2.imshow('Imagen RGB',self.frameRGB)
-		cv2.imshow('Imagen Depth',self.frameDepth)
 		#self.showRotatedRectangle(self.frameRGB,self.persona.contornos)
 
 if __name__=="__main__":

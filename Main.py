@@ -1,6 +1,5 @@
 import freenect
 import cv2
-import cv
 import numpy as np
 
 from Persona import Persona
@@ -19,6 +18,11 @@ def get_video():
 	frame = cv2.cvtColor(frame,cv2.COLOR_RGB2BGR)
 	return frame
 
+def guardaInfoPersona(posicion):
+	file=open('infoPersona.txt','w')
+	np.savetxt(file,posicion)
+	file.close
+
 
 if __name__=="__main__":
 	#Instanciar clases (:
@@ -34,7 +38,9 @@ if __name__=="__main__":
 		posicion.setFrames(frame)
 		posicion.calculaPosicion()
 
-		if cv.WaitKey(5) & 0xFF == 27:
+		#guarda informacion de la clase persona
+		guardaInfoPersona(persona.posicion)
+		if cv2.waitKey(1) & 0xFF == 27:
 			break
 	
 	freenect.sync_stop() #para liberar kinect
