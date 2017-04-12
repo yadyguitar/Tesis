@@ -5,7 +5,7 @@ import numpy as np
 
 from Persona import Persona
 from Deteccion import Deteccion
-
+from Posicion import Posicion
 
 def get_depth():
 	depth, timestamp = freenect.sync_get_depth()
@@ -21,15 +21,18 @@ def get_video():
 
 
 if __name__=="__main__":
-	print "hola"
+	#Instanciar clases (:
 	persona=Persona()
 	deteccion=Deteccion(persona)
+	posicion=Posicion(persona)
 	while 1:
 		frame=get_video()
 		depth=get_depth()
-
+		#se va modificando la class persona y se puede ir accediendo a sus propiedades actuales
 		deteccion.setFrames(frame,depth)
 		deteccion.deteccionManual()
+		posicion.setFrames(frame)
+		posicion.calculaPosicion()
 
 		if cv.WaitKey(5) & 0xFF == 27:
 			break
