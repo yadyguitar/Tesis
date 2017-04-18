@@ -25,23 +25,23 @@
 
 %% class options
 \DeclareOption{draft}{%
-	\@drafttrue\PassOptionsToClass{draft}{report}
+	\@drafttrue\PassOptionsToClass{draft}{book}
 	\PassOptionsToClass{draft}{graphicx}}
-\DeclareOption{draftmarks}{\@drafttrue\PassOptionsToClass{draft}{report}}
+\DeclareOption{draftmarks}{\@drafttrue\PassOptionsToClass{draft}{book}}
 \DeclareOption{spanish}{\@spanishtrue}
 \DeclareOption{final}{\@draftfalse}
 \DeclareOption{letterpaper}{\PassLayoutOptions{letterpaper}}
 \DeclareOption{a4paper}{\PassLayoutOptions{a4paper}}
 \DeclareOption{twoside}{\PassLayoutOptions{twoside}}
 \DeclareOption{oneside}{%
-	\PassOptionsToClass{oneside}{report}%
+	\PassOptionsToClass{oneside}{book}%
 	\PassOptionsToPackage{twoside=false}{geometry}}
 \DeclareOption{singlespace}{\gdef\select@spacing{\singlespacing}}
 \DeclareOption{onehalfspace}{\gdef\select@spacing{\onehalfspacing}}
 \DeclareOption{doublespace}{\gdef\select@spacing{\doublespacing}}
-\DeclareOption{10pt}{\gdef\select@fontsz{\PassOptionsToClass{10pt}{report}}}
-\DeclareOption{11pt}{\gdef\select@fontsz{\PassOptionsToClass{11pt}{report}}}
-\DeclareOption{12pt}{\gdef\select@fontsz{\PassOptionsToClass{12pt}{report}}}
+\DeclareOption{10pt}{\gdef\select@fontsz{\PassOptionsToClass{10pt}{book}}}
+\DeclareOption{11pt}{\gdef\select@fontsz{\PassOptionsToClass{11pt}{book}}}
+\DeclareOption{12pt}{\gdef\select@fontsz{\PassOptionsToClass{12pt}{book}}}
 \DeclareOption{numbers}{\@bibnumberstrue}
 \DeclareOption{authoryear}{\@bibnumbersfalse}
 \DeclareOption{nobibtoc}{\@bibfixfalse}
@@ -49,7 +49,7 @@
 \DeclareOption{nocolors}{\@colorsfalse}
 \DeclareOption{nographicx}{\@graphicxfalse}
 \DeclareOption{nonatbib}{\@natbibfalse}
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 
 \ExecuteOptions{final,twoside,letterpaper,onehalfspace,12pt,authoryear}
 \ProcessOptions\relax
