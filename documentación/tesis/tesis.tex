@@ -1,19 +1,70 @@
 \documentclass[a4paper,openright,12pt]{report}
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
-
+\usepackage{cite}
+\usepackage{graphicx}
 
 \begin{document}
 \renewcommand{\listtablename}{Índice de tablas}
 
 
 %título
+
 \begin{titlepage}
-	\begin{center}
-		\begin{Huge}
-			\textsc{Un buen título es muy importante}
-		\end{Huge}
-	\end{center}
+\begin{minipage}[c][0.1\textheight][c]{0.2\textwidth}
+\begin{center}
+    \includegraphics[height=3cm]{logoUV}
+\end{center}
+\end{minipage}
+\begin{minipage}[c][0.1\textheight][t]{0.65\textwidth}
+\begin{center}
+    {\scshape Universidad Veracruzana}
+    \vspace{.3cm}
+    \hrule height2.5pt
+    \vspace{.1cm}
+    \hrule height1pt
+    \vspace{.3cm}
+    {\scshape  Facultad de Ciencias}
+\end{center}
+\end{minipage}
+
+\begin{minipage}[c][0.6\textheight][t]{0.2\textwidth}
+\begin{center}
+\hskip2pt
+\vrule width2.5pt height10cm
+        \hskip1mm
+        \vrule width1pt height10cm \\
+        \includegraphics[height=3cm]{logoUV}
+        \end{center}
+\end{minipage}
+\begin{minipage}[c][0.6\textheight][t]{0.65\textwidth}
+  \begin{center}
+    {\Large \scshape {T\'itulo de la tesis}}
+
+    \vspace{2cm}
+
+    \makebox[5cm][c]{\LARGE TESIS}  \\[8pt]
+    QUE PARA OBTENER EL T\'iTULO DE:\\[5pt]
+    {\large \textbf{{t\'itulo}}}\\[40pt]            
+    PRESENTA:\\[5pt]
+    \textbf{{Nombre del tesista}}
+
+    \vspace{1cm}
+
+    {\small DIRECTOR DEL TRABAJO:\\ {Nombre del director del trabajo}}
+
+    \vspace{0.5cm}
+
+    {Lugar,}{ }{Fecha}
+  \end{center}
+\end{minipage}
+
+
+	%\begin{center}
+	%	\begin{Huge}
+	%		\textsc{Un buen título es muy importante}
+	%	\end{Huge}
+	%\end{center}
 \end{titlepage}
 %%%%%%
 
@@ -54,27 +105,95 @@ Una bonita historia jejeje
 \pagenumbering{arabic}
 Vivimos en una época en la cual la tecnología forma parte esencial de nuestras vidas. En donde el ser humano, es capaz de mejorar y optimizar su entorno con el objetivo de satisfacer cada una de sus necesidades. El alcance que ha tenido la tecnología digital, nos abre camino para el surgimiento de nuevas técnicas capaces de colaborar en el desarrollo de múltiples áreas o disciplinas, ayudando a la creación de distintas formas para facilitar su aprendizaje, optimización y avance de las mismas.\\
 Así, la tecnología digital ha servido de apoyo incluso en situaciones en donde el ser humano requiere de entrenamiento para realizar ciertas actividades peligrosas, costosas o difíciles de ejecutar y que son proporcionadas a través de entornos virtuales, para mejorar sus habilidades y evitar a todo costo el riesgo de perder incluso vidas humanas. Una aplicación que ejemplifica claramente lo mencionado, lo tenemos en los simuladores de vuelo, que lo que se intenta hacer es replicar la experiencia de pilotar una aeronave de la manera más realista posible. No obstante, el desarrollo e implementación de simuladores de este tipo, implica la fabricación de cabinas en tamaño real con accionadores hidráulicos o electromecánicos, el cual conlleva un gran costo de los mismos.\\
-Es por ello que con el objetivo de minimizar costos y de no requerir de tantos equipos para la inmersión a estos escenarios artificiales, existe una rama de la tecnología conocida como Realidad Virtual (VR, Virtual Reality), que sustituye nuestro mundo real a través de dispositivos que nos permitan encontrarnos en otro lugar, es decir, sumergirnos en una realidad que no existe. Tomando el ejemplo anterior, se han estado desarrollando simuladores a través de este tipo de tecnología, con el objetivo de ahorrar recursos y que se puedan disponer de una manera mas rápida y frecuente [1].\\
-Los dispositivos utilizados para visualizar este tipo de Realidad Virtual, son conocidos como HMD (del inglés head-mounted display), similares a un casco, que reproducen imágenes sobre una pantalla muy cercana a nuestros ojos, permitiendo abarcar todo el campo de visión del usuario y así brinden una inmersión de éste en un mundo ficticio. Igualmente, existen algunos HMD’s que son utilizados por otro tipo de tecnología basada en entornos virtuales y que adopta el nombre de Realidad Aumentada.\\
-AR (del inglés Augmented Reality), es una tecnología que intenta lograr perfeccionar nuestra propia realidad, combinando nuestro mundo real con el virtual, que a diferencia de la Realidad Virtual, que crea todo un entorno artificial desde cero, éste tipo de tecnología agrega elementos virtuales a una realidad que ya existe.\\
-Hoy en día la Realidad Aumentada ha adquirido mayor popularidad y expansión debido a las aplicaciones en donde se encuentra. Por ejemplo, en la industria del entretenimiento, específicamente en el área de los videojuegos, existe una aplicación muy popular, conocida como Pokémon GO [2], el cual consiste en la búsqueda y captura de personajes de la saga Pokémon, que se encuentran escondidos en el mundo real, visualizados a través de un smartphone, en donde claramente se puede ver el concepto de Realidad Aumentada debido a que los personajes están superpuestos en nuestro mundo real. Así mismo, encontramos que la AR abarca áreas como la medicina [3, 4], turismo [5], manufactura [6], entre muchas otras.\\
-Todas estas aplicaciones en donde se encuentra la Realidad Aumentada, son visualizadas a través de dispositivos tales como HMD (Hololens de Microsoft, GoogleGlass de Google), computadoras, tablets o smartphones, y aunque gradualmente se ha optimizado mas el hardware y el software de cada uno de ellos, su uso impide al observador tener una conexión mas real con su mundo, debido a factores tales como el campo de visión, que es limitado por los mismos dispositivos, latencia en los gráficos que en ocasiones puede provocar mareos, y la necesidad obligatoria de llevar un equipo encima para poder visualizar este tipo de realidad. Debido a lo anterior, existe una variante de ésta tecnología, conocida como Realidad Aumentada Espacial (SAR, Spatial Augmented Reality), que mantiene el mismo concepto que la AR, pero con la diferencia que esta es mostrada mediante proyectores digitales, es decir, proyecta información u objetos virtuales directamente sobre objetos físicos, por lo tanto, ya no necesitaríamos llevar con nosotros algún dispositivo para visualizarla.\\
-En un inicio, SAR, simplemente se utilizaba en la proyección de imágenes o videos que se adaptaban a la forma de fachadas de edificios ofreciendo espectáculos visuales. Pero mas adelante se integró la fase de interacción con estos elementos virtuales, lo cual aunque ayudó a involucrarse en varias industrias y expandir su aplicación, aumentó su nivel de complejidad, encontrando varias problemáticas que actualmente siguen en proceso de desarrollo.
+Es por ello que con el objetivo de minimizar costos y de no requerir de tantos equipos para la inmersión a estos escenarios artificiales, existe una rama de la tecnología conocida como Realidad Virtual (VR, Virtual Reality), que sustituye nuestro mundo real a través de dispositivos que nos permitan encontrarnos en otro lugar, es decir, sumergirnos en una realidad que no existe. Tomando el ejemplo anterior, se han estado desarrollando simuladores a través de este tipo de tecnología, con el objetivo de ahorrar recursos y que se puedan disponer de una manera más rápida y frecuente \cite{Pausch1992}.\\
+Los dispositivos utilizados para visualizar este tipo de Realidad Virtual, son conocidos como HMD (del inglés head-mounted display), similares a un casco, que reproducen imágenes sobre una pantalla muy cercana a nuestros ojos, permitiendo abarcar todo el campo de visión del usuario y así brinden una inmersión de éste en un mundo ficticio.\\
+Igualmente, existen algunos HMD’s que son utilizados por otro tipo de tecnología basada en entornos virtuales y que adopta el nombre de Realidad Aumentada.\\
+AR (del inglés Augmented Reality), es una tecnología que intenta lograr perfeccionar nuestra propia realidad, combinando nuestro mundo real con el virtual que, a diferencia de la Realidad Virtual, que crea todo un entorno artificial desde cero, éste tipo de tecnología agrega elementos virtuales a una realidad que ya existe.\\
+Hoy en día, la Realidad Aumentada ha adquirido mayor popularidad y expansión debido a las aplicaciones en donde se encuentra. Por ejemplo, en la industria del entretenimiento, específicamente en el área de los videojuegos, existe una aplicación muy popular, conocida como Pokémon GO [2], el cual consiste en la búsqueda y captura de personajes de la saga Pokémon, que se encuentran escondidos en el mundo real, visualizados a través de un smartphone, en donde claramente se puede ver el concepto de Realidad Aumentada debido a que los personajes están superpuestos en nuestro mundo real. Así mismo, encontramos que la AR abarca áreas como la medicina [3, 4], turismo [5], manufactura [6], entre muchas otras.\\
+Todas estas aplicaciones en donde se encuentra la Realidad Aumentada, son visualizadas a través de dispositivos tales como HMD (Hololens de Microsoft, GoogleGlass de Google), computadoras, tablets o smartphones, y aunque gradualmente se han ido optimizando tanto el hardware como el software de cada uno de ellos, su uso impide al observador tener una conexión más real con su mundo, debido a factores tales como el campo de visión limitado por los mismos dispositivos, latencia en los gráficos que en ocasiones puede provocar mareos, y la necesidad obligatoria de llevar un equipo encima para poder visualizar este tipo de realidad. Debido a lo anterior, existe una variante de ésta tecnología, conocida como Realidad Aumentada Espacial (SAR, Spatial Augmented Reality), que mantiene el mismo concepto de la AR, pero con la diferencia que ésta es mostrada mediante proyectores digitales, es decir, proyecta información u objetos virtuales directamente sobre objetos físicos, por lo tanto, ya no necesitaríamos llevar con nosotros algún dispositivo para visualizarla.\\
+En un inicio, SAR, simplemente se utilizaba en la proyección de imágenes o videos que se adaptaban a la forma de fachadas de edificios ofreciendo espectáculos visuales. Pero más adelante se integró la fase de interacción con estos elementos virtuales, lo cual aunque ayudó a involucrarse en varias industrias y expandir su aplicación, aumentó su nivel de complejidad, encontrando varias problemáticas que actualmente siguen en proceso de desarrollo.
 %%->Planteamiento del problema
 \section{Planteamiento del problema}
 La Realidad Aumentada Espacial (SAR), siendo entonces un nuevo paradigma que se deriva de la Realidad Aumentada, es una nueva forma de visualizar elementos virtuales sin la necesidad de verlos a través de dispositivos sujetos a estar en nuestro cuerpo.\\
-Estos objetos virtuales proyectados en nuestro entorno, a pesar de jugar en algunos casos con nuestra mente para dar un efecto 3D, utilizando sombras en lugares específicos y aplicando técnicas para dar profundidad, se puede lograr distinguir de lo real con solo situarnos en otro lugar en torno a la proyección y verlo desde otra perspectiva. Esto ocasiona por lo tanto que exista aún una gran barrera entre lo que es real y lo que es virtual en términos de SAR.\\
-El estudio de proyectar objetos virtuales 3D, que se asemejen tanto a los objetos físicos, pudiendo en algunas ocasiones sustituirlos, es una de las problemáticas actuales sin resolver y que muy pocos han intentado abordar, debido al grado de complejidad que pudiese tener el desarrollo de esta. Considerando que, para que se pueda implementar esta mejora, se debe tener en cuenta varios aspectos tales como:\\
+Estos objetos virtuales proyectados en nuestro entorno, a pesar de jugar en algunos casos con nuestra mente, para dar un efecto 3D, utilizando sombras en lugares específicos y aplicando técnicas para dar profundidad, se puede lograr distinguir de lo real con sólo situarnos en otro lugar en torno a la proyección y verlo desde otra perspectiva. Esto ocasiona por lo tanto que exista aún una gran barrera entre lo que es real y lo que es virtual en términos de SAR.\\
+El estudio de proyectar objetos virtuales 3D, que se asemejen tanto a los objetos físicos, pudiendo en algunas ocasiones sustituirlos, es una de las problemáticas actuales sin resolver y que muy pocos han intentado abordar, debido al grado de complejidad que pudiese tener el desarrollo de ésta. Considerando que, para que se pueda implementar esta mejora, se debe tener en cuenta varios aspectos tales como:
 \begin{itemize}
 \item La deformación de los objetos virtuales al proyectarse directamente sobre los objetos físicos.
-\item La detección de una o mas personas.
+\item La detección de una o más personas.
 \item El seguimiento de la persona a la cual se le tomará en cuenta la perspectiva, debido a que únicamente se podría proyectar la perspectiva de una sola persona.
 \item La calidad de la proyección de los elementos virtuales.
 \end{itemize}
-Se propone, por lo tanto a través de un esquema simple inicial y en un futuro, aplicable a cualquier escenario virtual, la proyección de un escenario con elementos 3D, adaptable a la perspectiva de la persona, perfeccionando y cumpliendo aún mas con el objetivo del término de Realidad Aumentada Espacial.
+Se propone, por lo tanto, a través de un esquema simple inicial y en un futuro, aplicable a cualquier escenario virtual, la proyección de un escenario con elementos 3D, adaptable a la perspectiva de la persona, perfeccionando y cumpliendo aún más con el objetivo del término de Realidad Aumentada Espacial.
+%%
 
+%%Justificación
+\section{Justificación}
+Aunque varios proyectos en donde se aplica SAR, se encuentran dirigidos a la industria de los videojuegos (lo cual, a pesar de lo que muchos opinan ser una pérdida de tiempo, éstos son capaces de desarrollar múltiples habilidades en los usuarios y vivir experiencias únicas), el uso de SAR, se expande a distintas áreas proporcionando enriquecer la experiencia visual, y por lo tanto apoyando el desarrollo y entendimiento de las mismas.\\
+Es por ello que proyectar escenarios u objetos virtuales cambiando su ángulo de vista cuando una persona se mueve alrededor de éste, nos brinda la oportunidad de darle más realidad a un objeto virtual y vivir una experiencia mejorada de SAR.\\
+En la educación el uso de esta técnica nos permitiría, agilizar el proceso de aprendizaje, debido al impacto que causaría la proyección de objetos virtuales 3D, en temas como figuras o lugares históricos, planetas, el cuerpo humano, entre otros, que dieran la posibilidad de mostrar más información de la proporcionada en una simple imagen, y así motivar su estudio.\\
+En la rama de la arquitectura, la visualización de una estructura, ya sea un edificio o casa, proyectada en 3D sin la necesidad de crear una maqueta, ayudaría a ahorrar recursos y vivir la misma experiencia, incluyendo la ventaja de poder modificar su modelado y ver instantáneamente el resultado que obtendrían de manera virtual.\\
+Por lo tanto, el desarrollo de adaptar un objeto virtual 3D, según la perspectiva de una persona, sería un paso más hacia la adaptabilidad de un mundo virtual en el mundo real, y ser capaz de contribuir en el desarrollo de múltiples áreas.
+%%
+
+%%Objetivos
+\section{Objetivos}
+%General
+\subsection{General}
+Desarrollar un sistema capaz de determinar el ángulo correspondiente de un entorno virtual basado en la perspectiva de una persona y proyectarlo en nuestro mundo para proporcionar un efecto de realidad.
+%
+%Específicos
+\subsection{Específicos}
+\begin{itemize}
+\item Determinación de los módulos que intervendrán en el sistema mediante el análisis de los requerimientos.
+\item Detección del número de personas en la escena y selección del individuo de interacción, por medio del desarrollo y la implementación de un módulo.
+\item Determinar la posición en donde se encuentre la persona y la altura proporcionada por la imagen de profundidad de un sensor RGB - D, por medio del desarrollo e implementación de un módulo.
+\item Optimización del sistema por medio de una comparativa de diversas técnicas en cada uno de los módulos del sistema.
+\end{itemize}
+%
+%%
+
+%%Hipótesis
+\section{Hipótesis}
+Basado en la posición y altura de una persona, obtenidas mediante un sensor RGB – D es posible obtener su perspectiva respecto a un entorno virtual que será proyectado y creará el efecto 3D que tanto se intenta conseguir.
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%CAPÍTULO 2 -> MARCO TEÓRICO%%%
+\chapter{Marco Teórico}\label{cap.marcoteorico}
+%%Antecedentes
+\section{Antecedentes}
+continuando trabajo
+%%
+%%Esto del Arte
+\section{Estado del arte}
+todavía nada aquí ):
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%CAPÍTULO 3 -> DISEÑO%%%
+\chapter{Dise\~no}\label{cap.diseno}
+aún nada...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%CAPÍTULO 4 -> IMPLEMENTACIÓN Y RESULTADOS%%%
+\chapter{Implementación y resultados}\label{cap.implementacionyresultados}
+tampoco nadita ):
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%CAPÍTULO 5 -> CONCLUSIONES%%%
+\chapter{Conclusiones}\label{cap.conclusiones}
+y con esto concluímos /O/ 
+\section{Trabajo Futuro}
+muchos xD
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%BIBLIOGRAFÍA%%%
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliografía}
+\bibliographystyle{IEEEannot}
+\bibliography{biblio}
+
 
 
 \end{document}
