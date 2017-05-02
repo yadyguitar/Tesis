@@ -1,0 +1,7 @@
+\select@language {spanish}
+\contentsline {chapter}{Agradecimientos}{II}
+\contentsline {section}{Resumen}{III}
+\contentsline {chapter}{Lista de figuras}{V}
+\contentsline {chapter}{Lista de tablas}{VI}
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}
+\contentsline {section}{\numberline {1.1}Planteamiento del problema}{3}

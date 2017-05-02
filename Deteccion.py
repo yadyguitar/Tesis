@@ -9,7 +9,7 @@ class Deteccion:
 	def __init__(self, persona):
 		self.frameRGB=None
 		self.frameDepth=None		
-		self.threshold = 173
+		self.threshold = 92
 		self.persona=persona
 		cv2.namedWindow('Thres')
 		#Creo dos trackbar, uno con el minimo, y otro con el maximo (Sublime no permite acentos ):)
