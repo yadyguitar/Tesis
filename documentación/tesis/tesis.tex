@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{cite}
 \usepackage{graphicx}
+\usepackage{pdfpages}
 
 \begin{document}
 \renewcommand{\listtablename}{Índice de tablas}
@@ -11,60 +12,28 @@
 %título
 
 \begin{titlepage}
-\begin{minipage}[c][0.1\textheight][c]{0.2\textwidth}
-\begin{center}
-    \includegraphics[height=3cm]{logoUV}
-\end{center}
-\end{minipage}
-\begin{minipage}[c][0.1\textheight][t]{0.65\textwidth}
-\begin{center}
-    {\scshape Universidad Veracruzana}
-    \vspace{.3cm}
-    \hrule height2.5pt
-    \vspace{.1cm}
-    \hrule height1pt
-    \vspace{.3cm}
-    {\scshape  Facultad de Ciencias}
-\end{center}
-\end{minipage}
 
-\begin{minipage}[c][0.6\textheight][t]{0.2\textwidth}
-\begin{center}
-\hskip2pt
-\vrule width2.5pt height10cm
-        \hskip1mm
-        \vrule width1pt height10cm \\
-        \includegraphics[height=3cm]{logoUV}
-        \end{center}
-\end{minipage}
-\begin{minipage}[c][0.6\textheight][t]{0.65\textwidth}
-  \begin{center}
-    {\Large \scshape {T\'itulo de la tesis}}
+\AddToShipoutPicture*{\put(0,0){\includegraphics[scale=1]{portada2.pdf}}} % Image background
+	
 
-    \vspace{2cm}
+	
+	\begin{minipage}[t][1.75cm][b]{1.15\textwidth}
+		\begin{center}
+			\begin{Large}
+				\textsc{Universidad Veracruzana}
+			\end{Large}	
+			\\
+			\vspace*{0.6cm}
+			\textsc{Facultad de Ingeniería}
+		\end{center}
+		
+	\end{minipage}
 
-    \makebox[5cm][c]{\LARGE TESIS}  \\[8pt]
-    QUE PARA OBTENER EL T\'iTULO DE:\\[5pt]
-    {\large \textbf{{t\'itulo}}}\\[40pt]            
-    PRESENTA:\\[5pt]
-    \textbf{{Nombre del tesista}}
+	
 
-    \vspace{1cm}
+	
+	
 
-    {\small DIRECTOR DEL TRABAJO:\\ {Nombre del director del trabajo}}
-
-    \vspace{0.5cm}
-
-    {Lugar,}{ }{Fecha}
-  \end{center}
-\end{minipage}
-
-
-	%\begin{center}
-	%	\begin{Huge}
-	%		\textsc{Un buen título es muy importante}
-	%	\end{Huge}
-	%\end{center}
 \end{titlepage}
 %%%%%%
 
@@ -191,7 +160,7 @@ muchos xD
 %%%BIBLIOGRAFÍA%%%
 \cleardoublepage
 \addcontentsline{toc}{chapter}{Bibliografía}
-\bibliographystyle{IEEEannot}
+\bibliographystyle{acm}
 \bibliography{biblio}
 
 
