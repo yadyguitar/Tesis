@@ -4,6 +4,8 @@
 \usepackage{cite}
 \usepackage{graphicx}
 \usepackage{pdfpages}
+\usepackage{fancyhdr}
+
 
 \begin{document}
 \renewcommand{\listtablename}{Índice de tablas}
@@ -85,12 +87,12 @@
 %%%AGRADECIMIENTOS Y RESUMEN%%%
 \chapter*{Agradecimientos}
 \addcontentsline{toc}{chapter}{Agradecimientos}
-\markboth{AGRADECIMIENTOS}{AGRADECIMIENTOS}
+
 ¡Muchas gracias a todos jijiji!
 
 \chapter*{Resumen}
 \addcontentsline{toc}{section}{Resumen}
-\markboth{RESUMEN}{RESUMEN}
+
 Una bonita historia jejeje
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -105,10 +107,11 @@ Una bonita historia jejeje
 
 %%%%%%%%
 
-
+\cleardoublepage
 %%%CAPÍTULO 1 -> INTRODUCCIÓN
 \chapter{Introducción}\label{cap.introduccion}
 \pagenumbering{arabic}
+\pagestyle{fancy}
 Vivimos en una época en la cual la tecnología forma parte esencial de nuestras vidas. En donde el ser humano, es capaz de mejorar y optimizar su entorno con el objetivo de satisfacer cada una de sus necesidades. El alcance que ha tenido la tecnología digital, nos abre camino para el surgimiento de nuevas técnicas capaces de colaborar en el desarrollo de múltiples áreas o disciplinas, ayudando a la creación de distintas formas para facilitar su aprendizaje, optimización y avance de las mismas.\\
 Así, la tecnología digital ha servido de apoyo incluso en situaciones en donde el ser humano requiere de entrenamiento para realizar ciertas actividades peligrosas, costosas o difíciles de ejecutar y que son proporcionadas a través de entornos virtuales, para mejorar sus habilidades y evitar a todo costo el riesgo de perder incluso vidas humanas. Una aplicación que ejemplifica claramente lo mencionado, lo tenemos en los simuladores de vuelo, que lo que se intenta hacer es replicar la experiencia de pilotar una aeronave de la manera más realista posible. No obstante, el desarrollo e implementación de simuladores de este tipo, implica la fabricación de cabinas en tamaño real con accionadores hidráulicos o electromecánicos, el cual conlleva un gran costo de los mismos.\\
 Es por ello que con el objetivo de minimizar costos y de no requerir de tantos equipos para la inmersión a estos escenarios artificiales, existe una rama de la tecnología conocida como Realidad Virtual (VR, Virtual Reality), que sustituye nuestro mundo real a través de dispositivos que nos permitan encontrarnos en otro lugar, es decir, sumergirnos en una realidad que no existe. Tomando el ejemplo anterior, se han estado desarrollando simuladores a través de este tipo de tecnología, con el objetivo de ahorrar recursos y que se puedan disponer de una manera más rápida y frecuente \cite{Pausch1992}.\\
