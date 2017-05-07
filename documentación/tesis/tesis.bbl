@@ -1,10 +1,41 @@
 \begin{thebibliography}{1}
 
+\bibitem{Dorward2016}
+{\sc Dorward, L., Mittermeier, J., Sandbrook, C., and Spooner, F.}
+\newblock Pokémon go: Benefits, costs, and lessons for the conservation
+  movement.
+\newblock {\em Conservation Letters 10(1)\/} (2016), 160--165.
+
+\bibitem{Frund2004}
+{\sc Fründ, J., Gausemeier, J., Matysczok, C., and Radkowski, R.}
+\newblock Using augmented reality technology to support the automobile
+  development.
+\newblock {\em International Conference on Computer Supported Cooperative work
+  in Design\/} (2004), 289--298.
+
+\bibitem{Kounavis2012}
+{\sc Kounavis, C.~D., Kasimati, A.~E., and Zamani, E.~D.}
+\newblock Enhancing the tourism experience through mobile augmented reality:
+  Challenges and propects.
+\newblock {\em International Journal of Engineering Business Management 4\/}
+  (2012), 10.
+
+\bibitem{Marescaux2004}
+{\sc Marescaux, J., Rubino, F., Arenas, M., Mutter, D., and Soler, L.}
+\newblock Augmented-reality-assisted laparoscopic adrenalectomy.
+\newblock {\em Jama 292(18)\/} (2004), 2211--2215.
+
 \bibitem{Pausch1992}
 {\sc Pausch, R., Crea, T., and Conway, M.}
 \newblock A literature survey for virtual environments: Military flight
   simulator visual systems and simulator sickness.
 \newblock {\em Presence: Teleoperators and Virtual Environments 1(3)\/} (1992),
   344--363.
+
+\bibitem{Ploder1995}
+{\sc Ploder, O., Wagner, A., Enislidis, G., and Ewers, R.}
+\newblock Computer-assisted intraoperative visualization of dental implants.
+  augmented reality in medicine.
+\newblock {\em Der Radiologe 35(9)\/} (1995), 569--572.
 
 \end{thebibliography}
