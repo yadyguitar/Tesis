@@ -3,6 +3,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage{cite}
 \usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+
 
 \begin{document}
 \renewcommand{\listtablename}{Índice de tablas}
@@ -11,60 +14,65 @@
 %título
 
 \begin{titlepage}
-\begin{minipage}[c][0.1\textheight][c]{0.2\textwidth}
-\begin{center}
-    \includegraphics[height=3cm]{logoUV}
-\end{center}
+
+\AddToShipoutPicture*{\put(0,0){\includegraphics[scale=1]{portada2.pdf}}} % Image background
+	
+	\begin{minipage}[t][1.75cm][b]{1.15\textwidth}
+		\begin{center}
+			\begin{Large}
+				\textsc{Universidad Veracruzana}
+			\end{Large}	
+			\\
+			\vspace*{0.6cm}
+			\textsc{Facultad de Ingeniería}
+		\end{center}
+	\end{minipage}
+\hspace*{3.6cm}
+\mbox{	
+\begin{minipage}[b][6cm][b]{0.7\textwidth}
+	\begin{center}
+		\begin{LARGE}
+			\textsc{Proyección Adaptativa de un
+				escenario 3D basado en la
+				perspectiva de una persona}
+		\end{LARGE}	
+		
+	\end{center}
 \end{minipage}
-\begin{minipage}[c][0.1\textheight][t]{0.65\textwidth}
-\begin{center}
-    {\scshape Universidad Veracruzana}
-    \vspace{.3cm}
-    \hrule height2.5pt
-    \vspace{.1cm}
-    \hrule height1pt
-    \vspace{.3cm}
-    {\scshape  Facultad de Ciencias}
-\end{center}
-\end{minipage}
+	}
+	\\
+\hspace*{3.6cm}	
+	\mbox{	
+		\begin{minipage}[b][7.5cm][b]{0.7\textwidth}
+			\begin{center}
+					\textsc{
+						\large Que para obtener el grado de:\\
+						\small
+						Ingeniero en Informática\\
+						\large Presenta:\\
+						\small Yadira Fleitas Toranzo\\
+						\vspace*{1cm}
+						\large Asesor de tesis:\\
+						\small	Dr. Luis Felipe Marín Urías
+						}
+			\end{center}
+		\end{minipage}
+	}
+	\\
+	\hspace*{3.6cm}	
+	\mbox{	
+		\begin{minipage}[b][3cm][b]{0.7\textwidth}
+			\begin{center}
+				\textsc{
+				\begin{small}
+					Boca del Río, Veracruz, Junio de 2017
+				\end{small}	
+				}
+			\end{center}
+		\end{minipage}
+	}
+	
 
-\begin{minipage}[c][0.6\textheight][t]{0.2\textwidth}
-\begin{center}
-\hskip2pt
-\vrule width2.5pt height10cm
-        \hskip1mm
-        \vrule width1pt height10cm \\
-        \includegraphics[height=3cm]{logoUV}
-        \end{center}
-\end{minipage}
-\begin{minipage}[c][0.6\textheight][t]{0.65\textwidth}
-  \begin{center}
-    {\Large \scshape {T\'itulo de la tesis}}
-
-    \vspace{2cm}
-
-    \makebox[5cm][c]{\LARGE TESIS}  \\[8pt]
-    QUE PARA OBTENER EL T\'iTULO DE:\\[5pt]
-    {\large \textbf{{t\'itulo}}}\\[40pt]            
-    PRESENTA:\\[5pt]
-    \textbf{{Nombre del tesista}}
-
-    \vspace{1cm}
-
-    {\small DIRECTOR DEL TRABAJO:\\ {Nombre del director del trabajo}}
-
-    \vspace{0.5cm}
-
-    {Lugar,}{ }{Fecha}
-  \end{center}
-\end{minipage}
-
-
-	%\begin{center}
-	%	\begin{Huge}
-	%		\textsc{Un buen título es muy importante}
-	%	\end{Huge}
-	%\end{center}
 \end{titlepage}
 %%%%%%
 
@@ -79,12 +87,12 @@
 %%%AGRADECIMIENTOS Y RESUMEN%%%
 \chapter*{Agradecimientos}
 \addcontentsline{toc}{chapter}{Agradecimientos}
-\markboth{AGRADECIMIENTOS}{AGRADECIMIENTOS}
+
 ¡Muchas gracias a todos jijiji!
 
 \chapter*{Resumen}
 \addcontentsline{toc}{section}{Resumen}
-\markboth{RESUMEN}{RESUMEN}
+
 Una bonita historia jejeje
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -99,10 +107,11 @@ Una bonita historia jejeje
 
 %%%%%%%%
 
-
+\cleardoublepage
 %%%CAPÍTULO 1 -> INTRODUCCIÓN
 \chapter{Introducción}\label{cap.introduccion}
 \pagenumbering{arabic}
+\pagestyle{fancy}
 Vivimos en una época en la cual la tecnología forma parte esencial de nuestras vidas. En donde el ser humano, es capaz de mejorar y optimizar su entorno con el objetivo de satisfacer cada una de sus necesidades. El alcance que ha tenido la tecnología digital, nos abre camino para el surgimiento de nuevas técnicas capaces de colaborar en el desarrollo de múltiples áreas o disciplinas, ayudando a la creación de distintas formas para facilitar su aprendizaje, optimización y avance de las mismas.\\
 Así, la tecnología digital ha servido de apoyo incluso en situaciones en donde el ser humano requiere de entrenamiento para realizar ciertas actividades peligrosas, costosas o difíciles de ejecutar y que son proporcionadas a través de entornos virtuales, para mejorar sus habilidades y evitar a todo costo el riesgo de perder incluso vidas humanas. Una aplicación que ejemplifica claramente lo mencionado, lo tenemos en los simuladores de vuelo, que lo que se intenta hacer es replicar la experiencia de pilotar una aeronave de la manera más realista posible. No obstante, el desarrollo e implementación de simuladores de este tipo, implica la fabricación de cabinas en tamaño real con accionadores hidráulicos o electromecánicos, el cual conlleva un gran costo de los mismos.\\
 Es por ello que con el objetivo de minimizar costos y de no requerir de tantos equipos para la inmersión a estos escenarios artificiales, existe una rama de la tecnología conocida como Realidad Virtual (VR, Virtual Reality), que sustituye nuestro mundo real a través de dispositivos que nos permitan encontrarnos en otro lugar, es decir, sumergirnos en una realidad que no existe. Tomando el ejemplo anterior, se han estado desarrollando simuladores a través de este tipo de tecnología, con el objetivo de ahorrar recursos y que se puedan disponer de una manera más rápida y frecuente \cite{Pausch1992}.\\
@@ -191,7 +200,7 @@ muchos xD
 %%%BIBLIOGRAFÍA%%%
 \cleardoublepage
 \addcontentsline{toc}{chapter}{Bibliografía}
-\bibliographystyle{IEEEannot}
+\bibliographystyle{acm}
 \bibliography{biblio}
 
 
