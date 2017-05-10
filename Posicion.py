@@ -7,9 +7,11 @@ class Posicion:
 	def __init__(self, persona):
 		self.persona=persona
 		self.frameRGB=None
+		self.depth=None
 
-	def setFrames(self,rgb):
+	def setFrames(self,rgb,depth):
 		self.frameRGB=rgb
+		self.depth=depth
 
 	def calculaCentroFigura(self,c):
 		#calculo del centro del contorno usando momentos (:
@@ -39,7 +41,7 @@ class Posicion:
 
 	def showPointCentral(self):
 		cv2.drawContours(self.frameRGB, [self.persona.contornos], 0, (0, 255, 0), 2)
-		cv2.circle(self.frameRGB, self.persona.posicion, 7, (255, 255, 255), -1)
+		cv2.circle(self.frameRGB, self.persona.posicion[:2], 7, (255, 255, 255), -1)
 		#cv2.putText(image, "center", (cX - 20, cY - 20),
 		#cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
 		cv2.imshow("Imagen con punto central", self.frameRGB)
@@ -48,8 +50,10 @@ class Posicion:
 		contornos=self.persona.contornos
 		xy=self.calculaCentroFigura(contornos)
 		#filtro para que no varie mucho la deteccion de posicion
-		xy=self.filtroPosicion(xy)
-		self.persona.posicion=xy
+		x,y=self.filtroPosicion(xy)
+		altura=self.depth[int(xy[1])][int(xy[0])]
+		xyz=(x,y,altura)
+		self.persona.posicion=xyz
 		self.showPointCentral()
 
 if __name__ == "__main__":

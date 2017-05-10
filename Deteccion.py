@@ -72,7 +72,7 @@ class Deteccion:
 		cv2.drawContours(self.frameRGB,[self.persona.contornos],0, (0,255,0), 2)
 		#*********************************************************************************#
 		#cv2.imshow('Imagen RGB',self.frameRGB)
-		#cv2.imshow('Imagen Depth',self.frameDepth)
+		cv2.imshow('Imagen Depth',self.frameDepth)
 		
 		#self.showRotatedRectangle(self.frameRGB,self.persona.contornos)
 

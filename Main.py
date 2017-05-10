@@ -35,9 +35,9 @@ if __name__=="__main__":
 		#se va modificando la class persona y se puede ir accediendo a sus propiedades actuales
 		deteccion.setFrames(frame,depth)
 		deteccion.deteccionManual()
-		posicion.setFrames(frame)
+		posicion.setFrames(frame,depth)
 		posicion.calculaPosicion()
-
+		print persona.posicion
 		#guarda informacion de la clase persona
 		guardaInfoPersona(persona.posicion)
 		if cv2.waitKey(1) & 0xFF == 27:
