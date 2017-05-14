@@ -24,7 +24,7 @@ class Posicion:
 		except:
 			print "division entre cero"
 			
-		print (cX,cY)
+		#print (cX,cY)
 		return (cX,cY)
 
 	def filtroPosicion(self,xy):
