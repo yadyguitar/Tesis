@@ -108,7 +108,7 @@ class Deteccion:
 			elif areaPersona>maxRect:
 				self.threshold-=valorDeAumento
 
-			if self.threshold >=150:
+			if self.threshold >=200:
 				self.threshold=1
 	
 
