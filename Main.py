@@ -27,13 +27,14 @@ def guardaInfoPersona(posicion):
 if __name__=="__main__":
 	#Instanciar clases (:
 	persona=Persona()
-	deteccion=Deteccion(persona)
+	deteccion=Deteccion(persona,120)
 	posicion=Posicion(persona)
 	while 1:
 		frame=get_video()
 		depth=get_depth()
 		#se va modificando la class persona y se puede ir accediendo a sus propiedades actuales
 		deteccion.setFrames(frame,depth)
+		#deteccion.deteccionManual()
 		deteccion.deteccionAutomatica()
 		posicion.setFrames(frame,depth)
 		posicion.calculaPosicion()

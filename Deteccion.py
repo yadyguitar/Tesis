@@ -6,10 +6,10 @@ from Persona import Persona
 
 
 class Deteccion:
-	def __init__(self, persona):
+	def __init__(self, persona,thres):
 		self.frameRGB=None
 		self.frameDepth=None		
-		self.threshold = 1
+		self.threshold = thres
 		self.persona=persona
 		#cv2.namedWindow('Thres')
 		#Creo dos trackbar, uno con el minimo, y otro con el maximo (Sublime no permite acentos ):)
@@ -86,11 +86,9 @@ class Deteccion:
 		
 		#self.showRotatedRectangle(self.frameRGB,self.persona.contornos)
 
-	
-
 	def ajustaUmbral(self,depth):
-		minRect=5500
-		maxRect=8000
+		minRect=4000
+		maxRect=9000
 		valorDeAumento=1
 		areaPersona=0
 		contours=self.persona.contornos
@@ -104,7 +102,7 @@ class Deteccion:
 				cv2.rectangle(self.frameRGB,(x,y),(x+w,y+h),(0,0,255),2)
 				areaPersona=w*h
 				self.setContornoPersona(contours)
-			print areaPersona
+			print "area de la persona: " + str(areaPersona)
 			if areaPersona<minRect:
 				self.threshold+=valorDeAumento
 			elif areaPersona>maxRect:
@@ -112,10 +110,7 @@ class Deteccion:
 
 			if self.threshold >=150:
 				self.threshold=1
-
-		
-		
-		
+	
 
 	def deteccionAutomatica(self):
 		depth=cv2.GaussianBlur(self.frameDepth, (5, 5), 0)
