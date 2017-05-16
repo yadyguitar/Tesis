@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{Bimber2005}
+{\sc Bimber, O., and Raskar, R.}
+\newblock {\em Spatial augmented reality: merging real and virtual worlds}.
+\newblock CRC press, 2005.
+
 \bibitem{Dorward2016}
 {\sc Dorward, L., Mittermeier, J., Sandbrook, C., and Spooner, F.}
 \newblock Pokémon go: Benefits, costs, and lessons for the conservation
@@ -37,5 +42,9 @@
 \newblock Computer-assisted intraoperative visualization of dental implants.
   augmented reality in medicine.
 \newblock {\em Der Radiologe 35(9)\/} (1995), 569--572.
+
+\bibitem{Sol2016}
+{\sc Roo, J.~S., and Hachet, M.}
+\newblock Interacting with spatial augmented reality.
 
 \end{thebibliography}
