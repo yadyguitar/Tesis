@@ -3,48 +3,47 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: tesis.aux
 The style file: acm.bst
 Database file #1: biblio.bib
-Warning--I didn't find a database entry for "bibid"
 Warning--can't use both volume and number fields in Dorsey1991
 Warning--empty journal in Sol2016
-You've used 14 entries,
+You've used 16 entries,
             2253 wiz_defined-function locations,
-            634 strings with 6910 characters,
-and the built_in function-call counts, 5699 in all, are:
-= -- 564
-> -- 268
+            643 strings with 7296 characters,
+and the built_in function-call counts, 6557 in all, are:
+= -- 652
+> -- 292
 < -- 0
-+ -- 114
-- -- 96
-* -- 455
-:= -- 888
-add.period$ -- 42
-call.type$ -- 14
-change.case$ -- 90
++ -- 124
+- -- 104
+* -- 509
+:= -- 1005
+add.period$ -- 48
+call.type$ -- 16
+change.case$ -- 100
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 210
-empty$ -- 443
-format.name$ -- 96
-if$ -- 1203
+cite$ -- 18
+duplicate$ -- 256
+empty$ -- 524
+format.name$ -- 104
+if$ -- 1402
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 14
-newline$ -- 72
-num.names$ -- 28
-pop$ -- 92
+int.to.str$ -- 16
+missing$ -- 16
+newline$ -- 82
+num.names$ -- 32
+pop$ -- 108
 preamble$ -- 1
-purify$ -- 76
+purify$ -- 84
 quote$ -- 0
-skip$ -- 148
+skip$ -- 183
 stack$ -- 0
-substring$ -- 403
-swap$ -- 72
+substring$ -- 469
+swap$ -- 90
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 56
+type$ -- 64
 warning$ -- 2
-while$ -- 59
-width$ -- 16
-write$ -- 147
-(There were 3 warnings)
+while$ -- 69
+width$ -- 18
+write$ -- 169
+(There were 2 warnings)

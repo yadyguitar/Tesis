@@ -1,5 +1,12 @@
 \begin{thebibliography}{10}
 
+\bibitem{benko2012}
+{\sc Benko, H., Jota, R., and Wilson, A.}
+\newblock Miragetable: freehand interaction on a projected augmented reality
+  tabletop.
+\newblock In {\em Proceedings of the SIGCHI conference on human factors in
+  computing systems\/} (2012), ACM, pp.~199--208.
+
 \bibitem{dietz2001}
 {\sc Dietz, P., and Leigh, D.}
 \newblock Diamondtouch: a multi-user touch technology.
@@ -76,6 +83,13 @@
 {\sc Underkoffler, J.}
 \newblock A view from the luminous room.
 \newblock {\em Personal Technologies 1}, 2 (1997), 49--59.
+
+\bibitem{wilson2005}
+{\sc Wilson, A.~D.}
+\newblock Playanywhere: a compact interactive tabletop projection-vision
+  system.
+\newblock In {\em Proceedings of the 18th annual ACM symposium on User
+  interface software and technology\/} (2005), ACM, pp.~83--92.
 
 \bibitem{Wilson2007}
 {\sc Wilson, A.~D.}
