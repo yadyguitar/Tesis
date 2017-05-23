@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{projectionmapping}
+{Projection Mapping Central}.
+\newblock \url{http://projection-mapping.org}, 2017.
+
 \bibitem{benko2012}
 {\sc Benko, H., Jota, R., and Wilson, A.}
 \newblock Miragetable: freehand interaction on a projected augmented reality
@@ -12,6 +16,13 @@
 \newblock Diamondtouch: a multi-user touch technology.
 \newblock In {\em Proceedings of the 14th annual ACM symposium on User
   interface software and technology\/} (2001), ACM, pp.~219--226.
+
+\bibitem{dohse2008}
+{\sc Dohse, K., Dohse, T., Still, J.~D., and Parkhurst, D.~J.}
+\newblock Enhancing multi-user interaction with multi-touch tabletop displays
+  using hand tracking.
+\newblock In {\em Advances in Computer-Human Interaction, 2008 First
+  International Conference on\/} (2008), IEEE, pp.~297--302.
 
 \bibitem{Dorsey1991}
 {\sc Dorsey, J.~O., Sillion, F.~X., and Greenberg, D.~P.}
@@ -32,12 +43,46 @@
 \newblock In {\em International Conference on Computer Supported Cooperative
   Work in Design\/} (2004), Springer, pp.~289--298.
 
+\bibitem{geller2006}
+{\sc Geller, T.}
+\newblock Interactive tabletop exhibits in museums and galleries.
+\newblock {\em IEEE Computer Graphics and Applications 26}, 5 (2006), 6--11.
+
+\bibitem{hilliges2009}
+{\sc Hilliges, O., Izadi, S., Wilson, A.~D., Hodges, S., Garcia-Mendoza, A.,
+  and Butz, A.}
+\newblock Interactions in the air: adding further depth to interactive
+  tabletops.
+\newblock In {\em Proceedings of the 22nd annual ACM symposium on User
+  interface software and technology\/} (2009), ACM, pp.~139--148.
+
+\bibitem{jones2014}
+{\sc Jones, B., Sodhi, R., Murdock, M., Mehra, R., Benko, H., Wilson, A., Ofek,
+  E., MacIntyre, B., Raghuvanshi, N., and Shapira, L.}
+\newblock Roomalive: magical experiences enabled by scalable, adaptive
+  projector-camera units.
+\newblock In {\em Proceedings of the 27th annual ACM symposium on User
+  interface software and technology\/} (2014), ACM, pp.~637--644.
+
+\bibitem{jones2013}
+{\sc Jones, B.~R., Benko, H., Ofek, E., and Wilson, A.~D.}
+\newblock Illumiroom: peripheral projected illusions for interactive
+  experiences.
+\newblock In {\em Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems\/} (2013), ACM, pp.~869--878.
+
 \bibitem{Kounavis2012}
 {\sc Kounavis, C.~D., Kasimati, A.~E., and Zamani, E.~D.}
 \newblock Enhancing the tourism experience through mobile augmented reality:
   Challenges and prospects.
 \newblock {\em International Journal of Engineering Business Management 4\/}
   (2012), 10.
+
+\bibitem{kreylos2016}
+{\sc Kreylos, O.}
+\newblock Augmented reality sandbox.
+\newblock {\em Recuperado de http://idav. ucdavis. edu/\~{}
+  okreylos/ResDev/SARndbox\/} (2016).
 
 \bibitem{Marescaux2004}
 {\sc Marescaux, J., Rubino, F., Arenas, M., Mutter, D., and Soler, L.}
