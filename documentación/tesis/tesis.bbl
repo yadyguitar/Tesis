@@ -4,12 +4,35 @@
 {Projection Mapping Central}.
 \newblock \url{http://projection-mapping.org}, 2017.
 
+\bibitem{azuma2001}
+{\sc Azuma, R., Baillot, Y., Behringer, R., Feiner, S., Julier, S., and
+  MacIntyre, B.}
+\newblock Recent advances in augmented reality.
+\newblock {\em IEEE computer graphics and applications 21}, 6 (2001), 34--47.
+
+\bibitem{azuma1997}
+{\sc Azuma, R.~T.}
+\newblock A survey of augmented reality.
+\newblock {\em Presence: Teleoperators and virtual environments 6}, 4 (1997),
+  355--385.
+
 \bibitem{benko2012}
 {\sc Benko, H., Jota, R., and Wilson, A.}
 \newblock Miragetable: freehand interaction on a projected augmented reality
   tabletop.
 \newblock In {\em Proceedings of the SIGCHI conference on human factors in
   computing systems\/} (2012), ACM, pp.~199--208.
+
+\bibitem{benko2014}
+{\sc Benko, H., Wilson, A.~D., and Zannier, F.}
+\newblock Dyadic projected spatial augmented reality.
+\newblock In {\em Proceedings of the 27th annual ACM symposium on User
+  interface software and technology\/} (2014), ACM, pp.~645--655.
+
+\bibitem{Bimber2005}
+{\sc Bimber, O., and Raskar, R.}
+\newblock {\em Spatial augmented reality: merging real and virtual worlds}.
+\newblock CRC press, 2005.
 
 \bibitem{dietz2001}
 {\sc Dietz, P., and Leigh, D.}
@@ -89,6 +112,12 @@
 \newblock Augmented-reality--assisted laparoscopic adrenalectomy.
 \newblock {\em Jama 292}, 18 (2004), 2211--2215.
 
+\bibitem{milgram1994}
+{\sc Milgram, P., and Kishino, F.}
+\newblock A taxonomy of mixed reality visual displays.
+\newblock {\em IEICE TRANSACTIONS on Information and Systems 77}, 12 (1994),
+  1321--1329.
+
 \bibitem{Pausch1992}
 {\sc Pausch, R., Crea, T., and Conway, M.}
 \newblock A literature survey for virtual environments: Military flight
@@ -108,6 +137,12 @@
   and spatially immersive displays.
 \newblock In {\em Proceedings of the 25th annual conference on Computer
   graphics and interactive techniques\/} (1998), ACM, pp.~179--188.
+
+\bibitem{Raskar1998a}
+{\sc Raskar, R., Welch, G., and Fuchs, H.}
+\newblock Spatially augmented reality.
+\newblock In {\em First IEEE Workshop on Augmented Reality (IWAR’98)\/}
+  (1998), Citeseer, pp.~11--20.
 
 \bibitem{Raskar2001}
 {\sc Raskar, R., Welch, G., Low, K.-L., and Bandyopadhyay, D.}

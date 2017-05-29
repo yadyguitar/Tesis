@@ -8,6 +8,7 @@
 \usepackage{url}
 \usepackage{hyperref}
 
+\usepackage{subfigure} % subfiguras
 \hypersetup{
 	colorlinks,
 	citecolor=black,
@@ -181,45 +182,69 @@ Basado en la posición y altura de una persona, obtenidas mediante un sensor RGB
 Dado que el presente trabajo de tesis, se centrará en el área de la Realidad Aumentada Espacial (SAR), específicamente en la optimización de la percepción de objetos virtuales 3D, será necesario establecer algunas terminologías y trabajos relacionados que sirvan de apoyo para el correcto entendimiento de éste.
 %%Antecedentes
 \section{Antecedentes}
-La Realidad Aumentada (AR) técnicamente hablando se puede definir como la tecnología capaz de superponer objetos o información virtual en una secuencia de imágenes capturadas en tiempo real de nuestro propio entorno, creando la ilusión de que ambos mundos (virtual y real) se fusionan en uno, es decir, creando una realidad mixta (MR).\\
-La capacidad de proporcionar una experiencia visual tal para el usuario, que pueda llegar a pensar que éstos forman parte de su realidad, es uno de los retos que intenta conseguir la Realidad Aumentada (AR).\\
-La forma tradicional de visualizar este tipo de tecnología, es a través de dispositivos tales como HMD’s, lentes, computadoras, tablets o smartphones, (en inglés See-through Augmented Reality, STAR \cite{Sol2016}), y aunque cada vez surgen mas aplicaciones entorno a estos artefactos, el uso de ellos impide al observador tener una conexión mas real con su mundo, debido principalmente al campo de visión limitado por los mismos.\\
-La Realidad Aumentada Espacial (SAR), es una variante de la AR, que muestra mediante proyectores digitales, información u objectos virtuales directamente sobre objetos físicos, lo cual una de las ventajas que trae consigo con respecto a STAR, es el hecho de no tener que llevar un equipo encima para poder visualizar este tipo de realidad e involucrar la capacidad de poder interactuar directamente (sentido del tacto) de tal modo que nos ayude a estar mas en contacto con los objetos virtuales.\\
-En sus inicios, su desarrollo se basaba en resolver básicamente problemas en cuanto a la distorsión de la imagen en la irregularidad de la superficie, pero luego se implementó la fase de interacción entre el usuario y los elementos virtuales, surgiendo problemas mas complejos que aún siguen en proceso de desarrollo.\\
+\subsection{Realidad Aumentada}
+La Realidad Aumentada (AR), ha sido definida por varios autores desde distintos puntos de vista \cite{milgram1994,azuma1997}. Algunos, la describen como una variante de la Realidad Virtual (VR); otros la considera como un concepto general, en donde VR se encuentra dentro de ésta tecnología. Ramesh Raskar, en su libro \cite{Bimber2005} menciona que AR, a diferencia de VR (que crea un entorno virtual desde cero), incorpora en nuestro entorno elementos sintéticos; es decir, superpone objetos o información virtual en una secuencia de imágenes capturadas en tiempo real de nuestro propio entorno, creando la ilusión de que ambos mundos (virtual y real) se fusionan en uno, es decir, creando una realidad mixta (MR).\\
+
+\subsubsection{Técnicas de visualización}
+Según Azuma \cite{azuma2001}, existen 3 principales formas en las que podemos visualizar la AR. Tales son a través de: dipositivos montados en la cabeza (head-worn displays, HWD), dispositivos de mano (handheld displays) o dispositivos de proyección (projective displays). La manera tradicional de percibir esta realidad es a través de las dos primeras clasificaciones mencionadas anteriormente (en inglés See-though Augmented Reality, STAR \cite{Sol2016}), mientras que la última es mayormente conocida como Spatial Augmented Reality (SAR).\\
+\begin{figure}[thbp]
+	\centering
+	\subfigure[Optical see-through ]{\includegraphics[width=67.5mm]{./figuras/optical}}
+	\subfigure[Video see-through ]{\includegraphics[width=67.5mm]{./figuras/video}}
+	\caption[Funcionamiento de los HMD's]{En (a) la superposición AR es proporcionada a través de una pantalla transparente, mientras que (b) las imágenes son capturadas por la cámara de video y usadas como fondo para la superposición AR. } \label{fig:opticalvideo}
+\end{figure}
+\paragraph{See-though Augmented Reality.}
+En el caso de los HWD's, también conocido como Head Mounted Displays (HMD's), estos son clasificados por dos tipos de técnicas de visualización: optical see-through y video see-through (Figura \ref{fig:opticalvideo}). Comercialmente hablando y los mas populares que podemos encontrar hoy en día, tenemos los Hololens de Microsoft y los Google glass, que a pesar de ser llamados como lentes de AR, se encuentran dentro del concepto de dispositivos en la cabeza.\\
+En cuanto a los handhelds displays, traducido al español como dispositivos de mano, encontramos una amplia diversidad de dispostivos de varias marcas por parte de smartphones y tablets, que debido al bajo costo (en comparación con los HWD's) y al uso común de ellos, la AR se ha expandido y dado a conocer por medio del desarrollo de aplicaciones, que así como se ha utilizado como medio de entretenimiento, también ha servido de apoyo en el campo de la enseñanza, a través de aplicaciones tales como se presenta en (Figura \ref{fig:ARejemplos}). Sin embargo, aunque cada vez surgen mas aplicaciones entorno a estos artefactos, el uso de ellos impide al observador tener una conexión mas real con su mundo, debido principalmente al campo de visión limitado por los mismos.\\
+\begin{figure}[thbp]
+	\centering
+	\subfigure[Pokemon Go]{\includegraphics[width=30mm,height=30mm]{./figuras/pokemon}}
+	\subfigure[Snapchat]{\includegraphics[width=30mm,height=30mm]{./figuras/snapchat}}
+	\subfigure[LearnAR]{\includegraphics[width=30mm,height=30mm]{./figuras/learnAR}}
+	\subfigure[Google Translater]{\includegraphics[width=30mm,height=30mm]{./figuras/googleTranslater}}
+	\caption[Ejemplos de AR en smartphones y tablets]{Los ejemplos (a) y (b) están enfocados al entretenimiento; (c) y (d) están enfocados a la educación} \label{fig:ARejemplos}
+\end{figure}
+
+\section{Estado del arte}
+La Realidad Aumentada Espacial, es una variante de la AR, que muestra mediante proyectores digitales, información u objectos virtuales directamente sobre objetos físicos, lo cual una de las ventajas que trae consigo con respecto a STAR, es el hecho de no tener que llevar un equipo encima para poder visualizar este tipo de realidad e involucrar la capacidad de poder interactuar directamente (sentido del tacto) de tal modo que nos ayude a estar mas en contacto con los objetos virtuales.\\
+Raskar fue uno de los primeros en dar a conocer este nuevo paradigma a través de varios prototipos \cite{Raskar1998a,Raskar1998b,Raskar2001}, los cuales se basaban principalmente en resolver problemas en cuanto a la distorsión de la imagen en la irregularidad de la superficie. Mas adelante, se implementó la fase de interacción entre el usuario y los elementos virtuales,lo cual atrajo la atención a grandes compañías tales como Microsoft, Sony, Disney, pero a la vez, surgiendo problemas mas complejos que aún siguen en proceso de desarrollo.\\ 
 Dependiendo del uso o la aplicación en donde se encuentre ésta tecnología, se le atribuyen otros nombres que ayuden a entender mas su propósito en donde se esté implementando, ésto debido a que cuando hablamos de ``Espacial'', no solo nos estamos refiriendo a la percepción de información adicional a través del sentido visual, sino que también podemos involucrar el tacto y el sentido auditivo.\\ 
 
 \subsection{Projection mapping}
-Comercialmente SAR, también es conocida como ``projection o video mapping'', refiriéndose a la proyección de información virtual en objetos reales, con el objetivo de enriquecerlos visualmente, mostrando una nueva forma de percibir el objeto. De igual manera se pueden proyectar imágenes o elementos virtuales en superficies tales como paredes de edificios para publicidad, como medio artístico en escenarios o incluso en el rostro o cuerpo de las personas \cite{projectionmapping}.\\
+Comercialmente SAR, también es conocida como ``projection mapping'' o ``video mapping'', refiriéndose a la proyección de información virtual en objetos reales, con el objetivo de enriquecerlos visualmente, mostrando una nueva forma de percibir el objeto. De igual manera se pueden proyectar imágenes o elementos virtuales en superficies tales como paredes de edificios para publicidad, como medio artístico en escenarios o incluso en el rostro o cuerpo de las personas \cite{projectionmapping}.\\
 Su nivel de complejidad, por lo tanto, varía dependiendo de la superficie en donde pueda ser proyectada la información. Por ejemplo, inicialmente, en proyectos como Luminous Room \cite{Under1997} se proyectaba la información en una superficie plana, donde únicamente se ajustaba la deformación que ocasionaba la proyección dependiendo de donde se encontrara el proyector. Sin embargo, años antes, ya se tomaba en cuenta en cuenta la estructura del escenario \cite{Dorsey1991} (en éste caso pantallas curvas) para proyectar información, en donde generaban las imágenes pre-distorsionadas para que luego se pudiese visualizar de la forma correcta. En cambio, cuando la superficie en donde se proyecta la información posee objetos y por lo tanto se muestra de forma irregular, se requiere un análisis previo de su forma para así capturar la información 3D de los objetos físicos, pre-distorsionar la imagen conforme a la irregularidad del escenario, tomar en cuenta la posición en donde se encuentra la persona y seguido a esto, la proyección correcta de los elementos virtuales \cite{Raskar1998b,Raskar2001,Starner2003,Wilson2007}.\\
 IllumiRoom \cite{jones2013}, es un claro ejemplo en donde la información virtual se adapta en nuestro entorno, tomando en cuenta la geometría y apariencia de éste, con el objetivo de aumentar la zona que rodea una pantalla de televisión y mostrar un escenario extendido de éste.
 \subsection{Interacción en SAR}
 En sus primeros años de desarrollo, no se contaba con una fase de interacción entre el usuario y los elementos virtuales, debido a que su propósito en ese momento, era mostrar información adicional, aumentando la experiencia visual. Fue entonces, que gracias a grandes compañías como Microsoft Research, desarrollaron proyectos y propusieron nuevas técnicas que incluían la interacción a través de las manos o algún material o dispositivo de apoyo, lo cual propició la expansión de SAR en distintas áreas, principalmente en el aprendizaje y entretenimiento.\\
-\subsubsection{Proyectos de Sobremesa}
-Mucho de éste desarrollo y avance se inició a través de proyectos que mostraban la información en sobremesa (tabletop). Éstas eran visualizadas a través de proyectores que generalmente estaban ubicados encima de la mesa (front-projected displays) o debajo de ésta (técnica conocida como retroproyección).\\
+\subsubsection{Proyecciones de Sobremesa}
+Mucho de éste desarrollo y avance se inició a través de proyectos que mostraban la información en sobremesa (tabletop). Éstas eran visualizadas a través de proyectores que generalmente estaban ubicados en el techo, proyectando la información encima de la mesa (front-projected displays) o debajo de ésta (técnica conocida como retroproyección).\\
 Augmented Reality SandBox \cite{kreylos2016}, es un proyecto, basado en front-projection, que actualmente se encuentra en algunos museos, desarrollado por investigadores de la Universidad de California en Davis, en el cual proponen una interactiva forma de aprender topografía, ésto, utilizando arena en una caja especial, creando un modelo topográfico en relación a la forma en la que se encuentre la arena, es decir, dependiendo de la altura del relieve detectado por un sensor de profundidad, es proyectada la información real de como se comportaría el terreno.\\
 La proyección frontal, en la mayoría de los proyectos ocasiona que las manos u otras partes del cuerpo de las personas, obstruyan la proyección, ocasionando poca realidad de inmersión de elementos virtuales en nuestro entorno \cite{dietz2001,wilson2005,kreylos2016}. Como una propuesta de solución a éste problema, MirageTable \cite{benko2012} proyecto desarrollado por Microsoft Research, propone una técnica, que es capaz de manipular los elementos virtuales como si fuesen objetos reales, adoptando las características físicas que pudiesen tener, tomando en cuenta la interacción y superposición de estos en las manos, sin la distorsión que causaría ésta.\\
-En lo que respecta a la retroproyección, varios proyectos basados en ello fueron desarrollados. Tomando el ejemplo anterior, trabajo previo a MirageTable, fue propuesto una robusta técnica de manipulación de objetos virtuales para este tipo de proyección, simulando la manera en la que nosotros utilizamos los objetos físicos \cite{hilliges2009}. También, encontramos que el uso de la retroproyección, ha servido para mostrar información virtual con múltiples usuarios, optimizando las técnicas de seguimiento de manos y reconocimiento de gestos, para un correcto uso multi-touch, apoyando el trabajo colaborativo \cite{geller2006,dohse2008}.\\
-\subsubsection{Proyectos en entornos reales}
+En lo que respecta a la retroproyección, tomando el ejemplo anterior, trabajo previo a MirageTable, fue propuesto una robusta técnica de manipulación de objetos virtuales para este tipo de proyección, simulando la manera en la que nosotros utilizamos los objetos físicos \cite{hilliges2009}. También, encontramos que el uso de la retroproyección, ha servido para mostrar información virtual con múltiples usuarios, optimizando las técnicas de seguimiento de manos y reconocimiento de gestos, para un correcto uso multi-touch, apoyando el trabajo colaborativo \cite{geller2006,dohse2008}.\\
+\subsubsection{Proyecciones en superficies irregulares}
 Debido a la necesidad de llevar la tecnología SAR a nuestros hogares, principalmente como medio de entretenimiento, se han propuesto y desarrollado varias técnicas, en donde una de las principales cuestiones en las que se ha enfocado el estudio, es en la detección y modelado de la geometría de los objetos físicos, e incluso en la detección y ubicación de elementos en nuestro entorno, para involucrar a los elementos virtuales en nuestro medio, con el objetivo de que se puedan desenvolver de una forma mas real.\\
 RoomAlive, es un complejo proyecto propuesto por Microsoft Research, que es capaz de transformar cualquier habitación en un área de entretenimiento de realidad aumentada espacial \cite{jones2014}. Poseen un sistema de seguimiento de personas que es utilizado para que el escenario cambie dinámicamente alrededor de ellos. El sistema, se basa principalmente en identificar superficies planas como paredes y piso, esto a través de una combinación de mapas de profundidades de 6 sensores RGB-D distribuidos por toda la habitación, de manera que se puedan clasificar las superficies, y así brindar la oportunidad de crear situaciones y escenarios virtuales mas reales.\\
-\subsection{Dispositivos en SAR}
-A diferencia de STAR (donde existe una amplia gama de dispositivos utilizados), en SAR se involucran únicamente dos elementos para su correcto uso. Se determina, por lo tanto, que es necesario, un medio por el cual transmitir la información (comúnmente proyectores digitales) y un medio por el cual adquirir datos del entorno físico (sensores).
-\subsubsection{Proyectores digitales}
-Existe una gran variedad de proyectores digitales, y son diferenciados uno de otros por su nivel de 
-\subsubsection{Sensores}
-%%
-%%Esto del Arte
-\section{Estado del arte}
-El estudio de visualizar los elementos virtuales tomando la perspectiva respecto a este, es muy reciente.
+\subsubsection{Proyección en torno a la perspectiva}
+A pesar de que se ha logrado un buen avance en la proyección de elementos virtuales en nuestro entorno, de tal forma que no se distorsionen al ser mostrados en tiempo real, no se ha abarcado mucho en el estudio que toma en cuenta al objeto virtual 3D, mostrando sus respectivos ángulos o lados en torno a la perspectiva de una persona.\\
+Un ejemplo que toma en cuenta éste estudio, lo podemos encontrar con otro proyecto por parte de Microsoft, llamado Mano-a-mano \cite{benko2014}, el cual involucra las técnicas anteriormente mencionadas en RoomAlive y adicionalmente se realiza una adaptación del elemento virtual con respecto a la posición de la persona. En ésta propuesta, es tomada la perspectiva de dos personas que se encuentran una frente a la otra, lo cual involucra la interacción multi-usuario, y ser capaces de visualizar los objetos virtuales tal como si fuesen reales. Sin embargo, el ángulo en el que se pueden desplazar es limitado (menos de 90 grados) debido a la posición de los proyectores (parte de la imagen es proyectada directamente sobre la persona contraria), por lo tanto la interacción y visualización de los objetos virtuales 3D sigue siendo tema de estudio.\\
+
+
 
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%CAPÍTULO 3 -> DISEÑO%%%
 \chapter{Dise\~no}\label{cap.diseno}
-El diseño de un sistema en general, es primordial antes de su implementación para su correcto funcionamiento. Por lo tanto, es de suma importancia, para su futura escalabilidad y optimización, un diseño basado en pequeños módulos en los cuales se realice un análisis y desarrollo de cada una de las partes que estarán involucradas en el sistema.
+El correcto diseño de un sistema, es de suma importancia, para su futura escalabilidad y optimización, basado en pequeños módulos en los cuales permitan ser mejorados de forma independiente evitando a todo costo que la modificación de alguno de ellos afecte el funcionamiento de todo el sistema en general. Éste, fue desarrollado siguiendo el modelo por prototipos, de manera tal que pudiese existir retroalimentación en cualquier momento del desarrollo.\\
 %%
+\section{Análisis de Requerimientos}
+Antes de poner en marcha la implementación del sistema, es necesario un previo análisis desde el punto de vista del hardware y software, con el objetivo de obtener los mejores resultados del sistema.
 
+\section{Diseño del Sistema}
+Después de un análisis detallado de los elementos que podrían estar involucrados, se determinaron 3 módulos principales en el sistema: Detección, Posicion y Altura de persona.
+ se decidió pues realizar el desarrollo en base a dos prototipos.
+n dos etapas, para determinar los métodos apropiados en cada una, y obtener resultados rápidos de la implementación.\\
+La primera etapa se basó en el di
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

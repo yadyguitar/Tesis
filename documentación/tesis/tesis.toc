@@ -12,16 +12,19 @@
 \contentsline {section}{\numberline {1.4}Hip\IeC {\'o}tesis}{5}{section.1.4}
 \contentsline {chapter}{\numberline {2}Marco Te\IeC {\'o}rico}{6}{chapter.2}
 \contentsline {section}{\numberline {2.1}Antecedentes}{6}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Projection mapping}{7}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Interacci\IeC {\'o}n en SAR}{8}{subsection.2.1.2}
-\contentsline {subsubsection}{Proyectos de Sobremesa}{8}{section*.7}
-\contentsline {subsubsection}{Proyectos en entornos reales}{9}{section*.8}
-\contentsline {subsection}{\numberline {2.1.3}Dispositivos en SAR}{9}{subsection.2.1.3}
-\contentsline {subsubsection}{Proyectores digitales}{9}{section*.9}
-\contentsline {subsubsection}{Sensores}{10}{section*.10}
-\contentsline {section}{\numberline {2.2}Estado del arte}{10}{section.2.2}
-\contentsline {chapter}{\numberline {3}Dise\~no}{11}{chapter.3}
-\contentsline {chapter}{\numberline {4}Implementaci\IeC {\'o}n y resultados}{12}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclusiones}{13}{chapter.5}
-\contentsline {section}{\numberline {5.1}Trabajo Futuro}{13}{section.5.1}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{14}{section.5.1}
+\contentsline {subsection}{\numberline {2.1.1}Realidad Aumentada}{6}{subsection.2.1.1}
+\contentsline {subsubsection}{T\IeC {\'e}cnicas de visualizaci\IeC {\'o}n}{6}{section*.7}
+\contentsline {paragraph}{See-though Augmented Reality.}{7}{section*.8}
+\contentsline {section}{\numberline {2.2}Estado del arte}{8}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Projection mapping}{9}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Interacci\IeC {\'o}n en SAR}{9}{subsection.2.2.2}
+\contentsline {subsubsection}{Proyecciones de Sobremesa}{10}{section*.9}
+\contentsline {subsubsection}{Proyecciones en superficies irregulares}{10}{section*.10}
+\contentsline {subsubsection}{Proyecci\IeC {\'o}n en torno a la perspectiva}{11}{section*.11}
+\contentsline {chapter}{\numberline {3}Dise\~no}{12}{chapter.3}
+\contentsline {section}{\numberline {3.1}An\IeC {\'a}lisis de Requerimientos}{12}{section.3.1}
+\contentsline {section}{\numberline {3.2}Dise\IeC {\~n}o del Sistema}{12}{section.3.2}
+\contentsline {chapter}{\numberline {4}Implementaci\IeC {\'o}n y resultados}{13}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclusiones}{14}{chapter.5}
+\contentsline {section}{\numberline {5.1}Trabajo Futuro}{14}{section.5.1}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{15}{section.5.1}
