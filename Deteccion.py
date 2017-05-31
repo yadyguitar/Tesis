@@ -92,24 +92,27 @@ class Deteccion:
 		valorDeAumento=1
 		areaPersona=0
 		contours=self.persona.contornos
+		#ciclo que ajusta el thres para encontrar area de la persona
 		while areaPersona<minRect or areaPersona>maxRect:
-			thres=self.binarizarFrame(depth)
-			contours=self.buscaContornos(thres.copy())
+			imagenBinarizada=self.binarizarFrame(depth) #imagen binarizada
+			contours=self.buscaContornos(imagenBinarizada.copy())
 			print self.threshold
 			if contours!=[]:
 				indexContorno=self.getIndexContornoAreaMayor(contours)#indice donde se encuentra el area mas grande (filtro)
 				x,y,w,h=cv2.boundingRect(contours[indexContorno])
 				cv2.rectangle(self.frameRGB,(x,y),(x+w,y+h),(0,0,255),2)
 				areaPersona=w*h
-				self.setContornoPersona(contours)
 			print "area de la persona: " + str(areaPersona)
 			if areaPersona<minRect:
 				self.threshold+=valorDeAumento
 			elif areaPersona>maxRect:
 				self.threshold-=valorDeAumento
 
-			if self.threshold >=200:
-				self.threshold=1
+			if self.threshold >=154:
+				return False
+
+		self.setContornoPersona(contours)
+		return True
 	
 
 	def deteccionAutomatica(self):
