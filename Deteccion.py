@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#-*- coding: utf-8 -*-
 import freenect
 import cv2
 import numpy as np
@@ -92,8 +93,16 @@ class Deteccion:
 		valorDeAumento=1
 		areaPersona=0
 		contours=self.persona.contornos
+		listaDetectaCiclado=[]
 		#ciclo que ajusta el thres para encontrar area de la persona
 		while areaPersona<minRect or areaPersona>maxRect:
+			#acá determinaré si esta ciclando, y es donde tendre que agregar valor de Aumento
+			if len(listaDetectaCiclado)==6:#se reinicia la lista que detecta el listado
+				if ((listaDetectaCiclado[0],listaDetectaCiclado[2],listaDetectaCiclado[4]) == (listaDetectaCiclado[1]-valorDeAumento,listaDetectaCiclado[3]-valorDeAumento,listaDetectaCiclado[5]-valorDeAumento)) or ((listaDetectaCiclado[0],listaDetectaCiclado[2],listaDetectaCiclado[4]) == (listaDetectaCiclado[1]+valorDeAumento,listaDetectaCiclado[3]+valorDeAumento,listaDetectaCiclado[5]+valorDeAumento)):
+					valorDeAumento+=1
+					if valorDeAumento>3:
+						return False
+				listaDetectaCiclado=[]
 			imagenBinarizada=self.binarizarFrame(depth) #imagen binarizada
 			contours=self.buscaContornos(imagenBinarizada.copy())
 			print self.threshold
@@ -107,7 +116,7 @@ class Deteccion:
 				self.threshold+=valorDeAumento
 			elif areaPersona>maxRect:
 				self.threshold-=valorDeAumento
-
+			listaDetectaCiclado.append(self.threshold)
 			if self.threshold >=154:
 				return False
 
@@ -119,12 +128,12 @@ class Deteccion:
 		depth=cv2.GaussianBlur(self.frameDepth, (5, 5), 0)
 		depth=cv2.medianBlur(depth,5)
 		#depth = cv2.blur(depth,(5,5))
-		self.ajustaUmbral(depth)
 		print "Umbral: "
 		print self.threshold
+		if self.ajustaUmbral(depth):			
 		#*********************************************************************************#
-		#cv2.imshow('Thres',thres) #muestra la ventana donde ajustare manualmente el thres
-		cv2.drawContours(self.frameRGB,[self.persona.contornos],0, (0,255,0), 2)
+			#cv2.imshow('Thres',thres) #muestra la ventana donde ajustare manualmente el thres
+			cv2.drawContours(self.frameRGB,[self.persona.contornos],0, (0,255,0), 2)
 		#*********************************************************************************#
 		cv2.imshow('Imagen RGB',self.frameRGB)
 		cv2.imshow('Imagen Depth',self.frameDepth)
