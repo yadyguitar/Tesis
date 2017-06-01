@@ -3,6 +3,7 @@
 import freenect
 import cv2
 import numpy as np
+import math
 from Persona import Persona
 
 
@@ -93,6 +94,8 @@ class Deteccion:
 		valorDeAumento=1
 		areaPersona=0
 		contours=self.persona.contornos
+		hayOtraPersona=False
+		tempOtraPersona=None
 		listaDetectaCiclado=[]
 		#ciclo que ajusta el thres para encontrar area de la persona
 		while areaPersona<minRect or areaPersona>maxRect:
@@ -103,21 +106,41 @@ class Deteccion:
 					if valorDeAumento>3:
 						return False
 				listaDetectaCiclado=[]
+			############
 			imagenBinarizada=self.binarizarFrame(depth) #imagen binarizada
 			contours=self.buscaContornos(imagenBinarizada.copy())
 			print self.threshold
+			
 			if contours!=[]:
 				indexContorno=self.getIndexContornoAreaMayor(contours)#indice donde se encuentra el area mas grande (filtro)
 				x,y,w,h=cv2.boundingRect(contours[indexContorno])
 				cv2.rectangle(self.frameRGB,(x,y),(x+w,y+h),(0,0,255),2)
 				areaPersona=w*h
-			print "area de la persona: " + str(areaPersona)
+				puntCentCuad=(x+(w/2),y+(h/2))
+				distancia=math.sqrt((self.persona.posicion[0]-puntCentCuad[0])**2 + (self.persona.posicion[1]-puntCentCuad[1])**2)
+				if distancia > 20:
+					if areaPersona>=minRect and areaPersona<=maxRect:
+						tempOtraPersona=contours[indexContorno]
+						areaPersona=0
+						cv2.rectangle(depth,(x,y),(x+w,y+h),(255,255,255),-1)
+						cv2.imshow('quitando persona alta',depth)
+						hayOtraPersona=True
+					print "hay otra persona"
+
+
+			#print "area de la persona: " + str(areaPersona)
+			
 			if areaPersona<minRect:
 				self.threshold+=valorDeAumento
 			elif areaPersona>maxRect:
 				self.threshold-=valorDeAumento
+			
 			listaDetectaCiclado.append(self.threshold)
 			if self.threshold >=154:
+				self.threshold=154
+				if hayOtraPersona==True:
+					self.persona.contornos=tempOtraPersona
+					return True
 				return False
 
 		self.setContornoPersona(contours)
