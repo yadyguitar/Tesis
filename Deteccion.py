@@ -103,7 +103,7 @@ class Deteccion:
 			if len(listaDetectaCiclado)==6:#se reinicia la lista que detecta el listado
 				if ((listaDetectaCiclado[0],listaDetectaCiclado[2],listaDetectaCiclado[4]) == (listaDetectaCiclado[1]-valorDeAumento,listaDetectaCiclado[3]-valorDeAumento,listaDetectaCiclado[5]-valorDeAumento)) or ((listaDetectaCiclado[0],listaDetectaCiclado[2],listaDetectaCiclado[4]) == (listaDetectaCiclado[1]+valorDeAumento,listaDetectaCiclado[3]+valorDeAumento,listaDetectaCiclado[5]+valorDeAumento)):
 					valorDeAumento+=1
-					if valorDeAumento>3:
+					if valorDeAumento>5:
 						return False
 				listaDetectaCiclado=[]
 			############
@@ -118,7 +118,7 @@ class Deteccion:
 				areaPersona=w*h
 				puntCentCuad=(x+(w/2),y+(h/2))
 				distancia=math.sqrt((self.persona.posicion[0]-puntCentCuad[0])**2 + (self.persona.posicion[1]-puntCentCuad[1])**2)
-				if distancia > 20:
+				if distancia > 40:
 					if areaPersona>=minRect and areaPersona<=maxRect:
 						tempOtraPersona=contours[indexContorno]
 						areaPersona=0
