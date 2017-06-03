@@ -7,7 +7,7 @@
 \usepackage{fancyhdr}
 \usepackage{url}
 \usepackage{hyperref}
-
+\setcounter{secnumdepth}{3}
 \usepackage{subfigure} % subfiguras
 \hypersetup{
 	colorlinks,
@@ -235,36 +235,57 @@ Un ejemplo que toma en cuenta éste estudio, lo podemos encontrar con otro proye
 
 %%%CAPÍTULO 3 -> DISEÑO%%%
 \chapter{Dise\~no}\label{cap.diseno}
-El correcto diseño de un sistema, es de suma importancia, para su futura escalabilidad y optimización. Éste trabajo de tesis fue realizado a través de módulos los cuales permitan ser mejorados de forma independiente evitando a todo costo que la modificación de alguno de ellos afecte el funcionamiento de todo el sistema en general.\\
+El correcto diseño de un sistema así como el análisis de los elementos que lo conformarán, es de suma importancia, para su futura escalabilidad y optimización. Éste trabajo de tesis fue realizado a través de módulos los cuales permitan ser mejorados de forma independiente evitando a todo costo que la modificación de alguno de ellos afecte el funcionamiento de todo el sistema en general.\\
 %%
 \section{Análisis de Requerimientos}
-Antes de iniciar el desarrollo de cualquier sistema, se debe realizar un análisis de los elementos que estarán involucrados en éste, para su correcto funcionamiento. Es por ello que a continuación se describen los componentes necesarios que se involucraron en el diseño y desarrollo del sistema.
+Antes de iniciar el desarrollo de cualquier sistema, se debe realizar un análisis de los elementos que estarán involucrados en éste para su correcto funcionamiento. Es por ello que a continuación se describen los componentes necesarios que se involucraron en el diseño y desarrollo del sistema.
+
 \subsection{Hardware del sistema}
+La parte física encargada de adquirir la información y mostrarla, consta de los siguientes dispositivos: computadora, sensor RGB-D (debido a que se utilizará un Kinect\textregistered) y un proyector.\\
+\subsubsection{Kinect}
+Para la detección y obtención de la información de la persona, se requiere de un dispositivo el cual nos proporcione todos los datos necesarios para facilitar el desarrollo del sistema. Para ello, se propuso el uso de un sensor de profundidad el cual nos brindaría todo lo necesario para la fase de programación. Es por eso que se decidió utilizar un Kinect\textregistered\ versión 1, debido a su bajo costo en el mercado y a que posee dicho sensor de profundidad, además de una cámara RGB la cual se podría utilizar en trabajo futuro para conseguir un modelo de detección mas robusto. Dicho esto, procedamos a conocer a detalle éste dispositivo.
+
+\subsubsection{Proyector y escenario}
+\subsubsection{Computadora}
+Después de un análisis previo del hardware que se utilizará, se determinaron las siguientes características recomendables para que el sistema funcione correctamente.
+ 
 
 \subsection{Software del sistema}
+En esta sección se describen los elementos de software que se utilizarán en el desarrollo del sistema, desde el lenguaje de programación, hasta los programas auxiliares y librerías, para una correcta comprensión del código del programa.
+\subsubsection{Python}
+Python es un lenguaje de programación, y es el que se utilizará en el desarrollo del sistema. Esto debido a que 
+\subsubsection{Librerías complementarias}
+El uso de librerías en python es una ventaja.
+Numpy blablabla
+Math blablabla
+\paragraph{LibFreenect}
 
 \section{Diseño General del Sistema}
 Después de un análisis detallado de los elementos que podrían estar involucrados en el desarrollo del sistema, se determinó como diseño general el siguiente esquema (Figura \ref{fig:esquemaGeneral}), el cual se realizó para definir las etapas por las cuales tendrá que seguir el sistema cada vez que se capture una imagen (frame) a través de un sensor de profundidad, en éste caso el kinect de Microsoft\textcopyright, descrito en la sección anterior. Este análisis fue basado en la premisa de que para obtener la perspectiva de un persona correspondiente a un escenario 3D, se debe determinar primero si se encuentra una persona en el entorno, para así conocer la información respecto a ésta (es decir su posición y altura), y así poder proyectar los elementos virtuales en relación con el observador.\\
-
 \begin{figure}[th]
 	\centering
 	\includegraphics[width=60mm]{./figuras/esquemaGeneral}
 	\caption{Esquema general del sistema} \label{fig:esquemaGeneral}
 \end{figure}
-Debido a lo anterior, se siguió el patrón de desarrollo de software conocido como modelo incremental (o iterativo), que es una mejora del modelo tradicional de cascada, el cual consiste en la secuencia de las etapas del tradicional (análisis, diseño,  implementación y pruebas) pero de una manera superficial, el cual se utiliza mayormente para obtener resultados a corto plazo del software (a veces se pueden obtener prototipos funcionales por varios incrementos), con la posibilidad de agregar o quitar funcionalidades conforme vaya avanzando el sistema, para obtener mejores resultados en cada uno de los módulos. Dicho esto, como primera fase o prototipo 1, se diseñó el sistema detectando a la persona de forma manual (mas adelante se explicará ésto), basándose únicamente en la posición de la persona (sin tomar en cuenta su altura), lo cual traería como resultado, que el escenario se adaptara a la posición de la persona rotando en el eje vertical, sin variar el ángulo de inclinación entre la proyección y el observador. Una vez implementado esta fase, pasaríamos a la siguiente o prototipo 2, el cual incluirá la detección automática y la obtención de la altura de la persona basado en la imagen de profundidad para la proyección correcta del escenario.
+Se siguió el patrón de desarrollo de software conocido como modelo incremental (o iterativo), que es una mejora del modelo tradicional de cascada, el cual consiste en la secuencia de las etapas del tradicional (análisis, diseño,  implementación y pruebas) pero de una manera superficial, el cual se utiliza mayormente para obtener resultados a corto plazo del software (a veces se pueden obtener prototipos funcionales por varios incrementos), con la posibilidad de agregar o quitar funcionalidades conforme vaya avanzando el sistema, para obtener mejores resultados en cada uno de los módulos. Dicho esto, como primera fase o prototipo 1, se diseñó el sistema detectando a la persona de forma manual (mas adelante se explicará ésto), basándose únicamente en la posición de la persona (sin tomar en cuenta su altura), lo cual traería como resultado, que el escenario se adaptara a la posición de la persona rotando en el eje vertical, sin variar el ángulo de inclinación entre la proyección y el observador. Una vez implementado esta fase, pasaríamos a la siguiente o prototipo 2, el cual incluirá la detección automática y la obtención de la altura de la persona basado en la imagen de profundidad para la proyección correcta del escenario.
 \begin{figure}[th]
 	\centering
 	\includegraphics[width=50mm]{./figuras/proto1}
 	\caption{Esquema general de prototipo 1} \label{fig:proto1}
 \end{figure}
 \subsection{Prototipo 1}
-Como fase inicial, este prototipo será la base para mejoras futuras, por lo que debe tener un diseño claro y bien estructurado, para evitar problemas en su funcionamiento a largo plazo. Constará con un fase inicial de detección la cual denominaremos detección manual debido a que se ajustará el umbral de detección de forma manual; ademas se diseñará el módulo para obtener la posición de la persona y el módulo para proyectar el escenario 3D con base a su posición (Figura \ref{fig:proto1})
+Como fase inicial, este prototipo será la base para mejoras futuras, por lo que debe tener un diseño claro y bien estructurado, para evitar problemas en su funcionamiento a largo plazo. Constará con un fase inicial de detección la cual denominaremos detección manual debido a que se ajustará el umbral de detección de forma manual; ademas se diseñará el módulo para obtener la posición de la persona y el módulo para proyectar el escenario 3D con base en su posición (Figura \ref{fig:proto1})
 
 \subsubsection{Detección manual}
-Como fue mencionado anteriormente, el diseño inicial de detección de la persona se basará dependiendo del umbral asignado por el usuario. Es decir, la imagen de profundidad será obtenida por el kinect en la escala de grises, se realizará un tratamiento a ésta imagen, se binarizará a través de un umbral dado por el usuario que delimitará el fondo de la persona para poder obtener su contorno. Debido a que el sensor de profundidad se encontrará a una distancia aproximada de 2.90 metros del suelo, capturando entonces la información desde arriba, el contorno que necesitaremos será el de la cabeza de la persona. El diseño de como se realizaría esta etapa lo encontramos en la Figura .
+Como fue mencionado anteriormente, el diseño inicial de detección de la persona se basará dependiendo del umbral asignado por el usuario. Es decir, la imagen de profundidad será obtenida por el kinect en la escala de grises, se binarizará a través de un umbral dado por el usuario que delimitará el fondo de la persona para poder obtener su contorno. Debido a que el sensor de profundidad se encontrará a una distancia aproximada de 2.90 metros del suelo, capturando entonces la información desde arriba, el contorno que necesitaremos será el de la cabeza de la persona. El esquema general que muestra los pasos para éste módulo lo podemos encontrar en la Figura (?).
 
+\subsubsection{Posición de la Persona}
+Definir las etapas de la posicion
+\subsubsection{Proyección con base en la Posición}
+definir las etapas de proyección y del uso del archivo
 \subsection{Prototipo 2}
-
+Despues de obtener un prototipo funcional, se incluyó a través de varias mejoras un prototipo 2, el cual involucra la optimización de la detección de la persona
+\subsection{Diseño preliminar de escenario}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%CAPÍTULO 4 -> IMPLEMENTACIÓN Y RESULTADOS%%%
