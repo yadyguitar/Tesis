@@ -249,7 +249,7 @@ La parte física encargada de adquirir la información y mostrarla, consta de lo
 \subsubsection{Kinect}
 \begin{figure}[thb]
 	\centering
-	\includegraphics[width=80mm]{./figuras/kinectEstructura}
+	\includegraphics[width=90mm]{./figuras/kinectEstructura}
 	\caption{Componentes internos del Kinect} \label{fig:kinectEstructura}
 \end{figure}
 %de: https://msdn.microsoft.com/en-us/library/jj131033.aspx%
@@ -257,7 +257,7 @@ Para la detección y obtención de la información de la persona, se requiere de
 Kinect es un dispositivo originalmente dirigido a los juegos de la consola Xbox 360\textregistered, desarrollado por Microsoft, el cual es capaz de a través de gestos, controlar e interactuar con la interfaz de la consola y los juegos en donde se requiera el uso de éste. Está conformado por los elementos mostrados en la Figura (\ref{fig:kinectEstructura}), en donde el sensor de profundidad, está formado por dos componentes: un proyector de luz infrarroja (IR Emitter) y un sensor CMOS monocromo estándar (IR Depth Sensor), los cuales se basan en un principio parecido al de triangulación entre los rayos visuales de los puntos proyectados sus correspondientes proyecciones en la imagen; además posee una cámara RGB (Color Sensor), cuyo funcionamiento es igual a la de una cámara digital estándar. También tiene 4 micrófonos (Microphone Array) y un motor (Tilt Motor) que es utilizado para orientar el campo de visión de las cámaras. Cabe mencionar, que existen dos modelos para la versión 1 del kinect, uno conocida como kinect para Xbox 360, que para su uso en una computadora se requiere de un adaptador USB, mientras que existe un kinect para Windows, que aunque posee mejoras, su costo hoy en día es mucho mas elevado que la versión para la consola y es por ello que en ése trabajo de tesis se optó por el primero. Teniendo en cuenta ello, en la tabla \ref{tabla:especKinect}, se presentan las características principales del kinect para xbox 360.\\
 \begin{table}[H]
 	\centering
-	\begin{tabular}{>{\centering\arraybackslash}m{7cm} >{\arraybackslash}m{7cm} }
+	\begin{tabular}{>{\centering\arraybackslash}m{6cm} >{\arraybackslash}m{7cm} }
 		\hline
 		Componentes & Características\\
 		\hline \hline
@@ -285,7 +285,7 @@ Kinect es un dispositivo originalmente dirigido a los juegos de la consola Xbox 
 		\end{itemize}\\
 		\hline
 	\end{tabular}
-	\caption{Especificaciones técnicas de Kinect para Xbox 360.}
+	\caption{Especificaciones técnicas del Kinect para Xbox 360.}
 	\label{tabla:especKinect}
 \end{table}
 \subsubsection{Proyector}
@@ -314,18 +314,19 @@ La computadora en la cual se realizará el desarrollo y ejecución del sistema, 
 \subsection{Software del sistema}
 En esta sección se describen los elementos de software que se utilizarán en el desarrollo del sistema, desde el lenguaje de programación, hasta los programas auxiliares y librerías, para una correcta comprensión del código del programa.
 \subsubsection{Sistema Operativo}
-
+El sistema operativo en donde se desarrollará el proyecto, será Ubuntu, específicamente la versión 16.04. Es una de las distribuciones Linux, que a diferencia de otros sistemas operativos es capaz de aprovechar mejor los recursos hardware, y que debido a su bajo consumo de éstos la velocidad de procesamiento es mayor. Una de las ventajas y una de las razones por la cual se utiliza eśte OS, es debido a que cuenta con el paquete de python 2.7 (por defecto) que será el lenguaje de programación utilizado, lo cual facilita el uso del mismo a través de terminal, además de que la instalación de las librerías y conexión con el kinect se obtienen de una manera sencilla a través de pocos comandos. 
 \subsubsection{Python}
-Python es un lenguaje de programación, y es el que se utilizará en el desarrollo del sistema. Esto debido a que 
-\subsubsection{Librerías complementarias}
-El uso de librerías en python es una ventaja.
-Numpy blablabla
-Math blablabla
-\paragraph{LibFreenect}
-Casi inmediatamente con la aparición de éste producto en el mercado, y debido a su facilidad de adquisición (precio muy bajo en comparación con otros sensores), muchas fuentes alternas a través de ingeniería inversa lograron desarrollar controladores que permitían acceder a la información tanto de la cámara RGB como la de profundidad, convirtiéndose entonces en un sistema de visión artificial muy utilizado por investigadores, que incluso Microsoft un tiempo después decidió lanzar un SDK (Software Development Kit) para el uso del kinect, pero dirigido a su sistema operativo y utilizando csharp como lenguaje de programación.\\
+Python es un lenguaje de programación interpretado multiparadigma y multiplataforma y será el lenguaje de programación que se utilizará para el desarrollo del sistema. Entre muchas de las ventajas que nos ofrece son su facilidad de uso, portabilidad, legibilidad y simplicidad. Fue diseñado principalmente para expresar en forma clara y directa instrucciones que debe seguir un programa, sin la necesidad de estar indicando los detalles de bajo nivel los cuales involucran los tipos de variables, sus tamaño y manejo de memoria; es por ello que se le denomina intérprete, debido a que es capaz de inferir esos detalles. Lamentablemente esas ventajas tienen su costo, debido a que se ejecuta mas lento que otros lenguajes tradicionales (por ejemplo los compilados, que son ejecutados directamente por el procesador). A pesar de ello, cada vez existen mas librerías (tales como numpy, math las cuales fueron utilizadas en el desarrollo) y herramientas de apoyo que agilizan algunos procesos que son mas lentos sin son desarrollados directamente en este lenguaje, lo cual convierte a python en un lenguaje potente. 
+\subsubsection{LibFreenect}
+Casi inmediatamente con la aparición del kinect en el mercado, y debido a su facilidad de adquisición (precio muy bajo en comparación con otros sensores), muchas fuentes alternas a través de ingeniería inversa lograron desarrollar controladores que permitían acceder a la información tanto de la cámara RGB como la de profundidad, convirtiéndose entonces en un sistema de visión artificial muy utilizado por investigadores, que incluso Microsoft un tiempo después decidió lanzar un SDK (Software Development Kit) para el uso del kinect, pero dirigido a su sistema operativo y utilizando csharp como lenguaje de programación.\\
+OpenKinect es una comunidad abierta, que distribuyen utilidades y aplicaciones para el kinect, y que ha sido de gran ayuda para el desarrollo de éste sistema. La librería en donde se encuentran todos los drivers, funciones y ejemplos es libfreenect, y está disponible para muchos sistemas operativos (entre ellos Ubuntu), es fácil su instalación y uso.
+\subsubsection{OpenCV}
+OpenCV (Open Source Computer Vision Library) es un librería que ha sido de gran utilidad en el área de la visión por computadora. Debido a que python es el lenguaje utilizado, el uso de ésta optimiza y agiliza el proceso de análisis y procesamiento de imágenes, lo cual es una gran ventaja debido a que el proceso se realiza en tiempo real. La versión utilizada es la 2.4.9.1, y se utilizó en gran medida para el tratamiento de las imágenes y detección, en conjunto con otra librería muy utilizada, numpy, que se utilizó mayormente para operaciones con matrices.
+\subsubsection{Blender}
+La información virtual que se mostrará en nuestro entorno, será diseñada a traves de Blender. Éste es un programa multiplataforma que se puede utilizar como modelado, animación y creación de gráficos en 3D. De igual manera, posee un motor de juegos internos, lo cual abre la posibilidad de que en futuro se pueda agregar una fase de interacción entre los elementos virtuales y el usuario. Es distribuido de forma gratuita y es compatible con Ubuntu. Además, el uso de la cámara virtual en blender nos proporciona el campo de vista que el observador debería tener, habiendo entonces una equivalencia entre la cámara y la persona en el mundo real. El lenguaje utilizado es python (pero la versión 3, lo cual tiene algunas diferencias con la 2.7). La versión de blender utilizada es la 2.76 
 \section{Diseño General del Sistema}
 Después de un análisis detallado de los elementos que podrían estar involucrados en el desarrollo del sistema, se determinó como diseño general el siguiente esquema (Figura \ref{fig:esquemaGeneral}), el cual se realizó para definir las etapas por las cuales tendrá que seguir el sistema cada vez que se capture una imagen (frame) a través de un sensor de profundidad, en éste caso el kinect de Microsoft\textcopyright, descrito en la sección anterior. Este análisis fue basado en la premisa de que para obtener la perspectiva de un persona correspondiente a un escenario 3D, se debe determinar primero si se encuentra una persona en el entorno, para así conocer la información respecto a ésta (es decir su posición y altura), y así poder proyectar los elementos virtuales en relación con el observador.\\
-\begin{figure}[th]
+\begin{figure}[tbh]
 	\centering
 	\includegraphics[width=60mm]{./figuras/esquemaGeneral}
 	\caption{Esquema general del sistema} \label{fig:esquemaGeneral}
@@ -333,21 +334,44 @@ Después de un análisis detallado de los elementos que podrían estar involucra
 Se siguió el patrón de desarrollo de software conocido como modelo incremental (o iterativo), que es una mejora del modelo tradicional de cascada, el cual consiste en la secuencia de las etapas del tradicional (análisis, diseño,  implementación y pruebas) pero de una manera superficial, el cual se utiliza mayormente para obtener resultados a corto plazo del software (a veces se pueden obtener prototipos funcionales por varios incrementos), con la posibilidad de agregar o quitar funcionalidades conforme vaya avanzando el sistema, para obtener mejores resultados en cada uno de los módulos. Dicho esto, como primera fase o prototipo 1, se diseñó el sistema detectando a la persona de forma manual (mas adelante se explicará ésto), basándose únicamente en la posición de la persona (sin tomar en cuenta su altura), lo cual traería como resultado, que el escenario se adaptara a la posición de la persona rotando en el eje vertical, sin variar el ángulo de inclinación entre la proyección y el observador. Una vez implementado esta fase, pasaríamos a la siguiente o prototipo 2, el cual incluirá la detección automática y la obtención de la altura de la persona basado en la imagen de profundidad para la proyección correcta del escenario.
 \begin{figure}[th]
 	\centering
-	\includegraphics[width=60mm]{./figuras/proto1}
+	\includegraphics[width=55mm]{./figuras/proto1}
 	\caption{Esquema general de prototipo 1} \label{fig:proto1}
 \end{figure}
 \subsection{Prototipo 1}
 Como fase inicial, este prototipo será la base para mejoras futuras, por lo que debe tener un diseño claro y bien estructurado, para evitar problemas en su funcionamiento a largo plazo. Constará con un fase inicial de detección la cual denominaremos detección manual debido a que se ajustará el umbral de detección de forma manual; ademas se diseñará el módulo para obtener la posición de la persona y el módulo para proyectar el escenario 3D con base en su posición (Figura \ref{fig:proto1})
 
 \subsubsection{Detección manual}
-Como fue mencionado anteriormente, el diseño inicial de detección de la persona se basará dependiendo del umbral asignado por el usuario. Es decir, la imagen de profundidad será obtenida por el kinect en la escala de grises, se binarizará a través de un umbral dado por el usuario que delimitará el fondo de la persona para poder obtener su contorno. Debido a que el sensor de profundidad se encontrará a una distancia aproximada de 2.90 metros del suelo, capturando entonces la información desde arriba, el contorno que necesitaremos será el de la cabeza de la persona. El esquema general que muestra los pasos para éste módulo lo podemos encontrar en la Figura (?).
-
+Como fue mencionado anteriormente, el diseño inicial de detección de la persona se basará dependiendo del umbral asignado por el usuario. Es decir, la imagen de profundidad será obtenida por el kinect en la escala de grises, se binarizará a través de un umbral dado por el usuario que delimitará el fondo de la persona para poder obtener su contorno. Debido a que el sensor de profundidad se encontrará a una distancia aproximada de 2.90 metros del suelo, capturando entonces la información desde arriba, el contorno que necesitaremos será el de la cabeza de la persona. El esquema general que muestra los pasos para éste módulo lo podemos encontrar en la Figura \ref{fig:deteccManual}.
+\begin{figure}[th]
+	\centering
+	\includegraphics[width=60mm]{./figuras/deteccionManual}
+	\caption{Esquema general de detección del prototipo 1} \label{fig:deteccManual}
+\end{figure}
 \subsubsection{Posición de la Persona}
-Definir las etapas de la posicion
+Para calcular la posición de la persona, se determinó que a través de la figura generada del contorno de ésta, se hallaría el punto central, lo cual, en otras palabras nos daría la posición del pixel calculado, en un rango de 640x480 (tamaño de la imagen), en donde ésta información se almacenará en un archivo para que se pueda obtener en blender. Para poder llegar a éste módulo, es necesario que se haya detectado la persona en la etapa anterior, de lo contrario, si no se obtiene un contorno, no se puede determinar la posición, y el programa se detendría. En la figura \ref{fig:posicion} se muestran los pasos para determinar la posición de la persona.
+\begin{figure}[th]
+	\centering
+	\includegraphics[width=60mm]{./figuras/posicion}
+	\caption{Esquema general de posición del prototipo 1} \label{fig:posicion}
+\end{figure}
 \subsubsection{Proyección con base en la Posición}
-definir las etapas de proyección y del uso del archivo
+Éste módulo, se encuentra internamente en el programa Blender, y es el encargado de posicionar la cámara virtual, en la posición obtenida del archivo. El escenario recreado posee las mismas medidas que el de la cámara depth 640x480, pero una unidad menos, es decir 64.0x48.0 debido a la gran expansión que ocasionaría si se utilizara las dimensiones originales. De éste modo, al obtener la posición de la persona, la posición de la cámara será la dimensión original dividida entre diez. Es importante recalcar, que aunque la cámara y la posición de la persona, serán equivalentes, al momento de posicionar la cámara virtual, esta mantendrá el mismo ángulo en el eje vertical, por lo cual será necesario dirigir el campo de vista de ésta hacia el centro del escenario calculando su respectivo ángulo. En la figura \ref{fig:proyeccionProto1}  podemos ver los pasos para llegar al objetivo final.
+\begin{figure}[th]
+	\centering
+	\includegraphics[width=55mm]{./figuras/proyeccionProto1}
+	\caption{Esquema general de proyección del prototipo 1} \label{fig:proyeccionProto1}
+\end{figure}
 \subsection{Prototipo 2}
-Despues de obtener un prototipo funcional, se incluyó a través de varias mejoras un prototipo 2, el cual involucra la optimización de la detección de la persona
+Después de obtener un prototipo funcional, se incluirá a través de varias mejoras un prototipo 2, el cual involucre la optimización de la detección de la persona, logrando que se realice de manera automática y la adición del módulo de la altura, lo cual implicaría modificar un poco la parte de proyección en blender y sus ángulos en la cámara. Lo anterior se puede resumir en la figura \ref{fig:proto2}, en donde se definen cada una de las etapas que se analizarán a continuación.
+\begin{figure}[th]
+	\centering
+	\includegraphics[width=150mm]{./figuras/proto2}
+	\caption{Esquema general de prototipo 2} \label{fig:proto2}
+\end{figure}
+
+\subsubsection{Detección automática}
+\subsubsection{Altura de la Persona}
+\subsubsection{Proyección en base a la Altura y Posición}
 \subsection{Diseño preliminar de escenario}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
