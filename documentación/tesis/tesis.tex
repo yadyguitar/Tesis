@@ -7,7 +7,8 @@
 \usepackage{fancyhdr}
 \usepackage{url}
 \usepackage{hyperref}
-\setcounter{secnumdepth}{3}
+\setcounter{secnumdepth}{3}%hasta subsubsection
+\setcounter{tocdepth}{3}
 \usepackage{subfigure} % subfiguras
 \usepackage{multirow, array} % para las tablas
 \usepackage{float} % para usar [H]
@@ -370,6 +371,8 @@ Después de obtener un prototipo funcional, se incluirá a través de varias mej
 \end{figure}
 
 \subsubsection{Detección automática}
+Éste módulo es basado en la técnica usada en el anterior, la detección manual, el cual se basa en el mismo concepto de ajustar un umbral de tal modo que solo se pueda determinar la cabeza de la persona y así poder marcar el contorno y proceder a los modulos siguientes. La diferencia entonces, la encontramos en que desde un inicio el umbral se ajusta de manera automática, de tal modo que si una persona de mayor o menor altura, siempre se determinará un rango de área determinada. El área se determinará a través de un rectangulo debido a la irregularidad de la forma generada por el contorno determinada por la imagen de profundidad y para que sea un modelo de aproximación.
+
 \subsubsection{Altura de la Persona}
 \subsubsection{Proyección en base a la Altura y Posición}
 \subsection{Diseño preliminar de escenario}
