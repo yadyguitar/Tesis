@@ -9,6 +9,10 @@
 \usepackage{hyperref}
 \setcounter{secnumdepth}{3}
 \usepackage{subfigure} % subfiguras
+\usepackage{multirow, array} % para las tablas
+\usepackage{float} % para usar [H]
+
+
 \hypersetup{
 	colorlinks,
 	citecolor=black,
@@ -19,7 +23,7 @@
 
 \begin{document}
 \renewcommand{\listtablename}{Índice de tablas}
-
+\renewcommand{\tablename}{Tabla}
 
 %título
 
@@ -243,15 +247,74 @@ Antes de iniciar el desarrollo de cualquier sistema, se debe realizar un anális
 \subsection{Hardware del sistema}
 La parte física encargada de adquirir la información y mostrarla, consta de los siguientes dispositivos: computadora, sensor RGB-D (debido a que se utilizará un Kinect\textregistered) y un proyector.\\
 \subsubsection{Kinect}
-Para la detección y obtención de la información de la persona, se requiere de un dispositivo el cual nos proporcione todos los datos necesarios para facilitar el desarrollo del sistema. Para ello, se propuso el uso de un sensor de profundidad el cual nos brindaría todo lo necesario para la fase de programación. Es por eso que se decidió utilizar un Kinect\textregistered\ versión 1, debido a su bajo costo en el mercado y a que posee dicho sensor de profundidad, además de una cámara RGB la cual se podría utilizar en trabajo futuro para conseguir un modelo de detección mas robusto. Dicho esto, procedamos a conocer a detalle éste dispositivo.
-
-\subsubsection{Proyector y escenario}
+\begin{figure}[thb]
+	\centering
+	\includegraphics[width=80mm]{./figuras/kinectEstructura}
+	\caption{Componentes internos del Kinect} \label{fig:kinectEstructura}
+\end{figure}
+%de: https://msdn.microsoft.com/en-us/library/jj131033.aspx%
+Para la detección y obtención de la información de la persona, se requiere de un dispositivo el cual nos proporcione todos los datos necesarios para facilitar el desarrollo del sistema. Para ello, se propuso el uso de un sensor de profundidad el cual nos brindaría todo lo necesario para la fase de programación. Es por eso que se decidió utilizar un Kinect\textregistered\ versión 1, debido a su bajo costo en el mercado y a que posee dicho sensor de profundidad, además de una cámara RGB la cual se podría utilizar en trabajo futuro para conseguir un modelo de detección mas robusto. Dicho esto, procedamos a conocerlo a detalle.\\
+Kinect es un dispositivo originalmente dirigido a los juegos de la consola Xbox 360\textregistered, desarrollado por Microsoft, el cual es capaz de a través de gestos, controlar e interactuar con la interfaz de la consola y los juegos en donde se requiera el uso de éste. Está conformado por los elementos mostrados en la Figura (\ref{fig:kinectEstructura}), en donde el sensor de profundidad, está formado por dos componentes: un proyector de luz infrarroja (IR Emitter) y un sensor CMOS monocromo estándar (IR Depth Sensor), los cuales se basan en un principio parecido al de triangulación entre los rayos visuales de los puntos proyectados sus correspondientes proyecciones en la imagen; además posee una cámara RGB (Color Sensor), cuyo funcionamiento es igual a la de una cámara digital estándar. También tiene 4 micrófonos (Microphone Array) y un motor (Tilt Motor) que es utilizado para orientar el campo de visión de las cámaras. Cabe mencionar, que existen dos modelos para la versión 1 del kinect, uno conocida como kinect para Xbox 360, que para su uso en una computadora se requiere de un adaptador USB, mientras que existe un kinect para Windows, que aunque posee mejoras, su costo hoy en día es mucho mas elevado que la versión para la consola y es por ello que en ése trabajo de tesis se optó por el primero. Teniendo en cuenta ello, en la tabla \ref{tabla:especKinect}, se presentan las características principales del kinect para xbox 360.\\
+\begin{table}[H]
+	\centering
+	\begin{tabular}{>{\centering\arraybackslash}m{7cm} >{\arraybackslash}m{7cm} }
+		\hline
+		Componentes & Características\\
+		\hline \hline
+		Cámaras: Profundidad y Color
+		&
+\begin{itemize}
+	\item Resolución: 320x240 ó 640x480
+	\item Campo de Visión: 43$^{\circ}$ vertical, 57$^{\circ}$ horizontal
+	\item Velocidad de frames: 30 Frames por segundo (30 FPS)
+	\item Distancia recomendada: entre 0.8m y 3.5 m
+\end{itemize}	
+		\\
+		\hline
+		Micrófonos & 
+		\begin{itemize}
+			\item Posee 4 micrófonos (ADC), con cancelación de eco acústico y supresión de ruido
+			\item Frecuencia: 16-khz
+			\item 24-bit mono modulación de código de pulso (PCM)
+		\end{itemize}
+		 \\
+		\hline
+		Motor &
+		\begin{itemize}
+			\item  Rango de inclinación: $ \pm $27$^{\circ}$ 
+		\end{itemize}\\
+		\hline
+	\end{tabular}
+	\caption{Especificaciones técnicas de Kinect para Xbox 360.}
+	\label{tabla:especKinect}
+\end{table}
+\subsubsection{Proyector}
+Debido a que éste trabajo de tesis es basado en la tecnología SAR, el uso de un proyector digital es indispensable para mostrar la información virtual. La calidad de éstos varía principalmente en el tipo de tecnología utilizada, modelo y distancia focal con el objetivo. A partir de ello, los elementos a tener en cuenta al momento de elegir un proyector son: tamaño de la imagen, resolución, luminosidad y contraste, tiempo de vida de la lámpara y el nivel sonoro. Enfocándonos en la luminosidad de un proyector, ésta es expresada en lúmenes y se puede definir como la medición de la emisión de color de un proyector. Mientras mayor sea su número, más vivo y real será la imagen, que es uno de los objetivos que se intenta conseguir en éste trabajo de tesis.\\
+Para la implementación se utilizará un proyector por parte de la Universidad Veracruzana con las siguientes características:
+\begin{itemize}
+	\item x lúmenes
+	\item --x-- píxeles
+\end{itemize}
+\paragraph{Lugar de proyección}
+Para obtener buenos resultados de la imagen, es necesario tomar en cuenta el color y el material en donde será proyectado. En un inicio se había considerado proyectar la imagen encima de una mesa de color negro (éste tipo de proyección es considerada como front-projection que fue explicado en el capítulo anterior). Sin embargo, esta disposición del proyector, no permite que el observador se acerque mucho a la proyección, debido a que puede obstruir la imagen proyectada con su cabeza o manos. Como solución a ello, se decidió utilizar la técnica de retroproyección, la cual permitirá acercarse a la proyección sin la limitante anterior debido a que el proyector se encontrará dentro de una mesa y la imagen será proyectada de adentro hacia afuera. El material ideal para este tipo de proyección es conocido como DNP Holoscreen, pero el precio es muy elevado, rondando los 500 dls, por lo que se tiene pensado utilizar materiales de papel, en donde se pueda retener parte de la luz proyectada.\\
 \subsubsection{Computadora}
-Después de un análisis previo del hardware que se utilizará, se determinaron las siguientes características recomendables para que el sistema funcione correctamente.
- 
+Para determinar las características mínimas que se necesitan para que nuestro sistema funcione correctamente, se debe realizar un análisis previo del hardware y software que se utilizará. Después de dicho análisis, se determinó que una computadora con los siguientes requisitos mínimos no debería tener problemas en la ejecución del programa:
+\begin{itemize}
+	\item Procesador de 32 bits (x86) o 64 bits (x64)
+	\item Procesador de doble núcleo, de 2.66-GHz o más rápido
+	\item Bus USB 2.0 dedicado
+	\item 2 GB de RAM
+	\item Puerto VGA para proyector
+\end{itemize}
+La computadora en la cual se realizará el desarrollo y ejecución del sistema, es una laptop dell, modelo 1550 Precision, que cuenta con las siguientes características: 
+\begin{itemize}
+	\item información de la workstation dell
+\end{itemize}
 
 \subsection{Software del sistema}
 En esta sección se describen los elementos de software que se utilizarán en el desarrollo del sistema, desde el lenguaje de programación, hasta los programas auxiliares y librerías, para una correcta comprensión del código del programa.
+\subsubsection{Sistema Operativo}
+
 \subsubsection{Python}
 Python es un lenguaje de programación, y es el que se utilizará en el desarrollo del sistema. Esto debido a que 
 \subsubsection{Librerías complementarias}
@@ -259,7 +322,7 @@ El uso de librerías en python es una ventaja.
 Numpy blablabla
 Math blablabla
 \paragraph{LibFreenect}
-
+Casi inmediatamente con la aparición de éste producto en el mercado, y debido a su facilidad de adquisición (precio muy bajo en comparación con otros sensores), muchas fuentes alternas a través de ingeniería inversa lograron desarrollar controladores que permitían acceder a la información tanto de la cámara RGB como la de profundidad, convirtiéndose entonces en un sistema de visión artificial muy utilizado por investigadores, que incluso Microsoft un tiempo después decidió lanzar un SDK (Software Development Kit) para el uso del kinect, pero dirigido a su sistema operativo y utilizando csharp como lenguaje de programación.\\
 \section{Diseño General del Sistema}
 Después de un análisis detallado de los elementos que podrían estar involucrados en el desarrollo del sistema, se determinó como diseño general el siguiente esquema (Figura \ref{fig:esquemaGeneral}), el cual se realizó para definir las etapas por las cuales tendrá que seguir el sistema cada vez que se capture una imagen (frame) a través de un sensor de profundidad, en éste caso el kinect de Microsoft\textcopyright, descrito en la sección anterior. Este análisis fue basado en la premisa de que para obtener la perspectiva de un persona correspondiente a un escenario 3D, se debe determinar primero si se encuentra una persona en el entorno, para así conocer la información respecto a ésta (es decir su posición y altura), y así poder proyectar los elementos virtuales en relación con el observador.\\
 \begin{figure}[th]
@@ -270,7 +333,7 @@ Después de un análisis detallado de los elementos que podrían estar involucra
 Se siguió el patrón de desarrollo de software conocido como modelo incremental (o iterativo), que es una mejora del modelo tradicional de cascada, el cual consiste en la secuencia de las etapas del tradicional (análisis, diseño,  implementación y pruebas) pero de una manera superficial, el cual se utiliza mayormente para obtener resultados a corto plazo del software (a veces se pueden obtener prototipos funcionales por varios incrementos), con la posibilidad de agregar o quitar funcionalidades conforme vaya avanzando el sistema, para obtener mejores resultados en cada uno de los módulos. Dicho esto, como primera fase o prototipo 1, se diseñó el sistema detectando a la persona de forma manual (mas adelante se explicará ésto), basándose únicamente en la posición de la persona (sin tomar en cuenta su altura), lo cual traería como resultado, que el escenario se adaptara a la posición de la persona rotando en el eje vertical, sin variar el ángulo de inclinación entre la proyección y el observador. Una vez implementado esta fase, pasaríamos a la siguiente o prototipo 2, el cual incluirá la detección automática y la obtención de la altura de la persona basado en la imagen de profundidad para la proyección correcta del escenario.
 \begin{figure}[th]
 	\centering
-	\includegraphics[width=50mm]{./figuras/proto1}
+	\includegraphics[width=60mm]{./figuras/proto1}
 	\caption{Esquema general de prototipo 1} \label{fig:proto1}
 \end{figure}
 \subsection{Prototipo 1}
