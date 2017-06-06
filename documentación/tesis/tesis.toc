@@ -41,10 +41,10 @@
 \contentsline {subsubsection}{\numberline {3.2.1.3}Proyecci\IeC {\'o}n con base en la Posici\IeC {\'o}n}{22}{subsubsection.3.2.1.3}
 \contentsline {subsection}{\numberline {3.2.2}Prototipo 2}{22}{subsection.3.2.2}
 \contentsline {subsubsection}{\numberline {3.2.2.1}Detecci\IeC {\'o}n autom\IeC {\'a}tica}{23}{subsubsection.3.2.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2.2}Altura de la Persona}{24}{subsubsection.3.2.2.2}
-\contentsline {subsubsection}{\numberline {3.2.2.3}Proyecci\IeC {\'o}n en base a la Altura y Posici\IeC {\'o}n}{24}{subsubsection.3.2.2.3}
-\contentsline {subsection}{\numberline {3.2.3}Dise\IeC {\~n}o preliminar de escenario}{24}{subsection.3.2.3}
-\contentsline {chapter}{\numberline {4}Implementaci\IeC {\'o}n y resultados}{25}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclusiones}{26}{chapter.5}
-\contentsline {section}{\numberline {5.1}Trabajo Futuro}{26}{section.5.1}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{27}{section.5.1}
+\contentsline {subsubsection}{\numberline {3.2.2.2}Altura de la Persona}{25}{subsubsection.3.2.2.2}
+\contentsline {subsubsection}{\numberline {3.2.2.3}Proyecci\IeC {\'o}n en base a la Altura y Posici\IeC {\'o}n}{25}{subsubsection.3.2.2.3}
+\contentsline {subsection}{\numberline {3.2.3}Dise\IeC {\~n}o preliminar de escenario}{26}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Implementaci\IeC {\'o}n y resultados}{27}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclusiones}{28}{chapter.5}
+\contentsline {section}{\numberline {5.1}Trabajo Futuro}{28}{section.5.1}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{29}{section.5.1}

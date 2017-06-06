@@ -371,11 +371,29 @@ Después de obtener un prototipo funcional, se incluirá a través de varias mej
 \end{figure}
 
 \subsubsection{Detección automática}
-Éste módulo es basado en la técnica usada en el anterior, la detección manual, el cual se basa en el mismo concepto de ajustar un umbral de tal modo que solo se pueda determinar la cabeza de la persona y así poder marcar el contorno y proceder a los modulos siguientes. La diferencia entonces, la encontramos en que desde un inicio el umbral se ajusta de manera automática, de tal modo que si una persona de mayor o menor altura, siempre se determinará un rango de área determinada. El área se determinará a través de un rectangulo debido a la irregularidad de la forma generada por el contorno determinada por la imagen de profundidad y para que sea un modelo de aproximación.
-
+Basado en los pasos definidos en el módulo de detección manual (donde para detectar el contorno de la cabeza de la persona se ajusta el umbral por el mismo usuario dependiendo de la altura de éste), se diseña un modelo de detección capaz de ajustar éste umbral de manera automática, basado en un rango de área permitida. Es decir, si el umbral es muy elevado, el contorno detectado estará involucrando más allá del área de la cabeza de la persona (por ejemplo los hombros) dando como resultado que el cálculo de la posición podría verse afectada. Por lo tanto, se define un intervalo de área mínima y máxima permitida, calculada a través de un rectángulo delimitador que contendrá el contorno (esto para dar un poco mas de libertad en las áreas detectadas), y dependiendo del área calculada del rectángulo delimitador con el umbral actual, se irá ajustando éste umbral hasta que su área se encuentre dentro del rango definido. Al tomar en cuenta esto, el umbral se ajusta de manera automática, de tal modo que si una persona es de mayor o menor altura, detectará la región de la cabeza, y ésta aunque varíe su altura (se incline o agache) siempre se seguirá el área de la cabeza, algo que en el módulo anterior no se podía realizar. En la figura \ref{fig:deteccAutomatica}, se muestra un esquema de cómo se realizaría ésta etapa del sistema.
+\begin{figure}[th]
+	\centering
+	\includegraphics[width=150mm]{./figuras/deteccionAutomatica}
+	\caption{Esquema general de detección automática} \label{fig:deteccAutomatica}
+\end{figure}
 \subsubsection{Altura de la Persona}
+Éste tal vez sea el módulo mas rápido y fácil de implementar. Debido a que la detección automática ajusta el umbral para obtener el contorno de la cabeza de la persona y luego es obtenida la posición a través el centro del contorno, el cual se puede interpretar como la posición en píxeles de la imagen, la altura entonces es determinada por el valor de la imagen de profundidad en el punto proporcionado por el módulo de posición. Por lo tanto, éste módulo podría encontrarse dentro del módulo de posición y almacenar la información en un archivo como coordenadas en un espacio 3D, para su posterior uso en el módulo de proyección.
 \subsubsection{Proyección en base a la Altura y Posición}
+En lo que respecta a éste módulo, al adicionar la fase de detección de la altura de la persona, se debe hacer una equivalencia en el eje vertical de la cámara en blender con el valor dado por la imagen de profundidad. Una vez realizado el paso anterior, se orienta la cámara, es decir se inclina enfocando al centro del escenario (ésto se verá en detalle en la fase de implementación). En la figura \ref{fig:proyeccionProto2} se muestra un resumen de lo explicado anteriormente.
+\begin{figure}[th]
+	\centering
+	\includegraphics[width=50mm]{./figuras/proyeccionProto2}
+	\caption{Esquema general de proyección de prototipo 2} \label{fig:proyeccionProto2}
+\end{figure}
 \subsection{Diseño preliminar de escenario}
+El lugar en donde se proyectará el escenario virtual 3D y se realizarán las pruebas del sistema, será a través de una técnica conocida como retroproyección, explicada anteriormente, a través de un material semi-translúcido, simulando una mesa, en donde el usuario podrá caminar al rededor de ésta, pudiendo abarcar todo el campo de visión, es decir, podrá darle una vuelta de 360$^{\circ}$ en torno a ésta. Como fue analizado en la sección anterior, como diseño previo del escenario en donde serán realizadas las pruebas del sistema, constará de un proyector que se localizará en la parte inferior de la mesa. Para que tengamos una idea mas clara de lo explicado, en la figura \ref{fig:disenoPre}  se muestra un diseño previo del escenario de pruebas.
+\begin{figure}[th]
+	\centering
+	\includegraphics[width=110mm]{./figuras/disenoPre}
+	\caption{Diseño preliminar del escenario de pruebas} \label{fig:disenoPre}
+\end{figure}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%CAPÍTULO 4 -> IMPLEMENTACIÓN Y RESULTADOS%%%
