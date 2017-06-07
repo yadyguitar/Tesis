@@ -11,11 +11,37 @@
 \BOOKMARK [1][-]{section.1.4}{Hip\363tesis}{chapter.1}% 11
 \BOOKMARK [0][-]{chapter.2}{Marco Te\363rico}{}% 12
 \BOOKMARK [1][-]{section.2.1}{Antecedentes}{chapter.2}% 13
-\BOOKMARK [2][-]{subsection.2.1.1}{Projection mapping}{section.2.1}% 14
-\BOOKMARK [2][-]{subsection.2.1.2}{Spatial Augmented Reality}{section.2.1}% 15
+\BOOKMARK [2][-]{subsection.2.1.1}{Realidad Aumentada}{section.2.1}% 14
+\BOOKMARK [3][-]{subsubsection.2.1.1.1}{T\351cnicas de visualizaci\363n}{subsection.2.1.1}% 15
 \BOOKMARK [1][-]{section.2.2}{Estado del arte}{chapter.2}% 16
-\BOOKMARK [0][-]{chapter.3}{Dise\361o}{}% 17
-\BOOKMARK [0][-]{chapter.4}{Implementaci\363n y resultados}{}% 18
-\BOOKMARK [0][-]{chapter.5}{Conclusiones}{}% 19
-\BOOKMARK [1][-]{section.5.1}{Trabajo Futuro}{chapter.5}% 20
-\BOOKMARK [0][-]{section.5.1}{Bibliograf\355a}{}% 21
+\BOOKMARK [2][-]{subsection.2.2.1}{Projection mapping}{section.2.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.2}{Interacci\363n en SAR}{section.2.2}% 18
+\BOOKMARK [3][-]{subsubsection.2.2.2.1}{Proyecciones de Sobremesa}{subsection.2.2.2}% 19
+\BOOKMARK [3][-]{subsubsection.2.2.2.2}{Proyecciones en superficies irregulares}{subsection.2.2.2}% 20
+\BOOKMARK [3][-]{subsubsection.2.2.2.3}{Proyecci\363n en torno a la perspectiva}{subsection.2.2.2}% 21
+\BOOKMARK [0][-]{chapter.3}{Dise\361o}{}% 22
+\BOOKMARK [1][-]{section.3.1}{An\341lisis de Requerimientos}{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.1.1}{Hardware del sistema}{section.3.1}% 24
+\BOOKMARK [3][-]{subsubsection.3.1.1.1}{Kinect}{subsection.3.1.1}% 25
+\BOOKMARK [3][-]{subsubsection.3.1.1.2}{Proyector}{subsection.3.1.1}% 26
+\BOOKMARK [3][-]{subsubsection.3.1.1.3}{Computadora}{subsection.3.1.1}% 27
+\BOOKMARK [2][-]{subsection.3.1.2}{Software del sistema}{section.3.1}% 28
+\BOOKMARK [3][-]{subsubsection.3.1.2.1}{Sistema Operativo}{subsection.3.1.2}% 29
+\BOOKMARK [3][-]{subsubsection.3.1.2.2}{Python}{subsection.3.1.2}% 30
+\BOOKMARK [3][-]{subsubsection.3.1.2.3}{LibFreenect}{subsection.3.1.2}% 31
+\BOOKMARK [3][-]{subsubsection.3.1.2.4}{OpenCV}{subsection.3.1.2}% 32
+\BOOKMARK [3][-]{subsubsection.3.1.2.5}{Blender}{subsection.3.1.2}% 33
+\BOOKMARK [1][-]{section.3.2}{Dise\361o General del Sistema}{chapter.3}% 34
+\BOOKMARK [2][-]{subsection.3.2.1}{Prototipo 1}{section.3.2}% 35
+\BOOKMARK [3][-]{subsubsection.3.2.1.1}{Detecci\363n manual}{subsection.3.2.1}% 36
+\BOOKMARK [3][-]{subsubsection.3.2.1.2}{Posici\363n de la Persona}{subsection.3.2.1}% 37
+\BOOKMARK [3][-]{subsubsection.3.2.1.3}{Proyecci\363n con base en la Posici\363n}{subsection.3.2.1}% 38
+\BOOKMARK [2][-]{subsection.3.2.2}{Prototipo 2}{section.3.2}% 39
+\BOOKMARK [3][-]{subsubsection.3.2.2.1}{Detecci\363n autom\341tica}{subsection.3.2.2}% 40
+\BOOKMARK [3][-]{subsubsection.3.2.2.2}{Altura de la Persona}{subsection.3.2.2}% 41
+\BOOKMARK [3][-]{subsubsection.3.2.2.3}{Proyecci\363n en base a la Altura y Posici\363n}{subsection.3.2.2}% 42
+\BOOKMARK [2][-]{subsection.3.2.3}{Dise\361o preliminar de escenario}{section.3.2}% 43
+\BOOKMARK [0][-]{chapter.4}{Implementaci\363n y resultados}{}% 44
+\BOOKMARK [0][-]{chapter.5}{Conclusiones}{}% 45
+\BOOKMARK [1][-]{section.5.1}{Trabajo Futuro}{chapter.5}% 46
+\BOOKMARK [0][-]{section.5.1}{Bibliograf\355a}{}% 47

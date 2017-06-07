@@ -1,6 +1,24 @@
 \select@language {spanish}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Funcionamiento de los HMD's}}{7}{figure.2.1}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Optical see-through }}}{7}{figure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Video see-through }}}{7}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Ejemplos de AR en smartphones y tablets}}{8}{figure.2.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Pokemon Go}}}{8}{figure.2.2}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Snapchat}}}{8}{figure.2.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {LearnAR}}}{8}{figure.2.2}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Google Translater}}}{8}{figure.2.2}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Componentes internos del Kinect}}{13}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Esquema general del sistema}}{18}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Esquema general de prototipo 1}}{19}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Esquema general de detecci\IeC {\'o}n del prototipo 1}}{20}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Esquema general de posici\IeC {\'o}n del prototipo 1}}{21}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Esquema general de proyecci\IeC {\'o}n del prototipo 1}}{22}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Esquema general de prototipo 2}}{23}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Esquema general de detecci\IeC {\'o}n autom\IeC {\'a}tica}}{24}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Esquema general de proyecci\IeC {\'o}n de prototipo 2}}{25}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Dise\IeC {\~n}o preliminar del escenario de pruebas}}{26}{figure.3.10}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

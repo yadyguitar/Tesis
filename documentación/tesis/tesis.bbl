@@ -1,50 +1,181 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{projectionmapping}
+{Projection Mapping Central}.
+\newblock \url{http://projection-mapping.org}, 2017.
+
+\bibitem{azuma2001}
+{\sc Azuma, R., Baillot, Y., Behringer, R., Feiner, S., Julier, S., and
+  MacIntyre, B.}
+\newblock Recent advances in augmented reality.
+\newblock {\em IEEE computer graphics and applications 21}, 6 (2001), 34--47.
+
+\bibitem{azuma1997}
+{\sc Azuma, R.~T.}
+\newblock A survey of augmented reality.
+\newblock {\em Presence: Teleoperators and virtual environments 6}, 4 (1997),
+  355--385.
+
+\bibitem{benko2012}
+{\sc Benko, H., Jota, R., and Wilson, A.}
+\newblock Miragetable: freehand interaction on a projected augmented reality
+  tabletop.
+\newblock In {\em Proceedings of the SIGCHI conference on human factors in
+  computing systems\/} (2012), ACM, pp.~199--208.
+
+\bibitem{benko2014}
+{\sc Benko, H., Wilson, A.~D., and Zannier, F.}
+\newblock Dyadic projected spatial augmented reality.
+\newblock In {\em Proceedings of the 27th annual ACM symposium on User
+  interface software and technology\/} (2014), ACM, pp.~645--655.
 
 \bibitem{Bimber2005}
 {\sc Bimber, O., and Raskar, R.}
 \newblock {\em Spatial augmented reality: merging real and virtual worlds}.
 \newblock CRC press, 2005.
 
-\bibitem{Dorward2016}
-{\sc Dorward, L., Mittermeier, J., Sandbrook, C., and Spooner, F.}
-\newblock Pokémon go: Benefits, costs, and lessons for the conservation
+\bibitem{dietz2001}
+{\sc Dietz, P., and Leigh, D.}
+\newblock Diamondtouch: a multi-user touch technology.
+\newblock In {\em Proceedings of the 14th annual ACM symposium on User
+  interface software and technology\/} (2001), ACM, pp.~219--226.
+
+\bibitem{dohse2008}
+{\sc Dohse, K., Dohse, T., Still, J.~D., and Parkhurst, D.~J.}
+\newblock Enhancing multi-user interaction with multi-touch tabletop displays
+  using hand tracking.
+\newblock In {\em Advances in Computer-Human Interaction, 2008 First
+  International Conference on\/} (2008), IEEE, pp.~297--302.
+
+\bibitem{Dorsey1991}
+{\sc Dorsey, J.~O., Sillion, F.~X., and Greenberg, D.~P.}
+\newblock Design and simulation of opera lighting and projection effects.
+\newblock In {\em ACM SIGGRAPH computer graphics\/} (1991), vol.~25, ACM,
+  pp.~41--50.
+
+\bibitem{Dorward2017}
+{\sc Dorward, L.~J., Mittermeier, J.~C., Sandbrook, C., and Spooner, F.}
+\newblock Pok{\'e}mon go: benefits, costs, and lessons for the conservation
   movement.
-\newblock {\em Conservation Letters 10(1)\/} (2016), 160--165.
+\newblock {\em Conservation Letters 10}, 1 (2017), 160--165.
 
 \bibitem{Frund2004}
-{\sc Fründ, J., Gausemeier, J., Matysczok, C., and Radkowski, R.}
+{\sc Fr{\"u}nd, J., Gausemeier, J., Matysczok, C., and Radkowski, R.}
 \newblock Using augmented reality technology to support the automobile
   development.
-\newblock {\em International Conference on Computer Supported Cooperative work
-  in Design\/} (2004), 289--298.
+\newblock In {\em International Conference on Computer Supported Cooperative
+  Work in Design\/} (2004), Springer, pp.~289--298.
+
+\bibitem{geller2006}
+{\sc Geller, T.}
+\newblock Interactive tabletop exhibits in museums and galleries.
+\newblock {\em IEEE Computer Graphics and Applications 26}, 5 (2006), 6--11.
+
+\bibitem{hilliges2009}
+{\sc Hilliges, O., Izadi, S., Wilson, A.~D., Hodges, S., Garcia-Mendoza, A.,
+  and Butz, A.}
+\newblock Interactions in the air: adding further depth to interactive
+  tabletops.
+\newblock In {\em Proceedings of the 22nd annual ACM symposium on User
+  interface software and technology\/} (2009), ACM, pp.~139--148.
+
+\bibitem{jones2014}
+{\sc Jones, B., Sodhi, R., Murdock, M., Mehra, R., Benko, H., Wilson, A., Ofek,
+  E., MacIntyre, B., Raghuvanshi, N., and Shapira, L.}
+\newblock Roomalive: magical experiences enabled by scalable, adaptive
+  projector-camera units.
+\newblock In {\em Proceedings of the 27th annual ACM symposium on User
+  interface software and technology\/} (2014), ACM, pp.~637--644.
+
+\bibitem{jones2013}
+{\sc Jones, B.~R., Benko, H., Ofek, E., and Wilson, A.~D.}
+\newblock Illumiroom: peripheral projected illusions for interactive
+  experiences.
+\newblock In {\em Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems\/} (2013), ACM, pp.~869--878.
 
 \bibitem{Kounavis2012}
 {\sc Kounavis, C.~D., Kasimati, A.~E., and Zamani, E.~D.}
 \newblock Enhancing the tourism experience through mobile augmented reality:
-  Challenges and propects.
+  Challenges and prospects.
 \newblock {\em International Journal of Engineering Business Management 4\/}
   (2012), 10.
 
+\bibitem{kreylos2016}
+{\sc Kreylos, O.}
+\newblock Augmented reality sandbox.
+\newblock {\em Recuperado de http://idav. ucdavis. edu/\~{}
+  okreylos/ResDev/SARndbox\/} (2016).
+
 \bibitem{Marescaux2004}
 {\sc Marescaux, J., Rubino, F., Arenas, M., Mutter, D., and Soler, L.}
-\newblock Augmented-reality-assisted laparoscopic adrenalectomy.
-\newblock {\em Jama 292(18)\/} (2004), 2211--2215.
+\newblock Augmented-reality--assisted laparoscopic adrenalectomy.
+\newblock {\em Jama 292}, 18 (2004), 2211--2215.
+
+\bibitem{milgram1994}
+{\sc Milgram, P., and Kishino, F.}
+\newblock A taxonomy of mixed reality visual displays.
+\newblock {\em IEICE TRANSACTIONS on Information and Systems 77}, 12 (1994),
+  1321--1329.
 
 \bibitem{Pausch1992}
 {\sc Pausch, R., Crea, T., and Conway, M.}
 \newblock A literature survey for virtual environments: Military flight
   simulator visual systems and simulator sickness.
-\newblock {\em Presence: Teleoperators and Virtual Environments 1(3)\/} (1992),
+\newblock {\em Presence: Teleoperators \& Virtual Environments 1}, 3 (1992),
   344--363.
 
 \bibitem{Ploder1995}
 {\sc Ploder, O., Wagner, A., Enislidis, G., and Ewers, R.}
 \newblock Computer-assisted intraoperative visualization of dental implants.
   augmented reality in medicine.
-\newblock {\em Der Radiologe 35(9)\/} (1995), 569--572.
+\newblock {\em Der Radiologe 35}, 9 (1995), 569--572.
+
+\bibitem{Raskar1998b}
+{\sc Raskar, R., Welch, G., Cutts, M., Lake, A., Stesin, L., and Fuchs, H.}
+\newblock The office of the future: A unified approach to image-based modeling
+  and spatially immersive displays.
+\newblock In {\em Proceedings of the 25th annual conference on Computer
+  graphics and interactive techniques\/} (1998), ACM, pp.~179--188.
+
+\bibitem{Raskar1998a}
+{\sc Raskar, R., Welch, G., and Fuchs, H.}
+\newblock Spatially augmented reality.
+\newblock In {\em First IEEE Workshop on Augmented Reality (IWAR’98)\/}
+  (1998), Citeseer, pp.~11--20.
+
+\bibitem{Raskar2001}
+{\sc Raskar, R., Welch, G., Low, K.-L., and Bandyopadhyay, D.}
+\newblock Shader lamps: Animating real objects with image-based illumination.
+\newblock In {\em Rendering Techniques 2001}. Springer, 2001, pp.~89--102.
 
 \bibitem{Sol2016}
 {\sc Roo, J.~S., and Hachet, M.}
 \newblock Interacting with spatial augmented reality.
+
+\bibitem{Starner2003}
+{\sc Starner, T., Leibe, B., Minnen, D., Westyn, T., Hurst, A., and Weeks, J.}
+\newblock The perceptive workbench: Computer-vision-based gesture tracking,
+  object tracking, and 3d reconstruction for augmented desks.
+\newblock {\em Machine Vision and Applications 14}, 1 (2003), 59--71.
+
+\bibitem{Under1997}
+{\sc Underkoffler, J.}
+\newblock A view from the luminous room.
+\newblock {\em Personal Technologies 1}, 2 (1997), 49--59.
+
+\bibitem{wilson2005}
+{\sc Wilson, A.~D.}
+\newblock Playanywhere: a compact interactive tabletop projection-vision
+  system.
+\newblock In {\em Proceedings of the 18th annual ACM symposium on User
+  interface software and technology\/} (2005), ACM, pp.~83--92.
+
+\bibitem{Wilson2007}
+{\sc Wilson, A.~D.}
+\newblock Depth-sensing video cameras for 3d tangible tabletop interaction.
+\newblock In {\em Horizontal Interactive Human-Computer Systems, 2007.
+  TABLETOP'07. Second Annual IEEE International Workshop on\/} (2007), IEEE,
+  pp.~201--204.
 
 \end{thebibliography}
