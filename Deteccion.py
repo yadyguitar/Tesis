@@ -103,7 +103,7 @@ class Deteccion:
 			if len(listaDetectaCiclado)==6:#se reinicia la lista que detecta el listado
 				if ((listaDetectaCiclado[0],listaDetectaCiclado[2],listaDetectaCiclado[4]) == (listaDetectaCiclado[1]-valorDeAumento,listaDetectaCiclado[3]-valorDeAumento,listaDetectaCiclado[5]-valorDeAumento)) or ((listaDetectaCiclado[0],listaDetectaCiclado[2],listaDetectaCiclado[4]) == (listaDetectaCiclado[1]+valorDeAumento,listaDetectaCiclado[3]+valorDeAumento,listaDetectaCiclado[5]+valorDeAumento)):
 					valorDeAumento+=1
-					if valorDeAumento>5:
+					if valorDeAumento>3:
 						return False
 				listaDetectaCiclado=[]
 			############

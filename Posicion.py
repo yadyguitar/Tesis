@@ -38,6 +38,12 @@ class Posicion:
 			return (px,py)
 		return xy
 
+	def filtroAltura(self,altura):
+		z=self.persona.posicion[2]
+		distancia=abs(z-altura)
+		if distancia<=10:
+			return z
+		return altura
 
 	def showPointCentral(self):
 		cv2.drawContours(self.frameRGB, [self.persona.contornos], 0, (0, 255, 0), 2)
@@ -52,6 +58,8 @@ class Posicion:
 		#filtro para que no varie mucho la deteccion de posicion
 		x,y=self.filtroPosicion(xy)
 		altura=self.depth[int(xy[1])][int(xy[0])]
+		altura=self.filtroAltura(altura)
+		print "altura: "+ str(altura)
 		xyz=(x,y,altura)
 		self.persona.posicion=xyz
 		self.showPointCentral()

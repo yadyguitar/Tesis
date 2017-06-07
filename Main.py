@@ -34,6 +34,7 @@ if __name__=="__main__":
 		depth=get_depth()
 		#se va modificando la class persona y se puede ir accediendo a sus propiedades actuales
 		deteccion.setFrames(frame,depth)
+		
 		#deteccion.deteccionManual()
 		deteccion.deteccionAutomatica() #si detecto algo, sigue con lo demas, de lo contrario, blender utilizara la ultima informacion que tenia de el file Persona
 		if persona.contornos != None:
