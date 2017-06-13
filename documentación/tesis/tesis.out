@@ -39,9 +39,14 @@
 \BOOKMARK [2][-]{subsection.3.2.2}{Prototipo 2}{section.3.2}% 39
 \BOOKMARK [3][-]{subsubsection.3.2.2.1}{Detecci\363n autom\341tica}{subsection.3.2.2}% 40
 \BOOKMARK [3][-]{subsubsection.3.2.2.2}{Altura de la Persona}{subsection.3.2.2}% 41
-\BOOKMARK [3][-]{subsubsection.3.2.2.3}{Proyecci\363n en base a la Altura y Posici\363n}{subsection.3.2.2}% 42
+\BOOKMARK [3][-]{subsubsection.3.2.2.3}{Proyecci\363n con base en la Altura y Posici\363n}{subsection.3.2.2}% 42
 \BOOKMARK [2][-]{subsection.3.2.3}{Dise\361o preliminar de escenario}{section.3.2}% 43
-\BOOKMARK [0][-]{chapter.4}{Implementaci\363n y resultados}{}% 44
-\BOOKMARK [0][-]{chapter.5}{Conclusiones}{}% 45
-\BOOKMARK [1][-]{section.5.1}{Trabajo Futuro}{chapter.5}% 46
-\BOOKMARK [0][-]{section.5.1}{Bibliograf\355a}{}% 47
+\BOOKMARK [2][-]{subsection.3.2.4}{Funcionamiento del Sistema General}{section.3.2}% 44
+\BOOKMARK [0][-]{chapter.4}{Implementaci\363n y resultados}{}% 45
+\BOOKMARK [1][-]{section.4.1}{Escenario de pruebas}{chapter.4}% 46
+\BOOKMARK [1][-]{section.4.2}{Prototipo 1}{chapter.4}% 47
+\BOOKMARK [2][-]{subsection.4.2.1}{Detecci\363n manual}{section.4.2}% 48
+\BOOKMARK [2][-]{subsection.4.2.2}{C\341lculo de la posici\363n}{section.4.2}% 49
+\BOOKMARK [0][-]{chapter.5}{Conclusiones}{}% 50
+\BOOKMARK [1][-]{section.5.1}{Trabajo Futuro}{chapter.5}% 51
+\BOOKMARK [0][-]{section.5.1}{Bibliograf\355a}{}% 52

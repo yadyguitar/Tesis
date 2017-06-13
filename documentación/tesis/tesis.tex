@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{pdfpages}
 \usepackage{fancyhdr}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
 \usepackage{url}
 \usepackage{hyperref}
 \setcounter{secnumdepth}{3}%hasta subsubsection
@@ -12,6 +13,8 @@
 \usepackage{subfigure} % subfiguras
 \usepackage{multirow, array} % para las tablas
 \usepackage{float} % para usar [H]
+\usepackage{verbatim} % comentarios
+\usepackage{setspace}
 
 
 \hypersetup{
@@ -21,6 +24,7 @@
 	linkcolor=black,
 	urlcolor=black
 }
+
 
 \begin{document}
 \renewcommand{\listtablename}{Índice de tablas}
@@ -121,7 +125,7 @@ Una bonita historia jejeje
 \listoftables
 
 %%%%%%%%
-
+%\spacing{1.5}
 \cleardoublepage
 %%%CAPÍTULO 1 -> INTRODUCCIÓN
 \chapter{Introducción}\label{cap.introduccion}
@@ -379,7 +383,7 @@ Basado en los pasos definidos en el módulo de detección manual (donde para det
 \end{figure}
 \subsubsection{Altura de la Persona}
 Éste tal vez sea el módulo mas rápido y fácil de implementar. Debido a que la detección automática ajusta el umbral para obtener el contorno de la cabeza de la persona y luego es obtenida la posición a través el centro del contorno, el cual se puede interpretar como la posición en píxeles de la imagen, la altura entonces es determinada por el valor de la imagen de profundidad en el punto proporcionado por el módulo de posición. Por lo tanto, éste módulo podría encontrarse dentro del módulo de posición y almacenar la información en un archivo como coordenadas en un espacio 3D, para su posterior uso en el módulo de proyección.
-\subsubsection{Proyección en base a la Altura y Posición}
+\subsubsection{Proyección con base en la Altura y Posición}
 En lo que respecta a éste módulo, al adicionar la fase de detección de la altura de la persona, se debe hacer una equivalencia en el eje vertical de la cámara en blender con el valor dado por la imagen de profundidad. Una vez realizado el paso anterior, se orienta la cámara, es decir se inclina enfocando al centro del escenario (ésto se verá en detalle en la fase de implementación). En la figura \ref{fig:proyeccionProto2} se muestra un resumen de lo explicado anteriormente.
 \begin{figure}[th]
 	\centering
@@ -393,12 +397,113 @@ El lugar en donde se proyectará el escenario virtual 3D y se realizarán las pr
 	\includegraphics[width=110mm]{./figuras/disenoPre}
 	\caption{Diseño preliminar del escenario de pruebas} \label{fig:disenoPre}
 \end{figure}
-
+\subsection{Funcionamiento del Sistema General}
+\begin{figure}[th]
+	\centering
+	\includegraphics[width=150mm]{./figuras/sistemaGeneral}
+	\caption{Sistema General} \label{fig:sistemaGeneral}
+\end{figure}
+De acuerdo con todo lo explicado anteriormente y para tener una idea mas clara de como se comportará el sistema, en la figura \ref{fig:sistemaGeneral} se muestra una representación de las funciones principales que intervendrán en el sistema general. Podemos entonces definir que será divido en dos grandes subsistemas que se ejecutarán al mismo tiempo y que el medio en el que se estarán comunicando será a través de un archivo de texto llamado infoPersona.txt. Éste contendrá la información necesaria para que el subsistema por parte de blender, sea capaz de posicionar la cámara virtual dependiendo de la última modificación del archivo por parte del subsistema de la terminal. El uso del archivo nos beneficia en caso de si el subsistema de la Terminal falla, el otro subsistema no se detendría debido a que usaría la última posición modificada, y así la información proyectada no finalizaría, solo quedaría estática. En cuanto al contenido del archivo, su información dependerá del prototipo en donde nos econtremos, es decir, para el prototipo 1, se manejaría únicamente las coordenadas (x,y) de la imagen, siendo entonces un espacio bidimensional (2 variables involucradas), mientras que en el prototipo 2, se agregaría una variable más (altura), lo cual estaríamos hablando de un espacio de 3 dimensiones (x,y,z).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%CAPÍTULO 4 -> IMPLEMENTACIÓN Y RESULTADOS%%%
 \chapter{Implementación y resultados}\label{cap.implementacionyresultados}
-Luego de analizar y definir los requerimientos del sistema, y haber realizado el diseño y esquematización de éste, pasamos a la etapa de implementación. Se abordará a detalle el proceso de desarrollo, así como los resultados generados en cada uno de los prototipos propuestos con el objetivo de identificar errores, proponer soluciones a los problemas y optimizar cada uno de los módulos.
+Luego de analizar y definir los requerimientos del sistema, y realizado el diseño y esquematización de éste, pasamos a la etapa de implementación. Se abordará a detalle el proceso de desarrollo, así como los resultados generados en cada uno de los prototipos propuestos con el objetivo de identificar errores, proponer soluciones a los problemas y optimizar cada uno de los módulos.\\
+A partir de los módulos identificados en el capítulo anterior, siguiendo los principios de programación orientada a objetos, con el objetivo que se puedan agregar funcionalidades y mejorar sus métodos por separado, el sistema fue desarrollado a través de clases las cuales son: Detección, Posición y Persona. El módulo de Proyección se encuentra embebido en el programa blender, por lo cual no se desarrolló como clase y el módulo de Altura se encontrará en la clase Posición, debido a su fácil adquisición a través de los resultados de los demás módulos y por lo tanto no será necesario definir una clase para ella. La clase Persona, es necesaria debido a que será el medio en el que se comunicarán las demás clases del subsistema de Terminal; además fue pensado como desarrollo futuro, se pueda hacer seguimiento de varias personas teniendo un registro de la posición de cada una de ellas e ir alternando la perspectiva. En la figura \ref{fig:diagramaClases} se muestra el diagrama de clases que define la estructura del subsistema de Terminal, con sus atributos y métodos dependiendo del prototipo en donde nos encontremos.\\
+
+\begin{figure}[th]
+	\centering
+	\includegraphics[width=140mm]{./figuras/diagramaClases}
+	\caption{Diagrama de clases de subsistema de Terminal} \label{fig:diagramaClases}
+\end{figure}
+
+\section{Escenario de pruebas}
+El diseño de la mesa y blablabla aquí en la figura \ref{fig:mesa}.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=60mm]{./figuras/mesa}
+	\caption{Mesa donde se realizará la retroproyección} \label{fig:mesa}
+\end{figure}
+
+\section{Prototipo 1}
+Como primera fase de desarrollo, y de acuerdo con el esquema general de este prototipo diseñado en el capítulo anterior, la figura \ref{fig:mainProto1}, muestra el diagrama de flujo que representa la función principal o base por parte del subsistema de Terminal, en donde se encuentran los métodos de las clases que intervendrán en el proceso de ejecución del sistema. De esta manera, podemos ver que se ejecuta siempre y cuando el kinect se encuentre conectado, en dicho caso, se puede acceder a la información y proceder con los siguientes métodos de las clases (Detección y Posición), para que de éste modo se pueda almacenar la información en un archivo de texto (infoPersona.txt) el cual es la conexión entre los dos subsistemas. Dicho esto, se explicará a continuación los métodos principales que intervienen en el funcionamiento de éste prototipo, que son Detección Manual y Posición (Calcular Posición), así como el módulo de Proyección que se encuentra embebido en Blender y es el que conforma nuestro segundo subsistema.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=120mm]{./figuras/mainProto1}
+	\caption{Diagrama de flujo: función Principal de prototipo 1} \label{fig:mainProto1}
+\end{figure}
+
+\subsection{Detección manual}
+Como se pudo observar en el diagrama de clases (Figura \ref{fig:diagramaClases}), dentro de la clase Detección, se define un método llamado ``deteccionManual()'', siendo éste el método de detección en éste prototipo encargado de realizar la función de buscar el contorno de la persona variando el umbral que delimitará el fondo de la ésta.\\
+\begin{comment}
+\begin{algorithm}[htb]
+	\SetAlgoLined
+	\KwData{Imagen Depth, Imagen RGB, class Persona}
+	\KwResult{Hallar contorno de la persona}
+	Aplicar filtros a Depth\;
+	Binarizar Depth con umbral actual\;
+	Buscar contornos en Depth\;
+	\If{Hay contornos}{
+		Seleccionar contorno con área mayor\;
+		Guardar contorno seleccionado en class Persona\;
+		Mostrar contorno en imagen RGB\;
+	}
+	\caption{Detección manual}
+	\label{alg:deteccionManual}
+\end{algorithm}
+\end{comment}
+Debido al sensor y a la versión utilizada para adquirir la imagen de profundidad, la información obtenida es sensible y propensa a ruidos en la imagen capturada. Es por ello que el uso de filtros en la imagen (principalmente de suavizado o desenfoque(blur)) pueden ayudar a que la detección del contorno no varíe demasiado. Esto lo podemos ver en la figura (), en donde se muestra una secuencia de imágenes de profundidad sin filtrar de una persona que no se movió en un segundo. Para ello, uno de los filtros mas utilizados para desenfocar o suavizar una imagen es el conocido como Gaussian blur (desenfoque gaussiano), que se basa en aplicar un kernel Gaussiano sobre la imagen para así desenfocarla (ésta función es proporcionada por la librería openCV, en donde tenemos que especificar el tamaño del kernel (se propuso 5x5)) y fue el filtro que se utilizó para eliminar el ruido en torno al contorno a la persona. En la figura () se muestra entonces la prueba anterior, pero en este caso utilizando el filtro.\\
+Luego del filtrado de la imagen, dependiendo del umbral establecido por el usuario (0 - 255 (que son los valores de profundidad que se pueden obtener)), se binarizará la imagen, es decir, se analizará toda la imagen (pixel por pixel) y con el valor asignado se determina si el pixel es blanco (255) o negro(0), por lo que la imagen mostrará una figura blanca que representará la cabeza de la persona en un fondo negro (éste método se encuentra dentro de la librería openCV) (Figura ). Terminado este proceso, se determinará entonces el contorno de la figura en blanco, a través de una una función que retorna una lista de los contornos en la imagen proporcionada igual por openCV. Debido al ruido que puede ocasionar el sensor (aún utilizando filtrado), se pueden llegar a detectar pequeños contornos que provoquen una detección errónea, por lo que se supone que el contorno de área mayor sea el de la persona y es seleccionado y almacenado como atributo en la clase Persona para su posterior uso. En la figura \ref{fig:diagFlujDeteccionManual} , se muestra un diagrama de flujo de forma general que resume lo explicado anteriormente.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=120mm]{./figuras/diagFlujDeteccionManual}
+	\caption{Diagrama de flujo de detección manual} \label{fig:diagFlujDeteccionManual}
+\end{figure}
+\subsection{Cálculo de la posición}
+Luego de detectar e identificar el contorno de la persona, procedemos al cálculo de su posición. Para ello, lo primero es adquirir el contorno a través de la clase Persona el cual fue modificado en el método anterior (detección manual). La posición de la persona será determinada obteniendo el punto central del contorno, a través de Momentos de la Imagen. Éstos nos ayudan a obtener características de una imagen u objeto seleccionado (en nuestro caso, la figura que forma el contorno) tales como su área, perímetro y centro de masa del objeto. Todo ello se puede obtener a través de una función dentro la librería openCV. En éste caso, lo que requerimos es el centro de la figura (centroide), que se puede obtener de la relación, $C_x = \frac{M_{10}}{M_{00}}$ y $C_y = \frac{M_{01}}{M_{00}}$.  Con ésto, obtenemos entonces el punto central, que varía dependiendo de la forma obtenida del contorno en la etapa anterior, sin embargo, a pesar de aplicar filtros para que no varíe mucho la forma, sigue existiendo un margen de error, lo cual ocasiona que la posición varíe unos cuantos pixeles estando el observador quieto, por lo que se aplicó un filtro donde se toma en cuenta la posición analizada del frame anterior, con la actual y se calcula la distancia en línea recta (distancia euclideana) entre estos dos valores suponiendo que en un rango (en ésto cual ocasiona que la posición varíe unos cuantos pixelee caso de 5 pixeles), puede significar que la persona se encuentra en la misma posición y la variación es causada por parte del ruido ocasionado por el sensor. Una vez realizado éste paso, y dependiendo del resultado obtenido, se guardará la posición en el atributo de la clase persona, que en este caso será un vector de 2 posiciones, es decir $ (x,y) $. Para tener una idea general de lo explicado, véase figura \ref{fig:diagFlujPosicion}.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=40mm]{./figuras/diagFlujPosicion}
+	\caption{Diagrama de flujo de Posición} \label{fig:diagFlujPosicion}
+\end{figure}
+
+
+\begin{comment}
+\begin{algorithm}[tbh]
+	\SetAlgoLined
+	\KwData{Imagen Depth, Imagen RGB, class Persona	}
+	\KwResult{Calcular posición de la persona en imagen Depth}
+	Obtener contorno de la class Persona\;
+	Calcular centro del contorno usando Momentos\;
+	Calcular distancia entre posición anterior y actual\;
+	\If{distancia $<$ 5}{
+		posición actual = posición anterior
+	}
+	Guardar posición actual en class Persona\;
+	Mostrar imagen RGB con punto central\;
+	\caption{Posición de la Persona}
+	\label{alg:posicion}
+\end{algorithm}
+\end{comment}
+
+\begin{comment}
+\begin{algorithm}[tbh]
+	\SetAlgoLined
+	\KwIn{Posición persona (x,y)}
+	\KwData{Punto Central $\rightarrow$ (-35.0, 24.0, 0.0)}
+	\KwResult{Posicionar cámara virtual respecto a posición de la persona, enfocando a punto central}
+	Obtener Posición de la persona\;
+	Posición cámara $\rightarrow$ Posición persona $/$ 10\;
+	
+	\If{Posición cámara $!=$ Posición cámara anterior}{
+		Calcular ángulo z entre Posición cámara y Punto Central\;
+		Rotar cámara en el ángulo z calculado\;
+		Rotar ventana de cámara\;
+	}
+	Ubicar cámara en la Posición cámara\;
+	\caption{proyección de la Persona}
+\end{algorithm}
+\end{comment}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
