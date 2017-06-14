@@ -97,6 +97,7 @@ class Deteccion:
 		hayOtraPersona=False
 		tempOtraPersona=None
 		listaDetectaCiclado=[]
+		imagenBinarizada=None
 		#ciclo que ajusta el thres para encontrar area de la persona
 		while areaPersona<minRect or areaPersona>maxRect:
 			#acá determinaré si esta ciclando, y es donde tendre que agregar valor de Aumento
@@ -142,7 +143,7 @@ class Deteccion:
 					self.persona.contornos=tempOtraPersona
 					return True
 				return False
-
+		cv2.imshow('imagenBinarizada',imagenBinarizada)
 		self.setContornoPersona(contours)
 		return True
 	
@@ -155,7 +156,7 @@ class Deteccion:
 		print self.threshold
 		if self.ajustaUmbral(depth):			
 		#*********************************************************************************#
-			#cv2.imshow('Thres',thres) #muestra la ventana donde ajustare manualmente el thres
+			 #muestra la ventana donde ajustare manualmente el thres
 			cv2.drawContours(self.frameRGB,[self.persona.contornos],0, (0,255,0), 2)
 		#*********************************************************************************#
 		cv2.imshow('Imagen RGB',self.frameRGB)
