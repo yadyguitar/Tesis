@@ -422,12 +422,13 @@ A partir de los módulos identificados en el capítulo anterior, siguiendo los p
 \end{figure}
 
 \section{Escenario de pruebas}
-El diseño de la mesa y blablabla aquí en la figura \ref{fig:mesa}.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=60mm]{./figuras/mesa}
 	\caption{Mesa donde se realizará la retroproyección} \label{fig:mesa}
 \end{figure}
+Después de haber realizado un diseño preliminar del escenario en donde se mostrará la información virtual, y decidir que se utilizará la técnica de retroproyección, se determinó que la manera mas asequible y fácil de contruir una mesa sería a través de tubos pvc, de tal modo que se pudiera poner encima de ella (como base), el material que retendrá la luz proyectada para ser mostrada en la parte superior. Se utilizó una lámina de plástico policril transparente, y adherida a ésta una película de plástico texturizado, que ayudó en gran medida a retener la proyección (Figura \ref{fig:mesa}). En la parte inferior, se encontrará el proyector, que con el objetivo de aumentar la imagen, se utilizó un espejo frente a éste, que entonces será el que reflejará la imagen en la parte superior.
+
 
 \section{Prototipo 1}
 Como primera fase de desarrollo, y de acuerdo con el esquema general de este prototipo diseñado en el capítulo anterior, la figura \ref{fig:mainProto1}, muestra el diagrama de flujo que representa la función principal o base por parte del subsistema de Terminal, en donde se encuentran los métodos de las clases que intervendrán en el proceso de ejecución del sistema. De esta manera, podemos ver que se ejecuta siempre y cuando el kinect se encuentre conectado, en dicho caso, se puede acceder a la información y proceder con los siguientes métodos de las clases (Detección y Posición), para que de éste modo se pueda almacenar la información en un archivo de texto (infoPersona.txt) el cual es la conexión entre los dos subsistemas. Dicho esto, se explicará a continuación los métodos principales que intervienen en el funcionamiento de éste prototipo, que son Detección Manual y Posición (Calcular Posición), así como el módulo de Proyección que se encuentra embebido en Blender y es el que conforma nuestro segundo subsistema.
@@ -563,6 +564,37 @@ Todo lo descrito anteriormente, se puede resumir en el siguiente diagrama de flu
 	\caption{proyección de la Persona}
 \end{algorithm}
 \end{comment}
+\section{Prototipo 2}
+Después de realizar algunas pruebas en la fase anterior, y de tener un sistema estable acorde a las limitaciones que tenían las funciones de éste (ajustar el umbral y proyección de la imagen sin tener en cuenta la altura), sigue la segunda fase o prototipo 2, el cual (como fue dicho en el diseño), se encargará del desarrollo de un nuevo método en la clase Detección, que será capaz de ajustar el umbral de forma automática (sin intervención del usuario), para luego proceder a determinar la altura y así lograr la perspectiva esperada. Como se puede observar en la figura \ref{fig:mainProto2}, la función principal fue modificada, sustituyendo el método de detección manual por el automático. La clase Persona, que en el diagrama de clases de la Figura \ref{fig:diagramaClases} se muestran los atributos que posee,  inicialmente el contorno se encuentra con un valor Nulo, por lo que si no se detectara nada en un inicio, el contorno continuaría con ese valor y por lo tanto el método del cálculo de la posición detendría el sistema, por lo que es necesario que en un inicio, exista una verificación del contorno de la persona y si es diferente a nulo, se podrá continuar con el proceso que determina su posición.
+\begin{figure}[thb]
+	\centering
+	\includegraphics[width=100mm]{./figuras/mainProto2}
+	\caption{Función principal de prototipo 2} 
+	\label{fig:mainProto2}
+\end{figure}
+\subsection{Detección Automática}
+En un inicio, éste método sigue las mismas instrucciones que el método manual, es decir, se obtienen las imágenes Depth y RGB y luego se le aplican los filtros para eliminar un poco el ruido generado por el sensor. La parte que difiere, es en el ajuste del umbral, que en éste caso se realiza de forma automática y que en el capitulo anterior, se dió una idea general de como se realizaría éste ajuste. Fue pensado entonces, como un escaneado de la imagen, donde empieza inicialmente con valor de 1, y va aumentando su valor hasta encontrar un objeto en la imagen, el cual es encerrada en un rectángulo para aproximar la figura determinada, se calcula el área y se compara con un rango establecido (4000 - 9000). Si el área actual se encuentra dentro de ese rango, se determina que se encontró a la persona y se continúa con las demás etapas; en caso contrario dependiendo de si es mayor o menos del rango, se aumentará o disminuirá el umbral. Ahora bien, en caso que no se encuentre alguna persona en el entorno, y de la forma en la que fue explicado anteriormente, se ciclaría el programa y se detendría, debido a que no posee una condición de paro. Es por lo tanto que se toma en cuenta ello a través de una lista, en donde se almacenan los último 6 valores registrados de umbral, en caso que los impares sean iguales y los pares sean iguales, significa que no se ha podido detectar un área dentro del rango y dentro del valor de aumento, por lo tanto se le proporciona 3 posibilidades de intervalo de aumento o disminución del umbral para abarcar el área de detección; si aún así no se encuentra nada, se sale del ciclo.\\
+Luego de éste proceso, y como el método anterior, se muestra el contorno detectado para validación y almacena la información en el atributo contorno de la class Persona. El algoritmo muestra lo explicado anteriormente.
+\begin{algorithm}[tbh]
+	\SetAlgoLined
+	\KwIn{Imagen Depth, Imagen RGB, class Persona}
+	\KwData{valor minimo$\rightarrow$ 4000, valor maximo$\rightarrow$ 9000, valor de aumento$\rightarrow$ 1 }
+	\KwResult{Identificar y guardar contorno de la Persona}
+	Aplicar filtros a Depth\;
+	Area Actual$\rightarrow$0\;
+	\While{Area Actual $<$ valor minimo o Area Actual $>$ valor maximo}{
+		Binarizar Depth con umbral actual\;
+		}
+	
+	Buscar contornos en Depth\;
+	\If{Hay contornos}{
+		Seleccionar contorno con área mayor\;
+		Guardar contorno seleccionado en class Persona\;
+		Mostrar contorno en imagen RGB\;
+	}
+	\caption{Detección Automática de la Persona}
+	\label{alg:deteccAutomatica}
+\end{algorithm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
