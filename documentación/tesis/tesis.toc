@@ -50,6 +50,7 @@
 \contentsline {section}{\numberline {4.2}Prototipo 1}{29}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Detecci\IeC {\'o}n manual}{30}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}C\IeC {\'a}lculo de la posici\IeC {\'o}n}{32}{subsection.4.2.2}
-\contentsline {chapter}{\numberline {5}Conclusiones}{34}{chapter.5}
-\contentsline {section}{\numberline {5.1}Trabajo Futuro}{34}{section.5.1}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{35}{section.5.1}
+\contentsline {subsection}{\numberline {4.2.3}Proyecci\IeC {\'o}n basada en la posici\IeC {\'o}n (x,y)}{34}{subsection.4.2.3}
+\contentsline {chapter}{\numberline {5}Conclusiones}{40}{chapter.5}
+\contentsline {section}{\numberline {5.1}Trabajo Futuro}{40}{section.5.1}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{41}{section.5.1}
