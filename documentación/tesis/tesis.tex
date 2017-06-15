@@ -583,19 +583,43 @@ Luego de éste proceso, y como el método anterior, se muestra el contorno detec
 	Aplicar filtros a Depth\;
 	Area Actual$\rightarrow$0\;
 	\While{Area Actual $<$ valor minimo o Area Actual $>$ valor maximo}{
-		Binarizar Depth con umbral actual\;
+		\If{Existe ciclado}{
+			valor de aumento$\rightarrow$ valor de aumento + 1\;
+			\If{valor de aumento $>$ 3}{
+				\Return No hay contornos
+				}
 		}
-	
-	Buscar contornos en Depth\;
-	\If{Hay contornos}{
-		Seleccionar contorno con área mayor\;
-		Guardar contorno seleccionado en class Persona\;
-		Mostrar contorno en imagen RGB\;
+		Binarizar Depth con umbral actual\;
+		Buscar contornos en Depth\;
+		\If{Hay contornos}{
+			Seleccionar contorno con área mayor\;
+			Area Actual$\rightarrow$ area de contorno seleccionado\;
+		}
+		\uIf{Area Actual $<$ valor minimo}{
+			umbral actual$\rightarrow$ umbral actual + valor de aumento\;
+			}
+			\uElseIf{Area Actual $>$ valor maximo}{
+				umbral actual$\rightarrow$ umbral actual - valor de aumento\;	
+				}
+				\uElse{
+					Guardar contorno seleccionado en class Persona\;
+					Mostrar contorno en imagen RGB\;
+					}
+					\If{umbral actual $>$ 153}{
+						\Return No hay contornos
+						}
+		
 	}
+	
+	
 	\caption{Detección Automática de la Persona}
 	\label{alg:deteccAutomatica}
 \end{algorithm}
-
+\subsection{Cálculo de la altura}
+Como fue dicho anteriormente, éste módulo, se encontrará dentro de la clase Posición, debido a que se puede obtener facilmente. Ésto es, debido a que cuando se obtiene la posición de la persona, los dos valores obtenidos indican la posición en la imagen depth, y por lo tanto se puede acceder al valor de esa posición donde se encuentra el número de profundidad detectado. Sin embargo, luego de hacer algunas pruebas, se propuso un filtro de la altura el cual considere la altura anterior y la actual, y si su diferencia no sobrepasa un valor asignado (en éste caso se consideró 5), no se cambiará la altura actual detectada, esto para evitar entonces que la imagen proyectada no posea pequeñas variaciones mientras la persona se encuentra en movimiento o quieta.
+\subsection{Proyección basada en la posición y altura (x,y,z)}
+En éste prototipo se agrega una nueva funcionalidad que ahora si toma en cuenta, la altura, para obtener la perspectiva real de un objeto virtual. Ésta se obtiene, luego de aplicar la equivalencia a la posición (x,y), z (que será en éste caso la altura), pasará por un método el cual se realice una equivalencia de éste. Para ello, cabe mencionar que solo se permitirá un rango máximo de altura 153 (el cual es definido en la detección automática), luego de ello se debe tomar en cuenta que mientras mas alta es la persona, menor es el alor obtenido de profundidad, cosa que en blender sería lo contrario, es decir mientras mas pequeño sea el valor de la altura de la persona mas grande será la altura de la cámara de blender. Es por ello que se puede definir la altura de la cámara como: $z = (153 - altura persona)*(0.5)$, donde se obtiene la mitad de la diferencia, por cuestiones de aproximar o simular una altura real y no alejarse demasiado del escenario.\\
+Con la adición a éste módulo del valor de la altura, nos encontramos con la obtención del ángulo de inclinación que dependiendo de la altura actual de la persona (si se inclina o agacha), éste debe cambiar. Para ello nos tenemos que enfocar en el eje de las abscisas, en el sistema global, debido a que éste es el que nos proporciona la función de inclinación. De la misma manera que como se han obtenido los demás ángulos, primero necesitamos obtener de los dos vectores (posición de la persona y posición central)  uno nuevo, que se encontrará ubicado en el origen. Ahora bien, como nos estamos involucrando con 3 variables (espacio 3D), se determinará el ángulo entre el vector obtenido anteriormente y un vector del origen a la posición z obtenida de la equivalencia. Calculamos el coseno del ángulo a través de la ecuación, \(\alpha =arccos(\frac { u·v }{ \left\| u \right\| ·\left\| v \right\|  } )\), donde el vector u representará el vector obtenido, y v será el vector del punto central.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%CAPÍTULO 5 -> CONCLUSIONES%%%
