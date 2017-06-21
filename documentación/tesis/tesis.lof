@@ -1,43 +1,50 @@
 \select@language {spanish}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Uso de la aplicaci\IeC {\'o}n pokemon Go obtenida de \cite {Dorward2017}}}{2}{figure.1.1}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Funcionamiento de los HMD's}}{7}{figure.2.1}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Optical see-through }}}{7}{figure.2.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Video see-through }}}{7}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Ejemplos de AR en smartphones y tablets}}{8}{figure.2.2}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Pokemon Go}}}{8}{figure.2.2}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Snapchat}}}{8}{figure.2.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {LearnAR}}}{8}{figure.2.2}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Google Translater}}}{8}{figure.2.2}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Realidad Aumentada en la arqueolog\IeC {\'\i }a}}{7}{figure.2.1}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Imagen original }}}{7}{figure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Imagen con realidad aumentada }}}{7}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Realidad Aumentada aplicada a la medicina}}{8}{figure.2.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Simulador cl\IeC {\'\i }nico de examen de mama, extra\IeC {\'\i }do de \cite {kotranza2009} }}}{8}{figure.2.2}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Simulador de operaci\IeC {\'o}n, explicado en \cite {bichlmeier2007} }}}{8}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Funcionamiento de los HMD's}}{9}{figure.2.3}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Optical see-through }}}{9}{figure.2.3}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Video see-through }}}{9}{figure.2.3}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplos de AR en smartphones y tablets}}{10}{figure.2.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Pokemon Go}}}{10}{figure.2.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Snapchat}}}{10}{figure.2.4}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {LearnAR}}}{10}{figure.2.4}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Google Translater}}}{10}{figure.2.4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Componentes internos del Kinect}}{13}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Esquema general del sistema}}{18}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Esquema general de prototipo 1}}{19}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Esquema general de detecci\IeC {\'o}n del prototipo 1}}{20}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Esquema general de posici\IeC {\'o}n del prototipo 1}}{21}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Esquema general de proyecci\IeC {\'o}n del prototipo 1}}{22}{figure.3.6}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Esquema general de prototipo 2}}{23}{figure.3.7}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Esquema general de detecci\IeC {\'o}n autom\IeC {\'a}tica}}{24}{figure.3.8}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Esquema general de proyecci\IeC {\'o}n de prototipo 2}}{25}{figure.3.9}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Dise\IeC {\~n}o preliminar del escenario de pruebas}}{26}{figure.3.10}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Sistema General}}{27}{figure.3.11}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Componentes internos del Kinect}}{15}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Esquema general del sistema}}{20}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Esquema general de prototipo 1}}{21}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Esquema general de detecci\IeC {\'o}n del prototipo 1}}{22}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Esquema general de posici\IeC {\'o}n del prototipo 1}}{23}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Esquema general de proyecci\IeC {\'o}n del prototipo 1}}{24}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Esquema general de prototipo 2}}{25}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Esquema general de detecci\IeC {\'o}n autom\IeC {\'a}tica}}{26}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Esquema general de proyecci\IeC {\'o}n de prototipo 2}}{27}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Dise\IeC {\~n}o preliminar del escenario de pruebas}}{28}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Sistema General}}{29}{figure.3.11}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama de clases de subsistema de Terminal}}{29}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Mesa donde se realizar\IeC {\'a} la retroproyecci\IeC {\'o}n}}{30}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagrama de flujo: funci\IeC {\'o}n Principal de prototipo 1}}{31}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Diagrama de flujo de detecci\IeC {\'o}n manual}}{32}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Diagrama de flujo de Posici\IeC {\'o}n}}{34}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Diagrama de flujo de Posici\IeC {\'o}n}}{35}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Ejes de coordenadas en Imagen Depth y en Blender }}{36}{figure.4.7}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Coordenadas de una imagen}}}{36}{figure.4.7}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Coordenadas en Blender}}}{36}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Sistema de coordenadas de la c\IeC {\'a}mara de Blender}}{37}{figure.4.8}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Sistema de coordenadas global}}}{37}{figure.4.8}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sistema de coordenadas local}}}{37}{figure.4.8}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Vista del escenario desde la c\IeC {\'a}mara}}{38}{figure.4.9}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Rotaci\IeC {\'o}n de la imagen proyectada en torno a la posici\IeC {\'o}n de la persona}}{39}{figure.4.10}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Posici\IeC {\'o}n incorrecta de la imagen}}}{39}{figure.4.10}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Posici\IeC {\'o}n correcta de la imagen}}}{39}{figure.4.10}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Diagrama de Flujo de Proyecci\IeC {\'o}n}}{40}{figure.4.11}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Funci\IeC {\'o}n principal de prototipo 2}}{41}{figure.4.12}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama de clases de subsistema de Terminal}}{31}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Mesa donde se realizar\IeC {\'a} la retroproyecci\IeC {\'o}n}}{32}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagrama de flujo: funci\IeC {\'o}n Principal de prototipo 1}}{33}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Diagrama de flujo de detecci\IeC {\'o}n manual}}{34}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Diagrama de flujo de Posici\IeC {\'o}n}}{36}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Diagrama de flujo de Posici\IeC {\'o}n}}{37}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Ejes de coordenadas en Imagen Depth y en Blender }}{38}{figure.4.7}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Coordenadas de una imagen}}}{38}{figure.4.7}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Coordenadas en Blender}}}{38}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Sistema de coordenadas de la c\IeC {\'a}mara de Blender}}{39}{figure.4.8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Sistema de coordenadas global}}}{39}{figure.4.8}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sistema de coordenadas local}}}{39}{figure.4.8}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Vista del escenario desde la c\IeC {\'a}mara}}{40}{figure.4.9}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Rotaci\IeC {\'o}n de la imagen proyectada en torno a la posici\IeC {\'o}n de la persona}}{41}{figure.4.10}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Posici\IeC {\'o}n incorrecta de la imagen}}}{41}{figure.4.10}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Posici\IeC {\'o}n correcta de la imagen}}}{41}{figure.4.10}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Diagrama de Flujo de Proyecci\IeC {\'o}n}}{42}{figure.4.11}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Funci\IeC {\'o}n principal de prototipo 2}}{43}{figure.4.12}
 \addvspace {10\p@ }
