@@ -1,50 +1,54 @@
 This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: tesis.aux
-The style file: acm.bst
+The style file: unsrtnat.bst
+Illegal, another \bibstyle command---line 220 of file tesis.aux
+ : \bibstyle
+ :          {plain}
+I'm skipping whatever remains of this command
 Database file #1: biblio.bib
-Warning--to sort, need author or key in projectionmapping
-Warning--can't use both volume and number fields in Dorsey1991
+Warning--I didn't find a database entry for "projectionmapping"
 Warning--empty journal in Sol2016
-You've used 36 entries,
-            2253 wiz_defined-function locations,
-            757 strings with 11190 characters,
-and the built_in function-call counts, 14328 in all, are:
-= -- 1403
-> -- 661
-< -- 0
-+ -- 279
-- -- 236
-* -- 1100
-:= -- 2195
-add.period$ -- 107
-call.type$ -- 36
-change.case$ -- 224
-chr.to.int$ -- 0
-cite$ -- 39
-duplicate$ -- 569
-empty$ -- 1152
-format.name$ -- 236
-if$ -- 3065
-int.to.chr$ -- 0
-int.to.str$ -- 36
-missing$ -- 37
-newline$ -- 181
-num.names$ -- 70
-pop$ -- 261
+Warning--can't use both volume and number fields in Dorsey1991
+You've used 34 entries,
+            2481 wiz_defined-function locations,
+            773 strings with 11538 characters,
+and the built_in function-call counts, 15693 in all, are:
+= -- 1384
+> -- 774
+< -- 30
++ -- 299
+- -- 230
+* -- 1170
+:= -- 2369
+add.period$ -- 118
+call.type$ -- 34
+change.case$ -- 66
+chr.to.int$ -- 33
+cite$ -- 36
+duplicate$ -- 828
+empty$ -- 1431
+format.name$ -- 272
+if$ -- 3469
+int.to.chr$ -- 2
+int.to.str$ -- 35
+missing$ -- 36
+newline$ -- 178
+num.names$ -- 102
+pop$ -- 332
 preamble$ -- 1
-purify$ -- 190
+purify$ -- 34
 quote$ -- 0
-skip$ -- 401
+skip$ -- 519
 stack$ -- 0
-substring$ -- 957
-swap$ -- 193
-text.length$ -- 0
+substring$ -- 836
+swap$ -- 222
+text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 140
-warning$ -- 3
-while$ -- 144
-width$ -- 38
-write$ -- 374
-(There were 3 warnings)
+type$ -- 232
+warning$ -- 2
+while$ -- 141
+width$ -- 0
+write$ -- 461
+(There was 1 error message)

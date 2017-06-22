@@ -1,6 +1,6 @@
 \select@language {spanish}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Uso de la aplicaci\IeC {\'o}n pokemon Go obtenida de \cite {Dorward2017}}}{2}{figure.1.1}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Uso de la aplicaci\IeC {\'o}n pokemon Go obtenida de \cite {Dorward2017}}}{3}{figure.1.1}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Realidad Aumentada en la arqueolog\IeC {\'\i }a}}{7}{figure.2.1}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Imagen original }}}{7}{figure.2.1}
@@ -12,7 +12,7 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Optical see-through }}}{9}{figure.2.3}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Video see-through }}}{9}{figure.2.3}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplos de AR en smartphones y tablets}}{10}{figure.2.4}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Pokemon Go}}}{10}{figure.2.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Pokemon Go \GenericError { }{LaTeX Error: There's no line here to end}{See the LaTeX manual or LaTeX Companion for explanation.}{Your command was ignored.\MessageBreak Type I <command> <return> to replace it with another command,\MessageBreak or <return> to continue without it.}\par \let \reserved@d =*\def \par }}}{10}{figure.2.4}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Snapchat}}}{10}{figure.2.4}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {LearnAR}}}{10}{figure.2.4}
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Google Translater}}}{10}{figure.2.4}

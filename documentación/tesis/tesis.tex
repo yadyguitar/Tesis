@@ -1,7 +1,7 @@
 \documentclass[a4paper,openright,12pt]{report}
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage{cite}
+%\usepackage{cite}
 \usepackage{graphicx}
 \usepackage{pdfpages}
 \usepackage{fancyhdr}
@@ -15,7 +15,8 @@
 \usepackage{float} % para usar [H]
 \usepackage{verbatim} % comentarios
 \usepackage{setspace}
-
+\usepackage{natbib}
+\bibliographystyle{unsrtnat}
 
 
 \hypersetup{
@@ -136,11 +137,11 @@ El desarrollo de la tecnología digital actualmente ha sido capaz de proporciona
 \pagestyle{fancy}
 Vivimos en una época en la cual la tecnología forma parte esencial de nuestras vidas. En donde el ser humano, es capaz de mejorar y optimizar su entorno con el objetivo de satisfacer cada una de sus necesidades. El alcance que ha tenido la tecnología digital, nos abre camino para el surgimiento de nuevas técnicas capaces de colaborar en el desarrollo de múltiples áreas o disciplinas, ayudando a la creación de distintas formas para facilitar su aprendizaje, optimización y avance de las mismas.\\
 Así, la tecnología digital ha servido de apoyo incluso en situaciones en donde el ser humano requiere de entrenamiento para realizar ciertas actividades peligrosas, costosas o difíciles de ejecutar y que son proporcionadas a través de entornos virtuales, para mejorar sus habilidades y evitar a todo costo el riesgo de perder incluso vidas humanas. Una aplicación que ejemplifica claramente lo mencionado, lo tenemos en los simuladores de vuelo, que lo que se intenta hacer es replicar la experiencia de pilotar una aeronave de la manera más realista posible. No obstante, el desarrollo e implementación de simuladores de este tipo, implica la fabricación de cabinas en tamaño real con accionadores hidráulicos o electromecánicos, el cual conlleva un gran costo de los mismos.\\
-Es por ello que con el objetivo de minimizar costos y de no requerir de tantos equipos para la inmersión a estos escenarios artificiales, existe una rama de la tecnología conocida como Realidad Virtual (VR, Virtual Reality), que sustituye nuestro mundo real a través de dispositivos que nos permitan encontrarnos en otro lugar, es decir, sumergirnos en una realidad que no existe. Tomando el ejemplo anterior, se han estado desarrollando simuladores a través de este tipo de tecnología, con el objetivo de ahorrar recursos y que se puedan disponer de una manera más rápida y frecuente \cite{Pausch1992,allerton2010}.\\
+Es por ello que con el objetivo de minimizar costos y de no requerir de tantos equipos para la inmersión a estos escenarios artificiales, existe una rama de la tecnología conocida como Realidad Virtual (VR, Virtual Reality), que sustituye nuestro mundo real a través de dispositivos que nos permitan encontrarnos en otro lugar, es decir, sumergirnos en una realidad que no existe. Tomando el ejemplo anterior, se han estado desarrollando simuladores a través de este tipo de tecnología, con el objetivo de ahorrar recursos y que se puedan disponer de una manera más rápida y frecuente (\cite{Pausch1992,allerton2010}).\\
 Los dispositivos utilizados para visualizar este tipo de Realidad Virtual, son conocidos como HMD (del inglés head-mounted display), similares a un casco, que reproducen imágenes sobre una pantalla muy cercana a nuestros ojos, permitiendo abarcar todo el campo de visión del usuario y así brinden una inmersión de éste en un mundo ficticio.\\
 Igualmente, existen algunos HMD’s que son utilizados por otro tipo de tecnología basada en entornos virtuales y que adopta el nombre de Realidad Aumentada.\\
 AR (del inglés Augmented Reality), es una tecnología que intenta lograr perfeccionar nuestra propia realidad, combinando nuestro mundo real con el virtual que, a diferencia de la Realidad Virtual, que crea todo un entorno artificial desde cero, éste tipo de tecnología agrega elementos virtuales a una realidad que ya existe.\\
-Hoy en día, la Realidad Aumentada ha adquirido mayor popularidad y expansión debido a las aplicaciones en donde se encuentra. Por ejemplo, en la industria del entretenimiento, específicamente en el área de los videojuegos, existe una aplicación muy popular, conocida como Pokémon GO \cite{Dorward2017}, el cual consiste en la búsqueda y captura de personajes de la saga Pokémon, que se encuentran escondidos en el mundo real, visualizados a través de un smartphone (Figura \ref{fig:pokemonGoIntro}), en donde claramente se puede ver el concepto de Realidad Aumentada debido a que los personajes están superpuestos en nuestro mundo real. Así mismo, encontramos que la AR abarca áreas como la medicina \cite{Marescaux2004,Ploder1995}, turismo \cite{Kounavis2012}, manufactura \cite{Frund2004}, entre muchas otras.
+Hoy en día, la Realidad Aumentada ha adquirido mayor popularidad y expansión debido a las aplicaciones en donde se encuentra. Por ejemplo, en la industria del entretenimiento, específicamente en el área de los videojuegos, existe una aplicación muy popular, conocida como Pokémon GO\textcopyright\ (\cite{Dorward2017}), el cual consiste en la búsqueda y captura de personajes de la saga Pokémon, que se encuentran escondidos en el mundo real, visualizados a través de un smartphone (Figura \ref{fig:pokemonGoIntro}), en donde claramente se puede ver el concepto de Realidad Aumentada debido a que los personajes están superpuestos en nuestro mundo real. Así mismo, encontramos que la AR abarca áreas como la medicina (\cite{Marescaux2004,Ploder1995}), turismo (\cite{Kounavis2012}), manufactura (\cite{Frund2004}), entre muchas otras.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=90mm]{./figuras/pokemonGoIntro}
@@ -187,7 +188,6 @@ Desarrollar un sistema capaz de determinar el ángulo correspondiente de un ento
 \end{itemize}
 %
 %%
-
 %%Hipótesis
 \section{Hipótesis}
 Basado en la posición y altura de una persona, obtenidas mediante un sensor RGB – D es posible obtener su perspectiva respecto a un entorno virtual que será proyectado y creará el efecto 3D que tanto se intenta conseguir.
@@ -224,10 +224,10 @@ Según Azuma \cite{azuma2001}, existen 3 principales formas en las que podemos v
 \end{figure}
 \paragraph{See-though Augmented Reality.}
 En el caso de los HWD's, en sus inicios se denominaban de ésta manera, pero hoy en día no se utiliza mucho éste término, por lo que otra forma de llamarlo sería como dispositivos montados en la cabeza head mounted displays (HMD), que abarca desde los cascos (utilizados principalmente en el ámbito militar), hasta los lentes que pueden variar su tamaño y sus dimensiones dependiendo de la empresa. Éstos son clasificados por dos tipos de técnicas de visualización: optical see-through y video see-through (Figura \ref{fig:opticalvideo}), en donde su principal diferencia radica en la forma en la que se captura la imagen del mundo real. Comercialmente hablando y los mas populares que podemos encontrar hoy en día, tenemos los Hololens de Microsoft y los Google glass.\\
-En cuanto a los handhelds displays, traducido al español como dispositivos de mano, encontramos una amplia diversidad de dispositivos de varias marcas por parte de smartphones y tablets, que debido al bajo costo (en comparación con los HWD's) y al uso común de ellos en nuestras vidas, la AR se ha expandido y dado a conocer por medio del desarrollo de aplicaciones, que así como se ha utilizado como medio de entretenimiento (Pokemon Go, Snapchat), también ha servido de apoyo en el campo de la enseñanza, proporcionando información virtual que ayuda al entendimiento o aprendizaje de  través de aplicaciones tales como las que se presentan en la figura \ref{fig:ARejemplos}. Sin embargo, aunque cada vez surgen mas aplicaciones entorno a estos artefactos, el uso de ellos impide al observador tener una conexión mas real con su mundo, debido principalmente al campo de visión limitado por los mismos.\\
+En cuanto a los handhelds displays, traducido al español como dispositivos de mano, encontramos una amplia diversidad de dispositivos de varias marcas por parte de smartphones y tablets, que debido al bajo costo (en comparación con los HWD's) y al uso común de ellos en nuestras vidas, la AR se ha expandido y dado a conocer por medio del desarrollo de aplicaciones, que así como se ha utilizado como medio de entretenimiento (Pokémon Go, Snapchat\textcopyright, mostradas en la figura \ref{fig:ARejemplos}(a,b), también ha servido de apoyo en el campo de la enseñanza, siendo capaz de proporcionar información virtual que ayude al entendimiento o aprendizaje en distintas áreas (figura \ref{fig:ARejemplos}(c,d)). Sin embargo, aunque cada vez surgen mas aplicaciones entorno a estos artefactos, el uso de ellos impide al observador tener una conexión mas real con su mundo, debido principalmente al campo de visión limitado por los mismos.\\
 \begin{figure}[thbp]
 	\centering
-	\subfigure[Pokemon Go]{\includegraphics[width=30mm,height=30mm]{./figuras/pokemon}}
+	\subfigure[Pokemon Go [\hyperlink{e02}{E02}] ]{\includegraphics[width=30mm,height=30mm]{./figuras/pokemon}}
 	\subfigure[Snapchat]{\includegraphics[width=30mm,height=30mm]{./figuras/snapchat}}
 	\subfigure[LearnAR]{\includegraphics[width=30mm,height=30mm]{./figuras/learnAR}}
 	\subfigure[Google Translater]{\includegraphics[width=30mm,height=30mm]{./figuras/googleTranslater}}
@@ -240,7 +240,7 @@ Raskar fue uno de los primeros en dar a conocer este nuevo paradigma a través d
 Dependiendo del uso o la aplicación en donde se encuentre ésta tecnología, se le atribuyen otros nombres que ayuden a entender mas su propósito en donde se esté implementando, ésto debido a que cuando hablamos de ``Espacial'', no solo nos estamos refiriendo a la percepción de información adicional a través del sentido visual, sino que también podemos involucrar el tacto y el sentido auditivo.\\ 
 
 \subsection{Projection mapping}
-Comercialmente SAR, también es conocida como ``projection mapping'' o ``video mapping'', refiriéndose a la proyección de información virtual en objetos reales, con el objetivo de enriquecerlos visualmente, mostrando una nueva forma de percibir el objeto. De igual manera se pueden proyectar imágenes o elementos virtuales en superficies tales como paredes de edificios para publicidad, como medio artístico en escenarios o incluso en el rostro o cuerpo de las personas \cite{projectionmapping}.\\
+Comercialmente SAR, también es conocida como ``projection mapping'' o ``video mapping'', refiriéndose a la proyección de información virtual en objetos reales, con el objetivo de enriquecerlos visualmente, mostrando una nueva forma de percibir el objeto. De igual manera se pueden proyectar imágenes o elementos virtuales en superficies tales como paredes de edificios para publicidad, como medio artístico en escenarios o incluso en el rostro o cuerpo de las personas \hyperlink{e01}{[E01]}.\\
 Su nivel de complejidad, por lo tanto, varía dependiendo de la superficie en donde pueda ser proyectada la información. Por ejemplo, inicialmente, en proyectos como Luminous Room \cite{Under1997} se proyectaba la información en una superficie plana, donde únicamente se ajustaba la deformación que ocasionaba la proyección dependiendo de donde se encontrara el proyector. Sin embargo, años antes, ya se tomaba en cuenta en cuenta la estructura del escenario \cite{Dorsey1991} (en éste caso pantallas curvas) para proyectar información, en donde generaban las imágenes pre-distorsionadas para que luego se pudiese visualizar de la forma correcta. En cambio, cuando la superficie en donde se proyecta la información posee objetos y por lo tanto se muestra de forma irregular, se requiere un análisis previo de su forma para así capturar la información 3D de los objetos físicos, pre-distorsionar la imagen conforme a la irregularidad del escenario, tomar en cuenta la posición en donde se encuentra la persona y seguido a esto, la proyección correcta de los elementos virtuales \cite{Raskar1998b,Raskar2001,Starner2003,Wilson2007}.\\
 IllumiRoom \cite{jones2013}, es un claro ejemplo en donde la información virtual se adapta en nuestro entorno, tomando en cuenta la geometría y apariencia de éste, con el objetivo de aumentar la zona que rodea una pantalla de televisión y mostrar un escenario extendido de éste.
 \subsection{Interacción en SAR}
@@ -647,16 +647,25 @@ Se propuso un sistema que fuese capaz de tomar la perspectiva de una persona con
 
 \section{Trabajo Futuro}
 El desarrollo de sistemas que requieren de una respuesta en tiempo real.
-Debido al corto tiempo que se tuvo para el desarrollo del sistema,  se determinó un conjunto de funcionalidades que ayudaría a obtener uno mas robusto y preciso, que debido al corto tiempo que se tuvo serán tomados como desarrollo futuro de para obtener un sistema robusto
+Debido al corto tiempo que se tuvo para el desarrollo del sistema,  se determinó un conjunto de funcionalidades que ayudaría a obtener uno mas robusto y preciso, que debido al corto tiempo que se tuvo serán tomados como desarrollo futuro de para obtener un sistema robusto.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 %%%BIBLIOGRAFÍA%%%
 \cleardoublepage
 \addcontentsline{toc}{chapter}{Bibliografía}
-\bibliographystyle{acm}
+\bibliographystyle{plain}
 \bibliography{biblio}
+\chapter*{Enlaces de Referencia}
+\addcontentsline{toc}{chapter}{Enlaces de Referencia}
+\hypertarget{e01}{
+[E01] Projection Mapping Central. \\\url{http://projection-mapping.org}, 21 de junio de 2017}\\
 
+\hypertarget{e02}{[E02] Polygon. \\\url{https://www.polygon.com/2016/9/12/12891682/pokemon-go-buddy-system-chart}, 22 de junio de 2017}\\
 
+\hypertarget{e03}{[E03] Smart meetings. \url{http://www.smartmeetings.com/technology/98569/snapchat-world-lens}, 22 de junio de 2017}\\
+
+\hypertarget{e04}{[E04] Indiatoday. \url{http://indiatoday.intoday.in/education/story/augmented-reality-in-educatuion/1/869883.html}, 22 de junio de 2017}\\
+
+\hypertarget{e05}{[E05] Social Geek.\\ \url{http://socialgeek.co/tech/10-datos-google-traductor-10-anos/}, 22 de junio de 2017}\\
 
 \end{document}
