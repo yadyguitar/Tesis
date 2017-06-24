@@ -24,37 +24,45 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Bonython Hall}}}{11}{figure.2.6}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Proyecto de KnownSense}}}{11}{figure.2.6}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Proyecto IllumiRoom por Microsoft\textregistered }}{12}{figure.2.7}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Proyecto de sobremesa: SandBox}}{13}{figure.2.8}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Proyecto de sobremesa: SandBox}}{14}{figure.2.8}
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Proyecto de sobremesa: MirageTable}}{14}{figure.2.9}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Proyecto RoomAlive por Microsoft\textregistered }}{15}{figure.2.10}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Estructura del escenario de RoomAlive}}}{15}{figure.2.10}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Juego experimental de RoomAlive}}}{15}{figure.2.10}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Proyecto Virtual Anatomical Model}}{16}{figure.2.11}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Estructura del escenario de RoomAlive}}}{16}{figure.2.11}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Estructura del escenario de RoomAlive}}}{16}{figure.2.11}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Proyecto RoomAlive por Microsoft\textregistered }}{17}{figure.2.12}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Estructura del escenario de RoomAlive}}}{17}{figure.2.12}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Componentes internos del Kinect}}{18}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Esquema general del sistema}}{23}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Esquema general de prototipo 1}}{24}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Esquema general de detecci\IeC {\'o}n del prototipo 1}}{25}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Esquema general de posici\IeC {\'o}n del prototipo 1}}{26}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Esquema general de proyecci\IeC {\'o}n del prototipo 1}}{27}{figure.3.6}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Esquema general de prototipo 2}}{28}{figure.3.7}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Esquema general de detecci\IeC {\'o}n autom\IeC {\'a}tica}}{29}{figure.3.8}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Esquema general de proyecci\IeC {\'o}n de prototipo 2}}{30}{figure.3.9}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Dise\IeC {\~n}o preliminar del escenario de pruebas}}{31}{figure.3.10}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Sistema General}}{32}{figure.3.11}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Componentes internos del Kinect}}{19}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Esquema general del sistema}}{24}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Esquema general de prototipo 1}}{25}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Esquema general de detecci\IeC {\'o}n del prototipo 1}}{26}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Esquema general de posici\IeC {\'o}n del prototipo 1}}{27}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Esquema general de proyecci\IeC {\'o}n del prototipo 1}}{28}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Esquema general de prototipo 2}}{29}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Esquema general de detecci\IeC {\'o}n autom\IeC {\'a}tica}}{30}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Esquema general de proyecci\IeC {\'o}n de prototipo 2}}{31}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Dise\IeC {\~n}o preliminar del escenario de pruebas}}{32}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Sistema General}}{33}{figure.3.11}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama de clases de subsistema de Terminal}}{34}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Mesa donde se realizar\IeC {\'a} la retroproyecci\IeC {\'o}n}}{35}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagrama de flujo: funci\IeC {\'o}n Principal de prototipo 1}}{36}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Diagrama de flujo de detecci\IeC {\'o}n manual}}{37}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Diagrama de flujo de Posici\IeC {\'o}n}}{39}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Diagrama de flujo de Posici\IeC {\'o}n}}{40}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Ejes de coordenadas en Imagen Depth y en Blender }}{41}{figure.4.7}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Coordenadas de una imagen}}}{41}{figure.4.7}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Coordenadas en Blender}}}{41}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Sistema de coordenadas de la c\IeC {\'a}mara de Blender}}{42}{figure.4.8}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Sistema de coordenadas global}}}{42}{figure.4.8}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sistema de coordenadas local}}}{42}{figure.4.8}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Vista del escenario desde la c\IeC {\'a}mara}}{43}{figure.4.9}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Rotaci\IeC {\'o}n de la imagen proyectada en torno a la posici\IeC {\'o}n de la persona}}{44}{figure.4.10}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Posici\IeC {\'o}n incorrecta de la imagen}}}{44}{figure.4.10}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Posici\IeC {\'o}n correcta de la imagen}}}{44}{figure.4.10}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Diagrama de Flujo de Proyecci\IeC {\'o}n}}{45}{figure.4.11}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Funci\IeC {\'o}n principal de prototipo 2}}{46}{figure.4.12}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama de clases de subsistema de Terminal}}{35}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Mesa donde se realizar\IeC {\'a} la retroproyecci\IeC {\'o}n}}{36}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagrama de flujo: funci\IeC {\'o}n Principal de prototipo 1}}{37}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Diagrama de flujo de detecci\IeC {\'o}n manual}}{38}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Diagrama de flujo de Posici\IeC {\'o}n}}{40}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Diagrama de flujo de Posici\IeC {\'o}n}}{41}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Ejes de coordenadas en Imagen Depth y en Blender }}{42}{figure.4.7}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Coordenadas de una imagen}}}{42}{figure.4.7}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Coordenadas en Blender}}}{42}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Sistema de coordenadas de la c\IeC {\'a}mara de Blender}}{43}{figure.4.8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Sistema de coordenadas global}}}{43}{figure.4.8}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sistema de coordenadas local}}}{43}{figure.4.8}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Vista del escenario desde la c\IeC {\'a}mara}}{44}{figure.4.9}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Rotaci\IeC {\'o}n de la imagen proyectada en torno a la posici\IeC {\'o}n de la persona}}{45}{figure.4.10}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Posici\IeC {\'o}n incorrecta de la imagen}}}{45}{figure.4.10}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Posici\IeC {\'o}n correcta de la imagen}}}{45}{figure.4.10}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Diagrama de Flujo de Proyecci\IeC {\'o}n}}{46}{figure.4.11}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Funci\IeC {\'o}n principal de prototipo 2}}{47}{figure.4.12}
 \addvspace {10\p@ }

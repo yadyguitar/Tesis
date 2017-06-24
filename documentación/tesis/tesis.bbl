@@ -1,17 +1,9 @@
-\begin{thebibliography}{34}
+\begin{thebibliography}{35}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
-
-\bibitem[Dorward et~al.(2017)Dorward, Mittermeier, Sandbrook, and
-  Spooner]{Dorward2017}
-Leejiah~J Dorward, John~C Mittermeier, Chris Sandbrook, and Fiona Spooner.
-\newblock Pok{\'e}mon go: benefits, costs, and lessons for the conservation
-  movement.
-\newblock \emph{Conservation Letters}, 10\penalty0 (1):\penalty0 160--165,
-  2017.
 
 \bibitem[Pausch et~al.(1992)Pausch, Crea, and Conway]{Pausch1992}
 Randy Pausch, Thomas Crea, and Matthew Conway.
@@ -25,6 +17,14 @@ DJ~Allerton.
 \newblock The impact of flight simulation in aerospace.
 \newblock \emph{The Aeronautical Journal}, 114\penalty0 (1162):\penalty0
   747--756, 2010.
+
+\bibitem[Dorward et~al.(2017)Dorward, Mittermeier, Sandbrook, and
+  Spooner]{Dorward2017}
+Leejiah~J Dorward, John~C Mittermeier, Chris Sandbrook, and Fiona Spooner.
+\newblock Pok{\'e}mon go: benefits, costs, and lessons for the conservation
+  movement.
+\newblock \emph{Conservation Letters}, 10\penalty0 (1):\penalty0 160--165,
+  2017.
 
 \bibitem[Marescaux et~al.(2004)Marescaux, Rubino, Arenas, Mutter, and
   Soler]{Marescaux2004}
@@ -233,6 +233,12 @@ Brett Jones, Rajinder Sodhi, Michael Murdock, Ravish Mehra, Hrvoje Benko,
   projector-camera units.
 \newblock In \emph{Proceedings of the 27th annual ACM symposium on User
   interface software and technology}, pages 637--644. ACM, 2014.
+
+\bibitem[Kondo et~al.(2008)Kondo, Shiwaku, and Kijima]{kondo2008}
+Daisuke Kondo, Yuichi Shiwaku, and Ryugo Kijima.
+\newblock Free form projection display and application.
+\newblock In \emph{Proceedings of the 5th ACM/IEEE International Workshop on
+  Projector camera systems}, page~8. ACM, 2008.
 
 \bibitem[Benko et~al.(2014)Benko, Wilson, and Zannier]{benko2014}
 Hrvoje Benko, Andrew~D Wilson, and Federico Zannier.

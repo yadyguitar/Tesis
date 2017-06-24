@@ -2,53 +2,52 @@ This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: tesis.aux
 The style file: unsrtnat.bst
-Illegal, another \bibstyle command---line 220 of file tesis.aux
+Illegal, another \bibstyle command---line 243 of file tesis.aux
  : \bibstyle
  :          {plain}
 I'm skipping whatever remains of this command
 Database file #1: biblio.bib
-Warning--I didn't find a database entry for "projectionmapping"
 Warning--empty journal in Sol2016
 Warning--can't use both volume and number fields in Dorsey1991
-You've used 34 entries,
+You've used 35 entries,
             2481 wiz_defined-function locations,
-            773 strings with 11538 characters,
-and the built_in function-call counts, 15693 in all, are:
-= -- 1384
-> -- 774
-< -- 30
-+ -- 299
-- -- 230
-* -- 1170
-:= -- 2369
-add.period$ -- 118
-call.type$ -- 34
-change.case$ -- 66
-chr.to.int$ -- 33
-cite$ -- 36
-duplicate$ -- 828
-empty$ -- 1431
-format.name$ -- 272
-if$ -- 3469
+            777 strings with 11709 characters,
+and the built_in function-call counts, 16096 in all, are:
+= -- 1417
+> -- 795
+< -- 31
++ -- 307
+- -- 236
+* -- 1198
+:= -- 2431
+add.period$ -- 122
+call.type$ -- 35
+change.case$ -- 68
+chr.to.int$ -- 34
+cite$ -- 37
+duplicate$ -- 853
+empty$ -- 1471
+format.name$ -- 279
+if$ -- 3562
 int.to.chr$ -- 2
-int.to.str$ -- 35
-missing$ -- 36
-newline$ -- 178
-num.names$ -- 102
-pop$ -- 332
+int.to.str$ -- 36
+missing$ -- 37
+newline$ -- 183
+num.names$ -- 105
+pop$ -- 345
 preamble$ -- 1
-purify$ -- 34
+purify$ -- 35
 quote$ -- 0
-skip$ -- 519
+skip$ -- 530
 stack$ -- 0
-substring$ -- 836
-swap$ -- 222
-text.length$ -- 17
+substring$ -- 840
+swap$ -- 228
+text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 232
+type$ -- 239
 warning$ -- 2
-while$ -- 141
+while$ -- 144
 width$ -- 0
-write$ -- 461
+write$ -- 475
 (There was 1 error message)
