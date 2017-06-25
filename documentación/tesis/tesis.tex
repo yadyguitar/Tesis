@@ -593,54 +593,58 @@ Luego de detectar e identificar el contorno de la persona, procedemos al cálcul
 Con respecto al subsistema por parte de blender, tenemos el módulo Proyección que ha sido analizado y diseñado anteriormente. Debido a que no existe forma de acceder a la interfaz y propiedades de Blender de manera externa (por Terminal), éste módulo se encuentra embebido en él. Es por ello, que para que el sistema general funcione, se requiere la ejecución paralela de los dos subsistemas. Se debe tener en cuenta que a pesar de que se encuentra python dentro de Blender, la versión por defecto que se utiliza es la 3.5.2, la cual varía un poco en algunas funciones, y fue necesario instalar las librerías numpy y math para ésta versión que permiten hacer los cálculos necesarios en éste subsistema.\\
 \begin{figure}[htb]
 	\centering
-	\hspace*{-1.5cm}
-	\subfigure[Coordenadas de una imagen]{\includegraphics[width=100mm]{./figuras/coordsImagen}}
-	\subfigure[Coordenadas en Blender]{\includegraphics[width=100mm]{./figuras/coordsBlender}}
-	\caption{Ejes de coordenadas en Imagen Depth y en Blender } \label{fig:coords}
+	\subfigure[Coordenadas de una imagen]{\includegraphics[width=120mm]{./figuras/coordsImagen}}
+	\subfigure[Coordenadas en Blender]{\includegraphics[width=118mm]{./figuras/coordsBlender}}
+	\caption[Ejes de coordenadas en Imagen Depth y en Blender]{Ejes de coordenadas en Imagen Depth y en Blender ; En (b) entonces se manejará el eje de las x negativo para tener un correcta correspondencia con las coordenadas de la imagen} \label{fig:coords}
 \end{figure}
+
 \begin{figure}[thb]
 	\centering
+	\vspace*{5mm}
 	\includegraphics[width=120mm]{./figuras/escenarioBlender}
-	\caption{Escenario en Blender} \label{fig:escenarioBlender}
+	\caption[Escenario virtual en Blender]{Escenario virtual en Blender; como puede notar en los ejes, el escenario se encuentra en el sentido positivo de las ordenadas, mientras que en el eje de las abscisas se encuentra en el sentido negativo} \label{fig:escenarioBlender}
 \end{figure}
+
 Para que existiera una equivalencia real, entre nuestro entorno y el entorno virtual, en un inicio se había decidido recrear el escenario virtual con las mismas dimensiones que la imagen de profundidad tiene como resolución (640x480), pero debido al gran número de coordenadas que generaría y por lo tanto un proceso mas lento de renderización, se decidió definir éste escenario con un tamaño diez veces menor (64.0x48.0), en donde los decimales serán el equivalente de la primera cifra (las unidades) de la imagen de profundidad, es decir, si tenemos una posición que se encuentra en el pixel (128, 264), el equivalente en blender de la posición será (-12.8, 26.4). Como se habrá dado cuenta, ésta última coordenada mencionada (la usada en blender), tiene el eje de las x como negativo, ésto debido a que las coordenadas en una imagen se encuentran como se muestra en la figura  \ref{fig:coords}(a) , mientras que en un sistema de coordenadas como el de blender, si el eje de las abscisas la consideramos como positiva se mostraría la proyección en espejo (Véase la diferencia de los sistemas de coordenadas en la misma figura \ref{fig:coords}), es por ello que al realizar la equivalencia de la posición también se necesita pasar el eje de las x a negativo para su correcta proyección. La figura \ref{fig:escenarioBlender} muestra el escenario en blender en donde nos podemos dar cuenta que se encuentra posicionado en el sentido negativo de la abscisa.\\
+\begin{figure}[p]
+	\centering
+	\hspace*{-5mm}
+	\subfigure[Sistema de coordenadas con marco de referencia global]{\includegraphics[width=150mm]{./figuras/camaraBGlobal}}
+	\hspace*{-5mm}
+	\subfigure[Sistema de coordenadas con marco de referencia local]{\includegraphics[width=150mm]{./figuras/camaraBLocal}}
+	\caption[Marcos de referencia de la cámara de Blender]{Marcos de referencia de la cámara de Blender. Eje x(rojo), eje y(verde), eje z(azul); en (a), la cámara se moverá con respecto al marco de referencia global, y su rotación será respecto a éste marco; en (b) el marco de referencia es local, por lo que la rotación será respecto a éste} \label{fig:camaraBlender}
+\end{figure}
+Luego de haber obtenido la posición de la persona y realizada la conversión a la posición relativa en blender, nos encontramos con el siguiente problema: los ángulos. El cálculo de los ángulos y de la posición de nuestra cámara en blender depende en gran medida con que marco de referencia nos guiemos (global o local) y es de suma importancia, debido a que dependiendo cual utilicemos, los valores cambiarán en los dos sistemas de forma diferente, de modo que se debe conocer cual utilizar para así poder posicionar y mostrar la imagen correctamente (Véase figura \ref{fig:camaraBlender}). Infiriendo que nuestro punto de atención siempre será el punto central en la mesa (equivalente al punto central del escenario virtual (Figura \ref{fig:escenarioBlender})), al ubicar la cámara, en la siguiente posición, los ángulos de ésta no varían, de tal modo que la cámara no estará enfocando al punto central, por lo que es necesario modificar su ángulo entre estas dos posiciones (posición actual de la cámara y posición central). Considerando esto, y con una posición en z constante (se utilizó valor de 20), debido a que en éste prototipo no se considera la altura, el eje el cual tendríamos que variar su ángulo dependiendo de su posición (x,y), sería Z en el marco de referencias global del sistema de coordenadas. Para ello generamos dos vectores (posición actual de la cámara, posición del punto central (-32.0, 24.0)) en el plano (xy), luego hallamos el vector resultante entre los dos anteriores que es trasladado al origen, y determinamos el ángulo a través del arcotangente para obtener el ángulo en z. Se debe tener en cuenta que dependiendo del cuadrante en donde se ubique el vector obtenido, se tendrá que adicionar o restar ángulos para su correcta proyección en blender (Figura \ref{fig:equivZ}).
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=70mm]{./figuras/equivZ}
+	\caption{Obtención de ángulo correcto en Z} \label{fig:equivZ}
+\end{figure}
+En la figura \ref{fig:vistaCamara} podemos observar cómo la cámara en una posición (x,y), muestra la perspectiva enfocando al punto central del escenario, lo cual demuestra que el seguimiento de éste punto se logra modificando el ángulo z global.
 \begin{figure}[thb]
 	\centering
-	%\vspace*{-4cm}
-	\subfigure[Sistema de coordenadas global]{\includegraphics[width=120mm]{./figuras/camaraBGlobal}}
-	\subfigure[Sistema de coordenadas local]{\includegraphics[width=120mm]{./figuras/camaraBLocal}}
-	\caption[Sistema de coordenadas de la cámara de Blender]{Sistema de coordenadas de la cámara de Blender: (a) Muestra los ejes globales (izquierda), la rotación global en cada uno de los ejes (derecha); (b) Muestra los ejes locales (izquierda), la rotación local en cada uno de los ejes (derecha) } \label{fig:camaraBlender}
-\end{figure}
-Luego de haber obtenido la posición de la persona y realizada la conversión a la posición relativa en blender, nos encontramos con el siguiente problema: los ángulos. El cálculo de los ángulos y de la posición de nuestra cámara en blender depende en gran medida en que sistema nos encontremos (global o local) y es de suma importancia, debido a que dependiendo cual utilicemos, los valores cambiarán en los dos sistemas de forma diferente, de modo que se debe conocer cual utilizar para así poder posición y mostrar la imagen correctamente (Véase figura \ref{fig:camaraBlender}). Infiriendo que nuestro punto de atención siempre será el punto central en la mesa (equivalente al punto central del escenario virtual (Figura \ref{fig:escenarioBlender})), al ubicar la cámara, en la siguiente posición, los ángulos de ésta no varían, de tal modo que la cámara no estará enfocando al punto central, por lo que es necesario modificar su ángulo entre estas dos posiciones. Considerando esto, y con una posición en z constante, debido a que en éste prototipo no se considera la altura, el eje el cual tendríamos que variar su ángulo dependiendo de su posición (x,y), sería Z en el sistema global de coordenadas. Para ello generamos dos vectores (posición actual de la cámara, posición del punto central (-32.0, 24.0)), hallamos el vector entre los dos anteriores que es trasladado al origen en un plano local, y luego el ángulo a través del arcotangente de z. Se debe tener en cuenta que dependiendo del cuadrante en donde se ubique el vector obtenido, se tendrá que adicionar o restar ángulos para su correcta proyección en blender:
-\begin{itemize}
-	\item Cuadrante I: (ángulo obtenido) + 270$^{\circ}$
-	\item Cuadrante II: 90$^{\circ}$ - (ángulo obtenido)
-	\item Cuadrante III: (ángulo obtenido) + 90$^{\circ}$
-	\item Cuadrante IV: (90$^{\circ}$ - ángulo obtenido) $*$ -1
-\end{itemize}
-\begin{figure}[thb]
-	\centering
-	\includegraphics[width=120mm]{./figuras/vistaCamara}
-	\caption{Vista del escenario desde la cámara} \label{fig:vistaCamara}
-\end{figure}
-En la figura \ref{fig:vistaCamara} podemos observar como la cámara en una posición (x,y), muestra la perspectiva enfocando al punto central del escenario, lo cual demuestra que el seguimiento de éste punto se logra modificando el ángulo z global.\\
+	\includegraphics[width=100mm]{./figuras/vistaCamara}
+	\caption[Vista del escenario desde la cámara]{Vista del escenario desde la cámara utilizando marco de referencia global} \label{fig:vistaCamara}
+\end{figure}\\
 El objetivo general de éste trabajo es que el usuario pueda caminar al rededor de toda la mesa y poder visualizar el escenario virtual desde cualquier ángulo. Cuando se realizaron las pruebas correspondientes del prototipo 1, se notó (como es entendible) que la ventana de visualización (que es la vista desde la cámara) muestra la perspectiva correctamente dependiendo de la posición del usuario, pero la imagen no se encuentra con dirección hacia la posición donde se encuentra éste, sino que se mantiene estática para que desde una única posición se pueda observar todo el cambio, es decir, la captura de la perspectiva de la cámara se debe rotar junto con la persona, para que ésta, desde la posición donde se encuentre lo pueda ver desde su perspectiva correspondiente. En la figura \ref{fig:vistas} se muestra lo que en un inicio pasaba, y como debería ser proyectado.\\
 \begin{figure}[thb]
 	\centering
 	%\vspace*{-4cm}
-	\subfigure[Posición incorrecta de la imagen]{\includegraphics[width=60mm]{./figuras/posicionIncorrecta}}
+	\subfigure[Posición incorrecta de la imagen]{\includegraphics[width=62mm]{./figuras/posicionIncorrecta}}
 	\hspace*{1cm}
 	\subfigure[Posición correcta de la imagen]{\includegraphics[width=60mm]{./figuras/posicionCorrecta}}
 	\caption{Rotación de la imagen proyectada en torno a la posición de la persona} \label{fig:vistas}
 \end{figure}
-Para poder obtener el resultado de la figura \ref{fig:vistas}-b, será necesario modificar el ángulo en z, pero en éste caso en las coordenadas locales, ya que al modificarse éstas, se estará rotando la ventana de visualización de la cámara sin variar la inclinación o posición global. Para ello, se aplica el mismo procedimiento anterior, pero variando la adición o resta final de ángulos dependiendo del cuadrante donde se encuentre:
-\begin{itemize}
-	\item Cuadrante I: 180$^{\circ}$ - (ángulo obtenido)
-	\item Cuadrante II: se mantiene igual a ángulo obtenido
-	\item Cuadrante III: 360$^{\circ}$ - (ángulo obtenido)
-	\item Cuadrante IV: 180$^{\circ}$ + (ángulo obtenido)
-\end{itemize}
-Todo lo descrito anteriormente, se puede resumir en el siguiente diagrama de flujo (Figura \ref{fig:diagFlujProyeccion})
+Para poder obtener el resultado de la figura \ref{fig:vistas}(b), será necesario modificar el ángulo en z, pero en éste caso con respecto al marco de referencia local, ya que al modificarse éstas, se estará rotando la ventana de visualización de la cámara sin variar la inclinación o posición global (véase como se comporta la rotación en z local en figura \ref{fig:camaraBlender}). Para ello, se realiza el mismo procedimiento anterior, es decir, a partir de la posición de la persona y del punto central del plano (xy) se obtiene un vector resultante, el cual se ubicará en el origen pero en éste caso la adición o resta final de ángulos será diferente, tomando en cuenta que el escenario será visto desde una posición inicial (se consideró paralela al eje de las abscisas) con ángulo inicial 0, y partiendo de ello se realizará la equivalencia (Figura \ref{fig:equivX}).
+\vspace*{5mm}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=70mm]{./figuras/equivX}
+	\caption{Obtención de ángulo correcto en Z local} \label{fig:equivX}
+\end{figure}
+\vspace*{5mm}
+Todo lo descrito anteriormente, se puede resumir en el diagrama de flujo de la figura \ref{fig:diagFlujProyeccion}, que muestra las instrucciones que se tiene que seguir para la proyección del escenario. Como fue mencionado, en éste prototipo el escenario 3D no involucrará la función de aumentar o disminuir la imagen (ésto ocurriría al acercarnos o alejarnos del escenario), lo que realmente estará haciendo será rotar en el eje vertical (z) dependiendo de la posición en donde se encuentre la persona.\\
+Se debe considerar, que si alguna persona de mayor altura se acerca al área de detección, debido al algoritmo utilizado para la detección (detectar lo más cercano al sensor y el contorno de área mas grande), la perspectiva cambiará a ésta. De igual forma, si se alzan las manos o algún objeto mas alto que la persona detectada, la proyección sufrirá cambios debido a la detección.
 \begin{figure}[thb]
 	\centering
 	\includegraphics[width=70mm]{./figuras/diagFlujProyeccion}
