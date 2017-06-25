@@ -294,15 +294,15 @@ RoomAlive, es un complejo proyecto propuesto por Microsoft Research\textregister
 A pesar de que se ha logrado un buen avance en la proyección de elementos virtuales en nuestro entorno, de tal forma que no se distorsionen al ser mostrados en tiempo real, no se ha abarcado mucho en el estudio que toma en cuenta al objeto virtual 3D, mostrando sus respectivos ángulos o lados en torno a la perspectiva de una persona.
 \begin{figure}[thb]
 	\centering
-	\subfigure[Estructura del escenario de RoomAlive]{\includegraphics[width=100mm]{./figuras/vam1}}
-	\subfigure[Estructura del escenario de RoomAlive]{\includegraphics[width=100mm]{./figuras/vam2}}
+	\subfigure[Estructura del escenario de proyecto VAM]{\includegraphics[width=100mm]{./figuras/vam1}}
+	\subfigure[Ejemplo de proyección de modelo anatómico]{\includegraphics[width=100mm]{./figuras/vam2}}
 	\caption[Proyecto Virtual Anatomical Model]{Proyecto Virtual Anatomical Model, que muestra la anatomía del ser humano tomando la perspectiva del observador; en (b) se puede observar que muestra la información dependiendo del lado (frontal o trasero) \cite{kondo2008}} \label{fig:vam}
 \end{figure}\\
 Uno de los primeros proyectos, en el cual que se empezó a tomar en cuenta éste estudio, lo podemos encontrar por parte de la Universidad de Gifu (Japón), con un prototipo llamado Virtual Anatomical Model(VAM) en su artículo \cite{kondo2008}, el cual ésta enfocado en el área de la medicina y se basa principalmente en combinar un objeto físico con forma humana (maniquí), el cual se encuentra encima de una mesa y superponer la información virtual directamente en el objeto mostrando los órganos internos del cuerpo humano para facilitar el aprendizaje de éstos. Proponen a través de marcadores en un gorra del observador realizar un seguimiento de la cabeza para así mostrar correctamente la perspectiva dependiendo de la posición en donde se encuentre, y de ésta forma exista una mejor interacción con lo observado. En la figura \ref{fig:vam} se muestra cómo fue construido el sistema en general y cómo se muestra la información.
 \begin{figure}[htb]
 	\centering
-	\subfigure[Estructura del escenario de RoomAlive]{\includegraphics[width=130mm]{./figuras/dyadic1}}
-	\caption[Proyecto RoomAlive por Microsoft\textregistered]{Proyecto RoomAlive por Microsoft\textregistered; (a) escenario conformado por 6 unidades procam (una unidad procam posee un proyector (pro) y un sensor Kinect\textcopyright(cam)); (b) juego experimental que identifica superficies planas, proyecta objetos en ella y se puede interactuar con estos elementos) \hyperlink{e12}{[E12]}} \label{fig:perspectiva}
+	\includegraphics[width=130mm]{./figuras/dyadic1}
+	\caption[Proyecto Mano-a-mano por Microsoft\textregistered]{Proyecto Mano-a-mano por Microsoft\textregistered; la imagen de la izquierda es la simulación virtual del escenario, mientras que la derecha es la proyección de éste en un entorno real} \label{fig:perspectiva}
 \end{figure}\\
 Por parte de Microsoft\textregistered, contamos con un proyecto llamado Mano-a-mano \citep{benko2014}, el cual involucra las técnicas anteriormente mencionadas en RoomAlive y adicionalmente se realiza una adaptación del elemento virtual con respecto a la posición de la persona. En ésta propuesta, es tomada la perspectiva de dos personas que se encuentran una frente a la otra, lo cual involucra la interacción multi-usuario y la posibilidad de visualizar los objetos virtuales tal como si fuesen reales. Sin embargo, el ángulo en el que se pueden desplazar es limitado (menos de 90 grados) debido a la posición de los proyectores (parte de la imagen es proyectada directamente sobre la persona contraria), por lo tanto la interacción y visualización de los objetos virtuales 3D sigue siendo tema de estudio (Figura \ref{fig:perspectiva}).%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
