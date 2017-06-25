@@ -54,19 +54,23 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Parte frontal de la mesa}}}{38}{figure.4.2}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Parte lateral de la mesa}}}{38}{figure.4.2}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Diagrama de flujo: funci\IeC {\'o}n Principal de prototipo 1}}{39}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Diagrama de flujo de detecci\IeC {\'o}n manual}}{40}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Diagrama de flujo de Posici\IeC {\'o}n}}{42}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Diagrama de flujo de Posici\IeC {\'o}n}}{43}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Ejes de coordenadas en Imagen Depth y en Blender }}{44}{figure.4.7}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Coordenadas de una imagen}}}{44}{figure.4.7}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Coordenadas en Blender}}}{44}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Sistema de coordenadas de la c\IeC {\'a}mara de Blender}}{45}{figure.4.8}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Sistema de coordenadas global}}}{45}{figure.4.8}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sistema de coordenadas local}}}{45}{figure.4.8}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Vista del escenario desde la c\IeC {\'a}mara}}{46}{figure.4.9}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Rotaci\IeC {\'o}n de la imagen proyectada en torno a la posici\IeC {\'o}n de la persona}}{47}{figure.4.10}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Posici\IeC {\'o}n incorrecta de la imagen}}}{47}{figure.4.10}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Posici\IeC {\'o}n correcta de la imagen}}}{47}{figure.4.10}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Diagrama de Flujo de Proyecci\IeC {\'o}n}}{48}{figure.4.11}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Funci\IeC {\'o}n principal de prototipo 2}}{49}{figure.4.12}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Secuencia de im\IeC {\'a}genes de profundidad en un segundo sin filtro y con filtro}}{40}{figure.4.4}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Secuencia de im\IeC {\'a}genes de profundidad sin filtro capturadas en un segundo}}}{40}{figure.4.4}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Secuencia de im\IeC {\'a}genes de profundidad con filtro capturadas en un segundo}}}{40}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Secuencia de im\IeC {\'a}genes de profundidad binarizadas y de im\IeC {\'a}genes RGB en un segundo}}{41}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Diagrama de flujo de detecci\IeC {\'o}n manual}}{42}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Diagrama de flujo de Posici\IeC {\'o}n}}{43}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Ejes de coordenadas en Imagen Depth y en Blender }}{44}{figure.4.8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Coordenadas de una imagen}}}{44}{figure.4.8}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Coordenadas en Blender}}}{44}{figure.4.8}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Escenario en Blender}}{45}{figure.4.9}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Sistema de coordenadas de la c\IeC {\'a}mara de Blender}}{46}{figure.4.10}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Sistema de coordenadas global}}}{46}{figure.4.10}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sistema de coordenadas local}}}{46}{figure.4.10}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Vista del escenario desde la c\IeC {\'a}mara}}{47}{figure.4.11}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Rotaci\IeC {\'o}n de la imagen proyectada en torno a la posici\IeC {\'o}n de la persona}}{48}{figure.4.12}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Posici\IeC {\'o}n incorrecta de la imagen}}}{48}{figure.4.12}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Posici\IeC {\'o}n correcta de la imagen}}}{48}{figure.4.12}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Diagrama de Flujo de Proyecci\IeC {\'o}n}}{49}{figure.4.13}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Funci\IeC {\'o}n principal de prototipo 2}}{50}{figure.4.14}
 \addvspace {10\p@ }
