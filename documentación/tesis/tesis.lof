@@ -74,4 +74,8 @@
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Obtenci\IeC {\'o}n de \IeC {\'a}ngulo correcto en Z local}}{49}{figure.4.14}
 \contentsline {figure}{\numberline {4.15}{\ignorespaces Diagrama de Flujo de Proyecci\IeC {\'o}n}}{50}{figure.4.15}
 \contentsline {figure}{\numberline {4.16}{\ignorespaces Funci\IeC {\'o}n principal de prototipo 2}}{51}{figure.4.16}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Detecci\IeC {\'o}n autom\IeC {\'a}tica que sigue a la persona principal}}{53}{figure.4.17}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Detecci\IeC {\'o}n de la persona excluyendo la mano}}}{53}{figure.4.17}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Detecci\IeC {\'o}n de la persona excluyendo ambas manos}}}{53}{figure.4.17}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Detecci\IeC {\'o}n autom\IeC {\'a}tica de la persona principal}}{54}{figure.4.18}
 \addvspace {10\p@ }

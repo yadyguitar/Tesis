@@ -53,10 +53,10 @@
 \contentsline {subsection}{\numberline {4.2.3}Proyecci\IeC {\'o}n basada en la posici\IeC {\'o}n (x,y)}{42}{subsection.4.2.3}
 \contentsline {section}{\numberline {4.3}Prototipo 2}{50}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Detecci\IeC {\'o}n Autom\IeC {\'a}tica}{51}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}C\IeC {\'a}lculo de la altura}{53}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Proyecci\IeC {\'o}n basada en la posici\IeC {\'o}n y altura (x,y,z)}{53}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Limitaciones}{55}{subsection.4.3.4}
-\contentsline {chapter}{\numberline {5}Conclusiones}{57}{chapter.5}
-\contentsline {section}{\numberline {5.1}Trabajo Futuro}{57}{section.5.1}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{58}{section.5.1}
-\contentsline {chapter}{Enlaces de Referencia}{62}{chapter*.10}
+\contentsline {subsection}{\numberline {4.3.2}C\IeC {\'a}lculo de la altura}{54}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Proyecci\IeC {\'o}n basada en la posici\IeC {\'o}n y altura (x,y,z)}{56}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Limitaciones}{56}{subsection.4.3.4}
+\contentsline {chapter}{\numberline {5}Conclusiones}{58}{chapter.5}
+\contentsline {section}{\numberline {5.1}Trabajo Futuro}{58}{section.5.1}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{59}{section.5.1}
+\contentsline {chapter}{Enlaces de Referencia}{63}{chapter*.10}
