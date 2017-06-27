@@ -79,8 +79,8 @@ class Deteccion:
 		try:
 			x,y,w,h=cv2.boundingRect(self.persona.contornos)
 			cv2.rectangle(self.frameRGB,(x,y),(x+w,y+h),(0,255,0),2)
-			print "Area del rectangulo: "
-			print w*h
+			#print "Area del rectangulo: "
+			#print w*h
 		except:
 			print("no hay contornos")
 		cv2.imshow('Imagen RGB',self.frameRGB)
@@ -110,7 +110,7 @@ class Deteccion:
 			############
 			imagenBinarizada=self.binarizarFrame(depth) #imagen binarizada
 			contours=self.buscaContornos(imagenBinarizada.copy())
-			print self.threshold
+			#print self.threshold
 			
 			if contours!=[]:
 				indexContorno=self.getIndexContornoAreaMayor(contours)#indice donde se encuentra el area mas grande (filtro)
@@ -126,7 +126,7 @@ class Deteccion:
 						cv2.rectangle(depth,(x,y),(x+w,y+h),(255,255,255),-1)
 						cv2.imshow('quitando persona alta',depth)
 						hayOtraPersona=True
-					print "hay otra persona"
+					#print "hay otra persona"
 
 
 			#print "area de la persona: " + str(areaPersona)
@@ -151,16 +151,20 @@ class Deteccion:
 	def deteccionAutomatica(self):
 		depth=cv2.GaussianBlur(self.frameDepth, (5, 5), 0)
 		depth=cv2.medianBlur(depth,5)
+		depth1=depth.copy()
 		#depth = cv2.blur(depth,(5,5))
-		print "Umbral: "
-		print self.threshold
+		#print "Umbral: "
+		#print self.threshold
+		cv2.imshow('Profundidad suavizada',depth) #para pruebas
 		if self.ajustaUmbral(depth):			
 		#*********************************************************************************#
 			 #muestra la ventana donde ajustare manualmente el thres
-			cv2.drawContours(self.frameRGB,[self.persona.contornos],0, (0,255,0), 2)
+			#cv2.drawContours(self.frameRGB,[self.persona.contornos],0, (0,255,0), 2)
 		#*********************************************************************************#
-		cv2.imshow('Imagen RGB',self.frameRGB)
-		cv2.imshow('Imagen Depth',self.frameDepth)
+			cv2.drawContours(depth1,[self.persona.contornos],0, (0,255,0), 2) #para pruebas
+		#cv2.imshow('Imagen RGB',self.frameRGB)
+		cv2.imshow('Imagen RGB',depth1) #para pruebas
+		#cv2.imshow('Imagen Depth',self.frameDepth)
 
 
 if __name__=="__main__":

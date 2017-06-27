@@ -32,6 +32,7 @@ if __name__=="__main__":
 	while 1:
 		frame=get_video()
 		depth=get_depth()
+		cv2.imshow("Profundidad",depth)#para pruebas
 		#se va modificando la class persona y se puede ir accediendo a sus propiedades actuales
 		deteccion.setFrames(frame,depth)
 		
