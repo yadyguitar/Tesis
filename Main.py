@@ -1,7 +1,7 @@
 import freenect
 import cv2
 import numpy as np
-
+from time import time
 from Persona import Persona
 from Deteccion import Deteccion
 from Posicion import Posicion
@@ -29,9 +29,28 @@ if __name__=="__main__":
 	persona=Persona()
 	deteccion=Deteccion(persona,1)
 	posicion=Posicion(persona)
+	tiempoinicial=time()
+	cont=0
+	seg=1
 	while 1:
+		'''print "depth"
+		print (cont/30,time()-tiempoinicial)
+		print "rgb"
+		print (cont/30,time()-tiempoinicial)'''
 		frame=get_video()
 		depth=get_depth()
+
+		cont+=1
+
+		if (time()-tiempoinicial>(seg+1)):
+			print str(cont) + "frames por segundo"
+
+		if(int(time()-tiempoinicial)>(seg)):
+			seg=int(time()-tiempoinicial)
+			cont=0
+	
+			
+
 		cv2.imshow("Profundidad",depth)#para pruebas
 		#se va modificando la class persona y se puede ir accediendo a sus propiedades actuales
 		deteccion.setFrames(frame,depth)

@@ -68,7 +68,7 @@ class Posicion:
 		#print "altura: "+ str(altura)
 		xyz=(x,y,altura)
 		self.persona.posicion=xyz
-		self.showPointCentral()
+		#self.showPointCentral()
 
 if __name__ == "__main__":
 	print ("estoy en la clase posicion")
