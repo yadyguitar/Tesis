@@ -821,23 +821,31 @@ Con la adición a éste módulo del valor de la altura en z, se realizaron los c
 %%%CAPÍTULO 5 -> CONCLUSIONES%%%
 \chapter{Conclusiones}\label{cap.conclusiones}
 Se propuso un sistema que fuese capaz de tomar la perspectiva de una persona con base en la posición y altura para así poder mostrar el ángulo correspondiente de un escenario proyectado virtual 3D. El análisis de éste nos permitió diseñar un sistema mediante módulos y prototipos, de tal modo que se pudiesen optimizar los métodos de cada uno de los módulos de forma independiente. Los resultados fueron satisfactorios conforme se fue avanzando el desarrollo y optimización de éste y tomando en cuenta los recursos limitados que se poseen en cuanto al hardware. El prototipo 2, fue la última versión del sistema en éste trabajo de tesis, y es capaz de detectar a una persona de forma automática, determinar la posición y altura (posición en 3 dimensiones), y proyectar el escenario calculando los ángulos correspondientes, además se adicionó un algoritmo propio capaz de realizar el seguimiento a la persona actual tomando en cuenta que pudiesen existir mas personas u objetos en el entorno de detección sin afectar la perspectiva de la persona principal.\\
-Como fue mencionado, el sensor utilizado captura 30 imágenes (frames) por segundo, y debido a los cálculos que se realizan en cada imagen, se hizo un análisis de cuantos frames realmente se obtienen en un segundo, dando como resultado el mismo número (30 fps), lo cual concluye que el uso de python no alentece el subsistema en la Terminal.
+Los resultados muestran que se puede lograr ver los 360$^{\circ}$ del escenario virtual, sin embargo los elementos mostrados por parte de blender carecen de textura, sombras y otras propiedades lo cual no ayuda a que se visualicen como si fuesen reales.\\
+En cuanto al rendimiento general del sistema, como fue mencionado, el sensor utilizado captura 30 imágenes (frames) por segundo, y debido a los cálculos que se realizan en cada imagen, se hizo un análisis de cuantos frames realmente se obtienen en un segundo, dando como resultado el mismo número (30 fps), lo cual concluye que el uso de python no alentece el subsistema en la Terminal.\\
 
 \section{Trabajo Futuro}
-Durante el desarrollo e implementación de éste sistema, se detectaron varias limitaciones que impedían el correcto funcionamiento de éste. Una de las principales y que afecta en gran medida al sistema, es el sensor de profundidad, que en éste caso, debido al bajo costo fue elegido el kinect\textcopyright\ versión 1 y debido a ello el ángulo de captura de la cámara depth es relativamente pequeño (43$^{\circ}$ vertical, 57$^{\circ}$ horizontal). Su poca amplitud ocasiona que el área de detección alrededor de la mesa varíe y sea mas pequeña si la persona es mas alta (Figura \ref{fig:anguloKinect1}). Otra limitante la vemos en la altura máxima permitida de una persona, debido a que depende de la altura en donde se encuentre el kinect\textcopyright. Es por ello que para una correcta detección como máximo se permiten personas con una altura de 1.80 m con el sensor ubicado a 2.90 m del suelo. Debido al foco del sensor de profundidad y al ángulo de captura de éste, las esquinas suelen ser mal detectadas por lo que cuando la persona se aleja, la detección del contorno varía mucho y la proyección del escenario sufre cierto grado de variación.
+Durante el desarrollo e implementación de éste sistema, se detectaron varias limitaciones que impedían el correcto funcionamiento de éste. Una de las principales y que afecta en gran medida al sistema, es el sensor de profundidad, que en éste caso, debido al bajo costo fue elegido el kinect\textcopyright\ versión 1 y debido a ello el ángulo de captura de la cámara depth es relativamente pequeño (43$^{\circ}$ vertical, 57$^{\circ}$ horizontal). Su poca amplitud ocasiona que el área de detección alrededor de la mesa varíe y sea mas pequeña si la persona es mas alta (Figura \ref{fig:anguloKinect1}). 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=140mm]{./figuras/anguloKinect1}
 	\caption{Área de detección dependiendo de altura de la persona}\label{fig:anguloKinect1}
 \end{figure}
-El desarrollo de sistemas que necesitan de una respuesta en tiempo real requiere de hardware y software que proporcionen y procesen la información lo más rápido posible evitando latencias. Para ello se debe tener en cuenta que debido al corto tiempo que se tuvo para el desarrollo del sistema y las limitantes que posee el Kinect\textcopyright\ versión 1, se determinó como trabajo futuro algunas mejoras en el programa y propuestas de cambio, que ayudarán a obtener uno mas robusto y preciso: 
+El material usado para la retroproyección, reflejaba en parte la proyección y la imagen mostrada no poseían mucha nitidez.\\
+El desarrollo de sistemas que necesitan de una respuesta en tiempo real requiere de hardware y software que proporcionen y procesen la información lo más rápido posible evitando latencias. Para ello se debe tener en cuenta que debido al corto tiempo que se tuvo para el desarrollo del sistema y a los recursos limitados de hardware, se determinó como trabajo futuro algunas mejoras en el programa y propuestas, que ayudarán a obtener uno mas robusto y preciso: 
 \begin{itemize}
-	\item Cambiar de lenguaje python (en el subsistema de Terminal) a un lenguaje compilado (c\#,c), para agilizar los cálculos de detección en la imagen, tratamientos y obtención de ésta.
 	\item Sustituir el Kinect\textcopyright\ versión 1, por la versión 2 (ésta posee ángulos de 70$^{\circ}$ en horizontal y 60$^{\circ}$ vertical; y menos ruido en la imagen de profundidad)
+	\item Obtención de algún otro tipo de material de retroproyección de bajo costo
 	\item Para tener un seguimiento de la persona mas robusto, incluir un análisis de la imagen de color, en situaciones donde la persona se encuentra en el borde de la detección
 	\item Aplicar textura y efectos que den profundidad a los objetos virtuales en blender para contribuir a una visión mas cercana a lo real.
 	\item Incluir un módulo de interacción con los objetos virtuales.
+	\item Incluir un módulo en donde se pueda utilizar además de la retroproyección, la proyección frontal, de tal modo que exista mayor contacto con los elementos virtuales (en la figura \ref{fig:frontretro} se muestra una idea de lo propuesto). Cabe mencionar que para ello se tendrá que considerar la irregularidad de la superficie (causada por las manos).
 \end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=130mm]{./figuras/frontretro}
+	\caption{Área de detección dependiendo de altura de la persona}\label{fig:frontretro}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%BIBLIOGRAFÍA%%%
