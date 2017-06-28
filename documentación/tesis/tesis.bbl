@@ -1,4 +1,4 @@
-\begin{thebibliography}{35}
+\begin{thebibliography}{36}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -245,5 +245,11 @@ Hrvoje Benko, Andrew~D Wilson, and Federico Zannier.
 \newblock Dyadic projected spatial augmented reality.
 \newblock In \emph{Proceedings of the 27th annual ACM symposium on User
   interface software and technology}, pages 645--655. ACM, 2014.
+
+\bibitem[Gonzalez and Woods(2006)]{Gonzalez2006}
+Rafael~C. Gonzalez and Richard~E. Woods.
+\newblock \emph{Digital Image Processing (3rd Edition)}.
+\newblock Prentice-Hall, Inc., Upper Saddle River, NJ, USA, 2006.
+\newblock ISBN 013168728X.
 
 \end{thebibliography}

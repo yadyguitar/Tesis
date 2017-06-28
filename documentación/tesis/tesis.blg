@@ -2,52 +2,52 @@ This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: tesis.aux
 The style file: unsrtnat.bst
-Illegal, another \bibstyle command---line 243 of file tesis.aux
+Illegal, another \bibstyle command---line 282 of file tesis.aux
  : \bibstyle
  :          {plain}
 I'm skipping whatever remains of this command
 Database file #1: biblio.bib
 Warning--empty journal in Sol2016
 Warning--can't use both volume and number fields in Dorsey1991
-You've used 35 entries,
+You've used 36 entries,
             2481 wiz_defined-function locations,
-            777 strings with 11709 characters,
-and the built_in function-call counts, 16096 in all, are:
-= -- 1417
-> -- 795
-< -- 31
-+ -- 307
-- -- 236
-* -- 1198
-:= -- 2431
-add.period$ -- 122
-call.type$ -- 35
-change.case$ -- 68
-chr.to.int$ -- 34
-cite$ -- 37
-duplicate$ -- 853
-empty$ -- 1471
-format.name$ -- 279
-if$ -- 3562
+            784 strings with 11868 characters,
+and the built_in function-call counts, 16412 in all, are:
+= -- 1444
+> -- 810
+< -- 32
++ -- 313
+- -- 240
+* -- 1217
+:= -- 2483
+add.period$ -- 126
+call.type$ -- 36
+change.case$ -- 69
+chr.to.int$ -- 35
+cite$ -- 38
+duplicate$ -- 872
+empty$ -- 1501
+format.name$ -- 286
+if$ -- 3631
 int.to.chr$ -- 2
-int.to.str$ -- 36
-missing$ -- 37
-newline$ -- 183
-num.names$ -- 105
-pop$ -- 345
+int.to.str$ -- 37
+missing$ -- 39
+newline$ -- 189
+num.names$ -- 108
+pop$ -- 355
 preamble$ -- 1
-purify$ -- 35
+purify$ -- 36
 quote$ -- 0
-skip$ -- 530
+skip$ -- 541
 stack$ -- 0
-substring$ -- 840
-swap$ -- 228
+substring$ -- 842
+swap$ -- 230
 text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 239
+type$ -- 243
 warning$ -- 2
-while$ -- 144
+while$ -- 146
 width$ -- 0
-write$ -- 475
+write$ -- 490
 (There was 1 error message)
