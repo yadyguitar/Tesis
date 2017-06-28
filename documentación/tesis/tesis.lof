@@ -6,8 +6,8 @@
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Imagen original }}}{7}{figure.2.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Imagen con realidad aumentada }}}{7}{figure.2.1}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Realidad Aumentada aplicada a la medicina}}{8}{figure.2.2}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Simulador cl\IeC {\'\i }nico de examen de mama, extra\IeC {\'\i }do de \cite {kotranza2009} }}}{8}{figure.2.2}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Simulador de operaci\IeC {\'o}n, explicado en \cite {bichlmeier2007} }}}{8}{figure.2.2}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Simulador cl\IeC {\'\i }nico de examen de mama, extra\IeC {\'\i }do de \citep {kotranza2009} }}}{8}{figure.2.2}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Simulador de operaci\IeC {\'o}n, explicado en \citep {bichlmeier2007} }}}{8}{figure.2.2}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Funcionamiento de los HMD's}}{9}{figure.2.3}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Optical see-through }}}{9}{figure.2.3}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Video see-through }}}{9}{figure.2.3}
@@ -34,49 +34,52 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Ejemplo de proyecci\IeC {\'o}n de modelo anat\IeC {\'o}mico}}}{16}{figure.2.11}
 \contentsline {figure}{\numberline {2.12}{\ignorespaces Proyecto Mano-a-mano por Microsoft\textregistered }}{17}{figure.2.12}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Componentes internos del Kinect\textcopyright }}{19}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Proyector Optoma DX551}}{21}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Dell Mobile Precision Workstation 5510}}{23}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Esquema general del sistema}}{26}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Esquema general de prototipo 1}}{27}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Esquema general de detecci\IeC {\'o}n del prototipo 1}}{28}{figure.3.6}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Esquema general de posici\IeC {\'o}n del prototipo 1}}{29}{figure.3.7}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Esquema general de proyecci\IeC {\'o}n del prototipo 1}}{30}{figure.3.8}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Esquema general de prototipo 2}}{31}{figure.3.9}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Esquema general de detecci\IeC {\'o}n autom\IeC {\'a}tica}}{32}{figure.3.10}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Esquema general de proyecci\IeC {\'o}n de prototipo 2}}{33}{figure.3.11}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Dise\IeC {\~n}o preliminar del escenario de pruebas}}{34}{figure.3.12}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Funcionamento del Sistema General}}{35}{figure.3.13}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces T\IeC {\'e}cnicas de proyecci\IeC {\'o}n analizadas}}{20}{figure.3.1}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Proyecci\IeC {\'o}n frontal}}}{20}{figure.3.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Retroproyecci\IeC {\'o}n}}}{20}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Esquema general del sistema}}{22}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Esquema general de prototipo 1}}{23}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Esquema general de detecci\IeC {\'o}n del prototipo 1}}{24}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Esquema general de posici\IeC {\'o}n del prototipo 1}}{25}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Esquema general de proyecci\IeC {\'o}n del prototipo 1}}{26}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Esquema general de prototipo 2}}{27}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Esquema general de detecci\IeC {\'o}n autom\IeC {\'a}tica}}{28}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Esquema general de proyecci\IeC {\'o}n de prototipo 2}}{29}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Dise\IeC {\~n}o preliminar del escenario de pruebas}}{30}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Funcionamento del Sistema General}}{31}{figure.3.11}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama de clases de subsistema de Terminal}}{37}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Mesa donde se realizar\IeC {\'a} la retroproyecci\IeC {\'o}n}}{38}{figure.4.2}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Parte frontal de la mesa}}}{38}{figure.4.2}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Parte lateral de la mesa}}}{38}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagrama de flujo: funci\IeC {\'o}n Principal de prototipo 1}}{39}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Secuencia de im\IeC {\'a}genes de profundidad en un segundo sin filtro y con filtro}}{40}{figure.4.4}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Secuencia de im\IeC {\'a}genes de profundidad sin filtro capturadas en un segundo}}}{40}{figure.4.4}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Secuencia de im\IeC {\'a}genes de profundidad con filtro capturadas en un segundo}}}{40}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Secuencia de im\IeC {\'a}genes de profundidad binarizadas y de im\IeC {\'a}genes RGB en un segundo}}{41}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Diagrama de flujo de detecci\IeC {\'o}n manual}}{42}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Diagrama de flujo de Posici\IeC {\'o}n}}{43}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Ejes de coordenadas en Imagen Depth y en Blender}}{44}{figure.4.8}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Coordenadas de una imagen}}}{44}{figure.4.8}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Coordenadas en Blender}}}{44}{figure.4.8}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Escenario virtual en Blender}}{45}{figure.4.9}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Marcos de referencia de la c\IeC {\'a}mara de Blender}}{46}{figure.4.10}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Sistema de coordenadas con marco de referencia global}}}{46}{figure.4.10}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sistema de coordenadas con marco de referencia local}}}{46}{figure.4.10}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Obtenci\IeC {\'o}n de \IeC {\'a}ngulo correcto en Z}}{47}{figure.4.11}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Vista del escenario desde la c\IeC {\'a}mara}}{47}{figure.4.12}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Rotaci\IeC {\'o}n de la imagen proyectada en torno a la posici\IeC {\'o}n de la persona}}{48}{figure.4.13}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Posici\IeC {\'o}n incorrecta de la imagen}}}{48}{figure.4.13}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Posici\IeC {\'o}n correcta de la imagen}}}{48}{figure.4.13}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Obtenci\IeC {\'o}n de \IeC {\'a}ngulo correcto en Z local}}{49}{figure.4.14}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Diagrama de Flujo de Proyecci\IeC {\'o}n}}{50}{figure.4.15}
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Funci\IeC {\'o}n principal de prototipo 2}}{51}{figure.4.16}
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Detecci\IeC {\'o}n autom\IeC {\'a}tica que sigue a la persona principal}}{53}{figure.4.17}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Detecci\IeC {\'o}n de la persona excluyendo la mano}}}{53}{figure.4.17}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Detecci\IeC {\'o}n de la persona excluyendo ambas manos}}}{53}{figure.4.17}
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Detecci\IeC {\'o}n autom\IeC {\'a}tica de la persona principal}}{54}{figure.4.18}
-\contentsline {figure}{\numberline {4.19}{\ignorespaces \IeC {\'A}rea de detecci\IeC {\'o}n dependiendo de altura de la persona}}{57}{figure.4.19}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagrama de clases de subsistema de Terminal}}{33}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Componentes internos del Kinect\textcopyright }}{34}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Proyector Optoma DX551}}{36}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Dell Mobile Precision Workstation 5510}}{38}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Mesa donde se realizar\IeC {\'a} la retroproyecci\IeC {\'o}n}}{41}{figure.4.5}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Parte frontal de la mesa}}}{41}{figure.4.5}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Parte lateral de la mesa}}}{41}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Diagrama de flujo: funci\IeC {\'o}n Principal de prototipo 1}}{42}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Secuencia de im\IeC {\'a}genes de profundidad en un segundo sin filtro y con filtro}}{43}{figure.4.7}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Secuencia de im\IeC {\'a}genes de profundidad sin filtro capturadas en un segundo}}}{43}{figure.4.7}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Secuencia de im\IeC {\'a}genes de profundidad con filtro capturadas en un segundo}}}{43}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Secuencia de im\IeC {\'a}genes de profundidad binarizadas y de im\IeC {\'a}genes RGB en un segundo}}{44}{figure.4.8}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Diagrama de flujo de detecci\IeC {\'o}n manual}}{45}{figure.4.9}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Diagrama de flujo de Posici\IeC {\'o}n}}{46}{figure.4.10}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Ejes de coordenadas en Imagen Depth y en Blender}}{47}{figure.4.11}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Coordenadas de una imagen}}}{47}{figure.4.11}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Coordenadas en Blender}}}{47}{figure.4.11}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Escenario virtual en Blender}}{48}{figure.4.12}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Marcos de referencia de la c\IeC {\'a}mara de Blender}}{49}{figure.4.13}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Sistema de coordenadas con marco de referencia global}}}{49}{figure.4.13}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Sistema de coordenadas con marco de referencia local}}}{49}{figure.4.13}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Obtenci\IeC {\'o}n de \IeC {\'a}ngulo correcto en Z}}{50}{figure.4.14}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Vista del escenario desde la c\IeC {\'a}mara}}{50}{figure.4.15}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Rotaci\IeC {\'o}n de la imagen proyectada en torno a la posici\IeC {\'o}n de la persona}}{51}{figure.4.16}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Posici\IeC {\'o}n incorrecta de la imagen}}}{51}{figure.4.16}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Posici\IeC {\'o}n correcta de la imagen}}}{51}{figure.4.16}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Obtenci\IeC {\'o}n de \IeC {\'a}ngulo correcto en Z local}}{52}{figure.4.17}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Diagrama de Flujo de Proyecci\IeC {\'o}n}}{53}{figure.4.18}
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Funci\IeC {\'o}n principal de prototipo 2}}{54}{figure.4.19}
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Detecci\IeC {\'o}n autom\IeC {\'a}tica que sigue a la persona principal}}{56}{figure.4.20}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Detecci\IeC {\'o}n de la persona excluyendo la mano}}}{56}{figure.4.20}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Detecci\IeC {\'o}n de la persona excluyendo ambas manos}}}{56}{figure.4.20}
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Detecci\IeC {\'o}n autom\IeC {\'a}tica de la persona principal}}{57}{figure.4.21}
+\contentsline {figure}{\numberline {4.22}{\ignorespaces \IeC {\'A}rea de detecci\IeC {\'o}n dependiendo de altura de la persona}}{60}{figure.4.22}
 \addvspace {10\p@ }

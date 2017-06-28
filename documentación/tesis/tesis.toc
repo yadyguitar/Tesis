@@ -17,46 +17,45 @@
 \contentsline {paragraph}{See-though Augmented Reality.}{8}{section*.7}
 \contentsline {section}{\numberline {2.2}Estado del arte}{10}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Projection mapping}{11}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Interacci\IeC {\'o}n en SAR}{12}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.2}Interacci\IeC {\'o}n en SAR}{13}{subsection.2.2.2}
 \contentsline {subsubsection}{\numberline {2.2.2.1}Proyecciones de Sobremesa}{13}{subsubsection.2.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2.2}Proyecciones en superficies irregulares}{15}{subsubsection.2.2.2.2}
 \contentsline {subsubsection}{\numberline {2.2.2.3}Proyecciones en torno a la perspectiva}{16}{subsubsection.2.2.2.3}
-\contentsline {chapter}{\numberline {3}Dise\~no}{18}{chapter.3}
-\contentsline {section}{\numberline {3.1}An\IeC {\'a}lisis de Requerimientos}{18}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Hardware del sistema}{18}{subsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.1.1}Sensor Kinect}{19}{subsubsection.3.1.1.1}
-\contentsline {subsubsection}{\numberline {3.1.1.2}Proyector}{20}{subsubsection.3.1.1.2}
-\contentsline {paragraph}{Lugar de proyecci\IeC {\'o}n}{21}{section*.8}
-\contentsline {subsubsection}{\numberline {3.1.1.3}Computadora}{22}{subsubsection.3.1.1.3}
-\contentsline {subsection}{\numberline {3.1.2}Software del sistema}{23}{subsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.2.1}Sistema Operativo}{23}{subsubsection.3.1.2.1}
-\contentsline {subsubsection}{\numberline {3.1.2.2}Python}{24}{subsubsection.3.1.2.2}
-\contentsline {subsubsection}{\numberline {3.1.2.3}LibFreenect}{24}{subsubsection.3.1.2.3}
-\contentsline {subsubsection}{\numberline {3.1.2.4}OpenCV}{25}{subsubsection.3.1.2.4}
-\contentsline {subsubsection}{\numberline {3.1.2.5}Blender}{25}{subsubsection.3.1.2.5}
-\contentsline {section}{\numberline {3.2}Dise\IeC {\~n}o General del Sistema}{25}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Prototipo 1}{27}{subsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.1.1}Detecci\IeC {\'o}n manual}{27}{subsubsection.3.2.1.1}
-\contentsline {subsubsection}{\numberline {3.2.1.2}Posici\IeC {\'o}n de la Persona}{28}{subsubsection.3.2.1.2}
-\contentsline {subsubsection}{\numberline {3.2.1.3}Proyecci\IeC {\'o}n con base en la Posici\IeC {\'o}n}{29}{subsubsection.3.2.1.3}
-\contentsline {subsection}{\numberline {3.2.2}Prototipo 2}{30}{subsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.2.1}Detecci\IeC {\'o}n autom\IeC {\'a}tica}{30}{subsubsection.3.2.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2.2}Altura de la Persona}{31}{subsubsection.3.2.2.2}
-\contentsline {subsubsection}{\numberline {3.2.2.3}Proyecci\IeC {\'o}n con base en la Altura y Posici\IeC {\'o}n}{32}{subsubsection.3.2.2.3}
-\contentsline {subsection}{\numberline {3.2.3}Dise\IeC {\~n}o preliminar de escenario}{33}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Funcionamiento del Sistema General}{34}{subsection.3.2.4}
-\contentsline {chapter}{\numberline {4}Implementaci\IeC {\'o}n y resultados}{36}{chapter.4}
-\contentsline {section}{\numberline {4.1}Escenario de pruebas}{37}{section.4.1}
-\contentsline {section}{\numberline {4.2}Prototipo 1}{38}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Detecci\IeC {\'o}n manual}{38}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}C\IeC {\'a}lculo de la posici\IeC {\'o}n}{41}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Proyecci\IeC {\'o}n basada en la posici\IeC {\'o}n (x,y)}{42}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Prototipo 2}{50}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Detecci\IeC {\'o}n Autom\IeC {\'a}tica}{51}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}C\IeC {\'a}lculo de la altura}{54}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Proyecci\IeC {\'o}n basada en la posici\IeC {\'o}n y altura (x,y,z)}{56}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Limitaciones}{57}{subsection.4.3.4}
-\contentsline {chapter}{\numberline {5}Conclusiones}{58}{chapter.5}
-\contentsline {section}{\numberline {5.1}Trabajo Futuro}{58}{section.5.1}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{60}{section.5.1}
-\contentsline {chapter}{Enlaces de Referencia}{64}{chapter*.10}
+\contentsline {chapter}{\numberline {3}Dise\~no}{19}{chapter.3}
+\contentsline {section}{\numberline {3.1}Dise\IeC {\~n}o General del Sistema}{21}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Prototipo 1}{22}{subsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.1.1}Detecci\IeC {\'o}n manual}{22}{subsubsection.3.1.1.1}
+\contentsline {subsubsection}{\numberline {3.1.1.2}Posici\IeC {\'o}n de la Persona}{23}{subsubsection.3.1.1.2}
+\contentsline {subsubsection}{\numberline {3.1.1.3}Proyecci\IeC {\'o}n con base en la Posici\IeC {\'o}n}{23}{subsubsection.3.1.1.3}
+\contentsline {subsection}{\numberline {3.1.2}Prototipo 2}{24}{subsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2.1}Detecci\IeC {\'o}n autom\IeC {\'a}tica}{24}{subsubsection.3.1.2.1}
+\contentsline {subsubsection}{\numberline {3.1.2.2}Altura de la Persona}{25}{subsubsection.3.1.2.2}
+\contentsline {subsubsection}{\numberline {3.1.2.3}Proyecci\IeC {\'o}n con base en la Altura y Posici\IeC {\'o}n}{26}{subsubsection.3.1.2.3}
+\contentsline {subsection}{\numberline {3.1.3}Dise\IeC {\~n}o preliminar de escenario}{26}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Funcionamiento del Sistema General}{27}{subsection.3.1.4}
+\contentsline {chapter}{\numberline {4}Implementaci\IeC {\'o}n y resultados}{32}{chapter.4}
+\contentsline {section}{\numberline {4.1}Hardware del sistema}{33}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Sensor Kinect}{34}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Proyector}{35}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.1}Lugar de proyecci\IeC {\'o}n}{36}{subsubsection.4.1.2.1}
+\contentsline {subsection}{\numberline {4.1.3}Computadora}{37}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Software del sistema}{38}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Sistema Operativo}{38}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Python}{39}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}LibFreenect}{39}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}OpenCV}{40}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Blender}{40}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}Escenario de pruebas}{40}{section.4.3}
+\contentsline {section}{\numberline {4.4}Prototipo 1}{41}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Detecci\IeC {\'o}n manual}{41}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}C\IeC {\'a}lculo de la posici\IeC {\'o}n}{44}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Proyecci\IeC {\'o}n basada en la posici\IeC {\'o}n (x,y)}{45}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}Prototipo 2}{53}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Detecci\IeC {\'o}n Autom\IeC {\'a}tica}{54}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}C\IeC {\'a}lculo de la altura}{57}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Proyecci\IeC {\'o}n basada en la posici\IeC {\'o}n y altura (x,y,z)}{59}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}Limitaciones}{60}{subsection.4.5.4}
+\contentsline {chapter}{\numberline {5}Conclusiones}{61}{chapter.5}
+\contentsline {section}{\numberline {5.1}Trabajo Futuro}{61}{section.5.1}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{63}{section.5.1}
+\contentsline {chapter}{Enlaces de Referencia}{67}{chapter*.9}
