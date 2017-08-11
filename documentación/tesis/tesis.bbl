@@ -1,41 +1,255 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{36}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem{Dorward2016}
-{\sc Dorward, L., Mittermeier, J., Sandbrook, C., and Spooner, F.}
-\newblock Pokémon go: Benefits, costs, and lessons for the conservation
-  movement.
-\newblock {\em Conservation Letters 10(1)\/} (2016), 160--165.
-
-\bibitem{Frund2004}
-{\sc Fründ, J., Gausemeier, J., Matysczok, C., and Radkowski, R.}
-\newblock Using augmented reality technology to support the automobile
-  development.
-\newblock {\em International Conference on Computer Supported Cooperative work
-  in Design\/} (2004), 289--298.
-
-\bibitem{Kounavis2012}
-{\sc Kounavis, C.~D., Kasimati, A.~E., and Zamani, E.~D.}
-\newblock Enhancing the tourism experience through mobile augmented reality:
-  Challenges and propects.
-\newblock {\em International Journal of Engineering Business Management 4\/}
-  (2012), 10.
-
-\bibitem{Marescaux2004}
-{\sc Marescaux, J., Rubino, F., Arenas, M., Mutter, D., and Soler, L.}
-\newblock Augmented-reality-assisted laparoscopic adrenalectomy.
-\newblock {\em Jama 292(18)\/} (2004), 2211--2215.
-
-\bibitem{Pausch1992}
-{\sc Pausch, R., Crea, T., and Conway, M.}
+\bibitem[Pausch et~al.(1992)Pausch, Crea, and Conway]{Pausch1992}
+Randy Pausch, Thomas Crea, and Matthew Conway.
 \newblock A literature survey for virtual environments: Military flight
   simulator visual systems and simulator sickness.
-\newblock {\em Presence: Teleoperators and Virtual Environments 1(3)\/} (1992),
-  344--363.
+\newblock \emph{Presence: Teleoperators \& Virtual Environments}, 1\penalty0
+  (3):\penalty0 344--363, 1992.
 
-\bibitem{Ploder1995}
-{\sc Ploder, O., Wagner, A., Enislidis, G., and Ewers, R.}
+\bibitem[Allerton(2010)]{allerton2010}
+DJ~Allerton.
+\newblock The impact of flight simulation in aerospace.
+\newblock \emph{The Aeronautical Journal}, 114\penalty0 (1162):\penalty0
+  747--756, 2010.
+
+\bibitem[Dorward et~al.(2017)Dorward, Mittermeier, Sandbrook, and
+  Spooner]{Dorward2017}
+Leejiah~J Dorward, John~C Mittermeier, Chris Sandbrook, and Fiona Spooner.
+\newblock Pok{\'e}mon go: benefits, costs, and lessons for the conservation
+  movement.
+\newblock \emph{Conservation Letters}, 10\penalty0 (1):\penalty0 160--165,
+  2017.
+
+\bibitem[Marescaux et~al.(2004)Marescaux, Rubino, Arenas, Mutter, and
+  Soler]{Marescaux2004}
+Jacques Marescaux, Francesco Rubino, Mara Arenas, Didier Mutter, and Luc Soler.
+\newblock Augmented-reality--assisted laparoscopic adrenalectomy.
+\newblock \emph{Jama}, 292\penalty0 (18):\penalty0 2211--2215, 2004.
+
+\bibitem[Ploder et~al.(1995)Ploder, Wagner, Enislidis, and Ewers]{Ploder1995}
+O~Ploder, A~Wagner, G~Enislidis, and R~Ewers.
 \newblock Computer-assisted intraoperative visualization of dental implants.
   augmented reality in medicine.
-\newblock {\em Der Radiologe 35(9)\/} (1995), 569--572.
+\newblock \emph{Der Radiologe}, 35\penalty0 (9):\penalty0 569--572, 1995.
+
+\bibitem[Kounavis et~al.(2012)Kounavis, Kasimati, and Zamani]{Kounavis2012}
+Chris~D Kounavis, Anna~E Kasimati, and Efpraxia~D Zamani.
+\newblock Enhancing the tourism experience through mobile augmented reality:
+  Challenges and prospects.
+\newblock \emph{International Journal of Engineering Business Management},
+  4:\penalty0 10, 2012.
+
+\bibitem[Fr{\"u}nd et~al.(2004)Fr{\"u}nd, Gausemeier, Matysczok, and
+  Radkowski]{Frund2004}
+J{\"u}rgen Fr{\"u}nd, J{\"u}rgen Gausemeier, Carsten Matysczok, and Rafael
+  Radkowski.
+\newblock Using augmented reality technology to support the automobile
+  development.
+\newblock In \emph{International Conference on Computer Supported Cooperative
+  Work in Design}, pages 289--298. Springer, 2004.
+
+\bibitem[Coiffet(1995)]{coiffet1995}
+Philippe Coiffet.
+\newblock \emph{Mondes imaginaires: les arcanes de la r{\'e}alit{\'e}
+  virtuelle}.
+\newblock Herm{\`e}s, 1995.
+
+\bibitem[Levis(1997)]{levis1997}
+Diego Levis.
+\newblock ?` qu{\'e} es la realidad virtual?
+\newblock \emph{l{\'\i}nea, disponible en:
+  \url{http://www.diegolevis.com.ar/secciones/Articulos/Que\_es\_RV.pdf},
+  (recuperado: 21 de junio de 2017)}, 21, 1997.
+
+\bibitem[Vlahakis et~al.(2002)Vlahakis, Ioannidis, Karigiannis, Tsotros,
+  Gounaris, Stricker, Gleue, Daehne, and Almeida]{vlahakis2002}
+Vassilios Vlahakis, M~Ioannidis, John Karigiannis, Manolis Tsotros, Michael
+  Gounaris, Didier Stricker, Tim Gleue, Patrick Daehne, and Lu{\'\i}s Almeida.
+\newblock Archeoguide: an augmented reality guide for archaeological sites.
+\newblock \emph{IEEE Computer Graphics and Applications}, 22\penalty0
+  (5):\penalty0 52--60, 2002.
+
+\bibitem[Milgram and Kishino(1994)]{milgram1994}
+Paul Milgram and Fumio Kishino.
+\newblock A taxonomy of mixed reality visual displays.
+\newblock \emph{IEICE TRANSACTIONS on Information and Systems}, 77\penalty0
+  (12):\penalty0 1321--1329, 1994.
+
+\bibitem[Azuma(1997)]{azuma1997}
+Ronald~T Azuma.
+\newblock A survey of augmented reality.
+\newblock \emph{Presence: Teleoperators and virtual environments}, 6\penalty0
+  (4):\penalty0 355--385, 1997.
+
+\bibitem[Bimber and Raskar(2005)]{Bimber2005}
+O.~Bimber and R.~Raskar.
+\newblock \emph{Spatial augmented reality: merging real and virtual worlds}.
+\newblock CRC press, 2005.
+
+\bibitem[Bichlmeier et~al.(2007)Bichlmeier, Wimmer, Heining, and
+  Navab]{bichlmeier2007}
+Christoph Bichlmeier, Felix Wimmer, Sandro~Michael Heining, and Nassir Navab.
+\newblock Contextual anatomic mimesis hybrid in-situ visualization method for
+  improving multi-sensory depth perception in medical augmented reality.
+\newblock In \emph{Mixed and Augmented Reality, 2007. ISMAR 2007. 6th IEEE and
+  ACM International Symposium on}, pages 129--138. IEEE, 2007.
+
+\bibitem[Kotranza et~al.(2009)Kotranza, Lind, Pugh, and Lok]{kotranza2009}
+Aaron Kotranza, D~Scott Lind, Carla~M Pugh, and Benjamin Lok.
+\newblock Real-time in-situ visual feedback of task performance in mixed
+  environments for learning joint psychomotor-cognitive tasks.
+\newblock In \emph{Mixed and Augmented Reality, 2009. ISMAR 2009. 8th IEEE
+  International Symposium on}, pages 125--134. IEEE, 2009.
+
+\bibitem[Azuma et~al.(2001)Azuma, Baillot, Behringer, Feiner, Julier, and
+  MacIntyre]{azuma2001}
+Ronald Azuma, Yohan Baillot, Reinhold Behringer, Steven Feiner, Simon Julier,
+  and Blair MacIntyre.
+\newblock Recent advances in augmented reality.
+\newblock \emph{IEEE computer graphics and applications}, 21\penalty0
+  (6):\penalty0 34--47, 2001.
+
+\bibitem[Roo and Hachet(2016)]{Sol2016}
+J.~S. Roo and M.~Hachet.
+\newblock Interacting with spatial augmented reality.
+\newblock 2016.
+
+\bibitem[Raskar et~al.(1998{\natexlab{a}})Raskar, Welch, and
+  Fuchs]{Raskar1998a}
+Ramesh Raskar, Greg Welch, and Henry Fuchs.
+\newblock Spatially augmented reality.
+\newblock In \emph{First IEEE Workshop on Augmented Reality (IWAR’98)}, pages
+  11--20. Citeseer, 1998{\natexlab{a}}.
+
+\bibitem[Raskar et~al.(1998{\natexlab{b}})Raskar, Welch, Cutts, Lake, Stesin,
+  and Fuchs]{Raskar1998b}
+Ramesh Raskar, Greg Welch, Matt Cutts, Adam Lake, Lev Stesin, and Henry Fuchs.
+\newblock The office of the future: A unified approach to image-based modeling
+  and spatially immersive displays.
+\newblock In \emph{Proceedings of the 25th annual conference on Computer
+  graphics and interactive techniques}, pages 179--188. ACM,
+  1998{\natexlab{b}}.
+
+\bibitem[Raskar et~al.(2001)Raskar, Welch, Low, and Bandyopadhyay]{Raskar2001}
+Ramesh Raskar, Greg Welch, Kok-Lim Low, and Deepak Bandyopadhyay.
+\newblock Shader lamps: Animating real objects with image-based illumination.
+\newblock In \emph{Rendering Techniques 2001}, pages 89--102. Springer, 2001.
+
+\bibitem[Underkoffler(1997)]{Under1997}
+John Underkoffler.
+\newblock A view from the luminous room.
+\newblock \emph{Personal Technologies}, 1\penalty0 (2):\penalty0 49--59, 1997.
+
+\bibitem[Dorsey et~al.(1991)Dorsey, Sillion, and Greenberg]{Dorsey1991}
+Julie~O'B Dorsey, Fran{\c{c}}is~X Sillion, and Donald~P Greenberg.
+\newblock Design and simulation of opera lighting and projection effects.
+\newblock In \emph{ACM SIGGRAPH computer graphics}, volume~25, pages 41--50.
+  ACM, 1991.
+
+\bibitem[Starner et~al.(2003)Starner, Leibe, Minnen, Westyn, Hurst, and
+  Weeks]{Starner2003}
+Thad Starner, Bastian Leibe, David Minnen, Tracy Westyn, Amy Hurst, and Justin
+  Weeks.
+\newblock The perceptive workbench: Computer-vision-based gesture tracking,
+  object tracking, and 3d reconstruction for augmented desks.
+\newblock \emph{Machine Vision and Applications}, 14\penalty0 (1):\penalty0
+  59--71, 2003.
+
+\bibitem[Wilson(2007)]{Wilson2007}
+Andrew~D Wilson.
+\newblock Depth-sensing video cameras for 3d tangible tabletop interaction.
+\newblock In \emph{Horizontal Interactive Human-Computer Systems, 2007.
+  TABLETOP'07. Second Annual IEEE International Workshop on}, pages 201--204.
+  IEEE, 2007.
+
+\bibitem[Jones et~al.(2013)Jones, Benko, Ofek, and Wilson]{jones2013}
+Brett~R Jones, Hrvoje Benko, Eyal Ofek, and Andrew~D Wilson.
+\newblock Illumiroom: peripheral projected illusions for interactive
+  experiences.
+\newblock In \emph{Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems}, pages 869--878. ACM, 2013.
+
+\bibitem[Kreylos(2016)]{kreylos2016}
+Oliver Kreylos.
+\newblock Augmented reality sandbox.
+\newblock \emph{Recuperado de
+  \url{http://idav.ucdavis.edu/~okreylos/ResDev/SARndbox/}, accedido: 20 de
+  mayo de 2017}, 2016.
+
+\bibitem[Dietz and Leigh(2001)]{dietz2001}
+Paul Dietz and Darren Leigh.
+\newblock Diamondtouch: a multi-user touch technology.
+\newblock In \emph{Proceedings of the 14th annual ACM symposium on User
+  interface software and technology}, pages 219--226. ACM, 2001.
+
+\bibitem[Wilson(2005)]{wilson2005}
+Andrew~D Wilson.
+\newblock Playanywhere: a compact interactive tabletop projection-vision
+  system.
+\newblock In \emph{Proceedings of the 18th annual ACM symposium on User
+  interface software and technology}, pages 83--92. ACM, 2005.
+
+\bibitem[Benko et~al.(2012)Benko, Jota, and Wilson]{benko2012}
+Hrvoje Benko, Ricardo Jota, and Andrew Wilson.
+\newblock Miragetable: freehand interaction on a projected augmented reality
+  tabletop.
+\newblock In \emph{Proceedings of the SIGCHI conference on human factors in
+  computing systems}, pages 199--208. ACM, 2012.
+
+\bibitem[Hilliges et~al.(2009)Hilliges, Izadi, Wilson, Hodges, Garcia-Mendoza,
+  and Butz]{hilliges2009}
+Otmar Hilliges, Shahram Izadi, Andrew~D Wilson, Steve Hodges, Armando
+  Garcia-Mendoza, and Andreas Butz.
+\newblock Interactions in the air: adding further depth to interactive
+  tabletops.
+\newblock In \emph{Proceedings of the 22nd annual ACM symposium on User
+  interface software and technology}, pages 139--148. ACM, 2009.
+
+\bibitem[Geller(2006)]{geller2006}
+Tom Geller.
+\newblock Interactive tabletop exhibits in museums and galleries.
+\newblock \emph{IEEE Computer Graphics and Applications}, 26\penalty0
+  (5):\penalty0 6--11, 2006.
+
+\bibitem[Dohse et~al.(2008)Dohse, Dohse, Still, and Parkhurst]{dohse2008}
+KC~Dohse, Thomas Dohse, Jeremiah~D Still, and Derrick~J Parkhurst.
+\newblock Enhancing multi-user interaction with multi-touch tabletop displays
+  using hand tracking.
+\newblock In \emph{Advances in Computer-Human Interaction, 2008 First
+  International Conference on}, pages 297--302. IEEE, 2008.
+
+\bibitem[Jones et~al.(2014)Jones, Sodhi, Murdock, Mehra, Benko, Wilson, Ofek,
+  MacIntyre, Raghuvanshi, and Shapira]{jones2014}
+Brett Jones, Rajinder Sodhi, Michael Murdock, Ravish Mehra, Hrvoje Benko,
+  Andrew Wilson, Eyal Ofek, Blair MacIntyre, Nikunj Raghuvanshi, and Lior
+  Shapira.
+\newblock Roomalive: magical experiences enabled by scalable, adaptive
+  projector-camera units.
+\newblock In \emph{Proceedings of the 27th annual ACM symposium on User
+  interface software and technology}, pages 637--644. ACM, 2014.
+
+\bibitem[Kondo et~al.(2008)Kondo, Shiwaku, and Kijima]{kondo2008}
+Daisuke Kondo, Yuichi Shiwaku, and Ryugo Kijima.
+\newblock Free form projection display and application.
+\newblock In \emph{Proceedings of the 5th ACM/IEEE International Workshop on
+  Projector camera systems}, page~8. ACM, 2008.
+
+\bibitem[Benko et~al.(2014)Benko, Wilson, and Zannier]{benko2014}
+Hrvoje Benko, Andrew~D Wilson, and Federico Zannier.
+\newblock Dyadic projected spatial augmented reality.
+\newblock In \emph{Proceedings of the 27th annual ACM symposium on User
+  interface software and technology}, pages 645--655. ACM, 2014.
+
+\bibitem[Gonzalez and Woods(2006)]{Gonzalez2006}
+Rafael~C. Gonzalez and Richard~E. Woods.
+\newblock \emph{Digital Image Processing (3rd Edition)}.
+\newblock Prentice-Hall, Inc., Upper Saddle River, NJ, USA, 2006.
+\newblock ISBN 013168728X.
 
 \end{thebibliography}
