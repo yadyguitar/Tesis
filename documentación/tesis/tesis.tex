@@ -814,13 +814,63 @@ Como fue dicho anteriormente, éste módulo, se encontrará dentro de la clase P
 En éste módulo se agrega una nueva funcionalidad que ahora si toma en cuenta la altura, con el objetivo final de obtener la perspectiva real de un escenario virtual. Ésta se obtiene (luego de aplicar la equivalencia a la posición (x,y)), el eje de las z (que será en éste caso la altura), pasará por un método en donde se realiza una equivalencia con respecto a la altura real obtenida de la imagen de profundidad. Para ello, cabe mencionar que sólo se permitirá un valor máximo de profundidad de 153 (determinado en la detección automática como constante $C$\ ), luego de ello se debe tomar en cuenta que mientras mas alta es la persona, menor es el valor obtenido de profundidad (ésto en blender sería lo contrario), es decir mientras mas pequeño sea el valor de la altura de la persona, más grande será el valor donde se ubicará en el eje z la cámara de blender. Es por ello que se puede realizar la equivalencia del valor de profundidad obtenido por el sensor de la siguiente manera: $altura equivalente = (C - valorProfundidad)*(0.5)$, donde se obtiene la mitad de la diferencia, por cuestiones de aproximar la altura real y no alejarse demasiado del escenario.\\
 Con la adición a éste módulo del valor de la altura en z, se realizaron los cálculos necesarios para la obtención del ángulo de inclinación que dependiendo de la altura actual de la persona (si se inclina o agacha), tendrá que variar. Cabe mencionar, que el ángulo máximo de inclinación que se abarcará será de 90$^{\circ}$, debido a que el objeto no mostrará la perspectiva desde abajo (simulando estar en la mesa del entorno real). Para realizar el cálculo, los vectores se encuentran en un espacio tridimensional (debido a que se tiene en cuenta la altura (eje z)), éstos son los mismos que se han mencionado siempre (posición actual de la persona y posición central, pero en éste caso se toma en cuenta los 3 ejes) y la operación para obtener el ángulo de inclinación (que en éste caso será con respecto a x en el marco de referencia local) será a través del cálculo de dos vectores en un espacio tridimensional, los cuales se obtuvieron de la siguiente forma. Llamemos $u$, a la resultante generada por los vectores (posición de la persona en (x,y,z) y punto central igual en (x,y,z)), y $v$ a la posición en el origen en el sistema 3D (0,0,altura equivalente)(que representaría un vector paralelo al eje vertical de un sistema de coordenadas). Es importante recalcar que nos estamos enfocando en la rotación del eje de las abscisas, en el sistema local (para ver marco de referencia local véase figura \ref{fig:coords}). Por consiguiente, calculamos el coseno del ángulo a través de la siguiente ecuación: \(\alpha =arccos(\frac { u*v }{ \left\| u \right\| *\left\| v \right\|  } )\), y así obtenemos entonces el ángulo en x.
 \section{Resultados Finales}
-En esta sección se muestran los resultados finales del sistema, en donde se muestra la perspectiva de una persona desde distintos puntos del área de detección en condiciones con mucha iluminación en el entorno. Por cuestiones de verificación de la posición de la persona, en las imágenes que muestran la captura en tiempo real de la proyección se dejó la barra de tareas del programa Blender. Las imágenes que muestran los objetos virtuales que se encuentran situados al lado de la imagen que captura a la persona, fueron tomados directamente del programa Blender, para que se pueda apreciar como se comporta la rotación de la ventana con base en la posición donde se encuentra la persona. Las imágenes tomadas a la proyección en el entorno, muestran la perspectiva de la persona desde las distintas posiciones.
-\begin{figure}[H]
+En esta sección se muestran los resultados finales del sistema, en donde se puede apreciar la perspectiva de una persona desde distintos puntos del área de detección en condiciones de iluminación normal. Fueron incluidas las imágenes directamente del programa Blender\textcopyright, para que se pueda apreciar como se comporta la rotación de la ventana de visualización con base en la posición donde se encuentre la persona. En las figuras \ref{fig:prueba1}, \ref{fig:prueba2}, \ref{fig:prueba3} y \ref{fig:prueba4} se muesta el proceso de detección de la posición de la persona por pasos hasta llegar a la proyección del escenario mostrado desde la perspectiva de la persona. Del mismo modo, la figura () muestra unos segundos subsecuentes de la figura (4) pero con un acercamiento de la persona al escenario, en donde se puede notar un leve aumento de la imagen. Las figuras (), muestran una secuencia similar a las anteriores pero con dos personas, en donde se puede notar en el filtro que se realiza en las imágenes con número 3, se detecta que si en un frame interviene una persona que no sea la principal, se le aplica un filtro de color blanco (fondo) para poder seguir a la persona principal. En la figura se muestra como la perspectiva proyectada es únicamente de la persona principal.
+\begin{figure}[th]
 	\centering
-	\subfigure{\includegraphics[width=140mm]{./figuras/prueba1}}
-	\subfigure{\includegraphics[width=140mm]{./figuras/prueba2}}
-	\caption{Pruebas finales}\label{fig:pruebas}
+	\hspace*{-1cm}
+	\includegraphics[width=160mm,height=130mm]{./figuras/resultados1}
+	\caption[Resultado 1]{Resultado 1. Figura 1-5: Tratamiento de la imagen para obtener la posición y altura (1: Imagen Depth, 2: Suavizado de Depth, 3: Imagen Binarizada, 4: Detección del contorno, 5: Detección de centroide). Figura 6: Imagen capturada del programa Blender\textcopyright. Figura 7: Proyección desde la perspectiva de la persona}\label{fig:prueba1}
 \end{figure}
+
+\begin{figure}[th]
+	\centering
+	\hspace*{-1cm}
+	\includegraphics[width=160mm,height=130mm]{./figuras/resultados2}
+	\caption[Resultado 2]{Resultado 2. Figura 1-5: Tratamiento de la imagen para obtener la posición y altura (1: Imagen Depth, 2: Suavizado de Depth, 3: Imagen Binarizada, 4: Detección del contorno, 5: Detección de centroide). Figura 6: Imagen capturada del programa Blender\textcopyright. Figura 7: Proyección desde la perspectiva de la persona}\label{fig:prueba2}
+\end{figure}
+
+\begin{figure}[th]
+	\centering
+	\hspace*{-1cm}
+	\includegraphics[width=160mm,height=130mm]{./figuras/resultados3}
+	\caption[Resultado 3]{Resultado 3. Figura 1-5: Tratamiento de la imagen para obtener la posición y altura (1: Imagen Depth, 2: Suavizado de Depth, 3: Imagen Binarizada, 4: Detección del contorno, 5: Detección de centroide). Figura 6: Imagen capturada del programa Blender\textcopyright. Figura 7: Proyección desde la perspectiva de la persona}\label{fig:prueba3}
+\end{figure}
+
+\begin{figure}[th]
+	\centering
+	\hspace*{-1cm}
+	\includegraphics[width=160mm,height=130mm]{./figuras/resultados4}
+	\caption[Resultado 4]{Resultado 4. Figura 1-5: Tratamiento de la imagen para obtener la posición y altura (1: Imagen Depth, 2: Suavizado de Depth, 3: Imagen Binarizada, 4: Detección del contorno, 5: Detección de centroide). Figura 6: Imagen capturada del programa Blender\textcopyright. Figura 7: Proyección desde la perspectiva de la persona}\label{fig:prueba4}
+\end{figure}
+
+\begin{figure}[th]
+	\centering
+	\hspace*{-1cm}
+	\includegraphics[width=160mm,height=130mm]{./figuras/resultados5}
+	\caption[Resultado 5]{Resultado 5. Segundos subsecuentes de la figura \ref{fig:prueba4} pero con un ligero acercamiento de la persona hacia el escenario}\label{fig:prueba5}
+\end{figure}
+
+\begin{figure}[th]
+	\centering
+	\hspace*{-1cm}
+	\includegraphics[width=160mm,height=130mm]{./figuras/resultados6}
+	\caption[Resultado 6]{Resultado 6. Figura 1-4: Tratamiento de la imagen para obtener la posición y altura (1: Imagen Depth, 2: Imagen Binarizada, 3: Filtro para excluir persona adicional al entorno, 4: Detección de centroide de la persona principal). Figura 5: Imagen capturada del programa Blender\textcopyright. Figura 7: Proyección desde la perspectiva de la persona}\label{fig:prueba6}
+\end{figure}
+
+\begin{figure}[th]
+	\centering
+	\hspace*{-1cm}
+	\includegraphics[width=160mm,height=130mm]{./figuras/resultados7}
+	\caption[Resultado 7]{Resultado 7. Figura 1-4: Tratamiento de la imagen para obtener la posición y altura (1: Imagen Depth, 2: Imagen Binarizada, 3: Filtro para excluir persona adicional al entorno, 4: Detección de centroide de la persona principal). Figura 5: Imagen capturada del programa Blender\textcopyright. Figura 7: Proyección desde la perspectiva de la persona acercándose al escenario}\label{fig:prueba7}
+\end{figure}
+
+\begin{figure}[th]
+	\centering
+	\hspace*{-1cm}
+	\includegraphics[width=160mm,height=130mm]{./figuras/resultados8}
+	\caption[Resultado 8]{Resultado 8. Figura 1-4: Tratamiento de la imagen para obtener la posición y altura (1: Imagen Depth, 2: Imagen Binarizada, 3: Filtro para excluir persona adicional al entorno, 4: Detección de centroide de la persona principal). Figura 5: Imagen capturada del programa Blender\textcopyright. Figura 7: Proyección desde la perspectiva de otra persona}\label{fig:prueba8}
+\end{figure}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%CAPÍTULO 5 -> CONCLUSIONES%%%
