@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.7)  13 AUG 2017 18:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.7)  14 AUG 2017 12:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -4639,7 +4639,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 816.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 816.
- <./figuras/resultados1.png, id=1124, 1107.38719pt x 753.5653pt>
+ <./figuras/resultados1.png, id=1130, 1107.38719pt x 753.5653pt>
 File: ./figuras/resultados1.png Graphic file (type png)
 
 <use ./figuras/resultados1.png>
@@ -4650,7 +4650,7 @@ Overfull \hbox (39.38974pt too wide) in paragraph at lines 820--822
  []|  [] 
  []
 
-<./figuras/resultados2.png, id=1125, 1119.43219pt x 718.93594pt>
+<./figuras/resultados2.png, id=1131, 1119.43219pt x 718.93594pt>
 File: ./figuras/resultados2.png Graphic file (type png)
 
 <use ./figuras/resultados2.png>
@@ -4661,7 +4661,7 @@ Overfull \hbox (39.40483pt too wide) in paragraph at lines 827--829
  []|  [] 
  []
 
-<./figuras/resultados3.png, id=1126, 1129.21875pt x 730.22812pt>
+<./figuras/resultados3.png, id=1132, 1129.21875pt x 730.22812pt>
 File: ./figuras/resultados3.png Graphic file (type png)
 
 <use ./figuras/resultados3.png>
@@ -4672,7 +4672,7 @@ Overfull \hbox (39.40456pt too wide) in paragraph at lines 834--836
  []|  [] 
  []
 
-<./figuras/resultados4.png, id=1127, 1124.70187pt x 714.41907pt>
+<./figuras/resultados4.png, id=1133, 1124.70187pt x 714.41907pt>
 File: ./figuras/resultados4.png Graphic file (type png)
 
 <use ./figuras/resultados4.png>
@@ -4683,7 +4683,7 @@ Overfull \hbox (39.4027pt too wide) in paragraph at lines 841--843
  []|  [] 
  []
 
-<./figuras/resultados5.png, id=1128, 1138.2525pt x 689.57625pt>
+<./figuras/resultados5.png, id=1134, 1138.2525pt x 689.57625pt>
 File: ./figuras/resultados5.png Graphic file (type png)
 
 <use ./figuras/resultados5.png>
@@ -4694,7 +4694,7 @@ Overfull \hbox (39.39917pt too wide) in paragraph at lines 848--850
  []|  [] 
  []
 
-<./figuras/resultados6.png, id=1131, 710.655pt x 532.23843pt>
+<./figuras/resultados6.png, id=1137, 710.655pt x 532.23843pt>
 File: ./figuras/resultados6.png Graphic file (type png)
 
 <use ./figuras/resultados6.png>
@@ -4705,7 +4705,7 @@ Overfull \hbox (39.40973pt too wide) in paragraph at lines 855--857
  []|  [] 
  []
 
-<./figuras/resultados7.png, id=1132, 697.10437pt x 530.73282pt>
+<./figuras/resultados7.png, id=1138, 697.10437pt x 530.73282pt>
 File: ./figuras/resultados7.png Graphic file (type png)
 
 <use ./figuras/resultados7.png>
@@ -4716,7 +4716,7 @@ Overfull \hbox (39.3982pt too wide) in paragraph at lines 862--864
  []|  [] 
  []
 
-<./figuras/resultados8.png, id=1133, 737.75626pt x 530.73282pt>
+<./figuras/resultados8.png, id=1139, 737.75626pt x 530.73282pt>
 File: ./figuras/resultados8.png Graphic file (type png)
 
 <use ./figuras/resultados8.png>
@@ -5118,7 +5118,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 882.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 882.
-<./figuras/anguloKinect1.png, id=1181, 822.07124pt x 565.11125pt>
+<./figuras/anguloKinect1.png, id=1187, 822.07124pt x 565.11125pt>
 File: ./figuras/anguloKinect1.png Graphic file (type png)
 
 <use ./figuras/anguloKinect1.png>
@@ -5196,7 +5196,7 @@ Package babel Info: Redefining spanish shorthand "?
                                                   \fi \fi 
 l.891 \begin{itemize}
                       <./figuras/anguloKinect1.png>]
-<./figuras/frontretro.png, id=1192, 497.86pt x 566.115pt>
+<./figuras/frontretro.png, id=1198, 497.86pt x 566.115pt>
 File: ./figuras/frontretro.png Graphic file (type png)
 
 <use ./figuras/frontretro.png>
@@ -5620,10 +5620,10 @@ cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on tesis.pdf (87 pages, 19410793 bytes).
+Output written on tesis.pdf (87 pages, 19410960 bytes).
 PDF statistics:
- 1375 PDF objects out of 1440 (max. 8388607)
- 1142 compressed objects within 12 object streams
+ 1381 PDF objects out of 1440 (max. 8388607)
+ 1148 compressed objects within 12 object streams
  329 named destinations out of 1000 (max. 500000)
  853 words of extra memory for PDF output out of 10000 (max. 10000000)
 
