@@ -41,11 +41,17 @@ class Posicion:
 	def filtroAltura(self,altura):
 		z=self.persona.posicion[2]
 		distancia=abs(z-altura)
-		if distancia<=10:
+		if distancia<=5:
 			return z
 		return altura
 
 	def showPointCentral(self):
+		cv2.drawContours(self.depth, [self.persona.contornos], 0, (0, 255, 0), 2)
+		cv2.circle(self.depth, self.persona.posicion[:2], 7, (255, 255, 255), -1)
+		#cv2.putText(image, "center", (cX - 20, cY - 20),
+		#cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 2)
+		cv2.imshow("Imagen Depth con punto central", self.depth)
+		
 		cv2.drawContours(self.frameRGB, [self.persona.contornos], 0, (0, 255, 0), 2)
 		cv2.circle(self.frameRGB, self.persona.posicion[:2], 7, (255, 255, 255), -1)
 		#cv2.putText(image, "center", (cX - 20, cY - 20),
@@ -59,10 +65,10 @@ class Posicion:
 		x,y=self.filtroPosicion(xy)
 		altura=self.depth[int(xy[1])][int(xy[0])]
 		altura=self.filtroAltura(altura)
-		print "altura: "+ str(altura)
+		#print "altura: "+ str(altura)
 		xyz=(x,y,altura)
 		self.persona.posicion=xyz
-		self.showPointCentral()
+		#self.showPointCentral()
 
 if __name__ == "__main__":
 	print ("estoy en la clase posicion")

@@ -27,7 +27,7 @@ class Deteccion:
 	def showFrameContorno(self,nombre,frame): #Imagen rgb con el contorno ya dibujado
 		contours=persona.contornos
 		cv2.drawContours(frame, contours, -1, (0,255,0), 2)
-		cv2.imshow(nombre,frame)
+		#cv2.imshow(nombre,frame)
 
 	def binarizarFrame(self,frame):
 		ret, threshold = cv2.threshold(frame,self.threshold,255,cv2.THRESH_BINARY_INV) #Refinamiento
@@ -43,7 +43,7 @@ class Deteccion:
 		box = cv2.boxPoints(rect)
 		box = np.int0(box)
 		cv2.drawContours(frame,[box],0,(0,0,255),2)
-		cv2.imshow('Rectangulo',frame)
+		#cv2.imshow('Rectangulo',frame)
 
 	def setContornoPersona(self,contours):
 		try:
@@ -69,7 +69,7 @@ class Deteccion:
 
 		thres=self.binarizarFrame(depth)
 		#*********************************************************************************#
-		cv2.imshow('Thres',thres) #muestra la ventana donde ajustare manualmente el thres
+		#cv2.imshow('Thres',thres) #muestra la ventana donde ajustare manualmente el thres
 
 		contours=self.buscaContornos(thres.copy())
 		self.setContornoPersona(contours)
@@ -79,12 +79,12 @@ class Deteccion:
 		try:
 			x,y,w,h=cv2.boundingRect(self.persona.contornos)
 			cv2.rectangle(self.frameRGB,(x,y),(x+w,y+h),(0,255,0),2)
-			print "Area del rectangulo: "
-			print w*h
+			#print "Area del rectangulo: "
+			#print w*h
 		except:
 			print("no hay contornos")
-		cv2.imshow('Imagen RGB',self.frameRGB)
-		cv2.imshow('Imagen Depth',self.frameDepth)
+		#cv2.imshow('Imagen RGB',self.frameRGB)
+		#cv2.imshow('Imagen Depth',self.frameDepth)
 		
 		#self.showRotatedRectangle(self.frameRGB,self.persona.contornos)
 
@@ -110,7 +110,7 @@ class Deteccion:
 			############
 			imagenBinarizada=self.binarizarFrame(depth) #imagen binarizada
 			contours=self.buscaContornos(imagenBinarizada.copy())
-			print self.threshold
+			#print self.threshold
 			
 			if contours!=[]:
 				indexContorno=self.getIndexContornoAreaMayor(contours)#indice donde se encuentra el area mas grande (filtro)
@@ -124,9 +124,9 @@ class Deteccion:
 						tempOtraPersona=contours[indexContorno]
 						areaPersona=0
 						cv2.rectangle(depth,(x,y),(x+w,y+h),(255,255,255),-1)
-						cv2.imshow('quitando persona alta',depth)
+						#cv2.imshow('quitando persona alta',depth)
 						hayOtraPersona=True
-					print "hay otra persona"
+					#print "hay otra persona"
 
 
 			#print "area de la persona: " + str(areaPersona)
@@ -137,13 +137,13 @@ class Deteccion:
 				self.threshold-=valorDeAumento
 			
 			listaDetectaCiclado.append(self.threshold)
-			if self.threshold >=154:
-				self.threshold=154
+			if self.threshold >=150:
+				self.threshold=150
 				if hayOtraPersona==True:
 					self.persona.contornos=tempOtraPersona
 					return True
 				return False
-		cv2.imshow('imagenBinarizada',imagenBinarizada)
+		#cv2.imshow('imagenBinarizada',imagenBinarizada)
 		self.setContornoPersona(contours)
 		return True
 	
@@ -151,16 +151,20 @@ class Deteccion:
 	def deteccionAutomatica(self):
 		depth=cv2.GaussianBlur(self.frameDepth, (5, 5), 0)
 		depth=cv2.medianBlur(depth,5)
+		depth1=depth.copy()
 		#depth = cv2.blur(depth,(5,5))
-		print "Umbral: "
-		print self.threshold
+		#print "Umbral: "
+		#print self.threshold
+		#cv2.imshow('Profundidad suavizada',depth) #para pruebas
 		if self.ajustaUmbral(depth):			
 		#*********************************************************************************#
 			 #muestra la ventana donde ajustare manualmente el thres
-			cv2.drawContours(self.frameRGB,[self.persona.contornos],0, (0,255,0), 2)
+			#cv2.drawContours(self.frameRGB,[self.persona.contornos],0, (0,255,0), 2)
 		#*********************************************************************************#
-		cv2.imshow('Imagen RGB',self.frameRGB)
-		cv2.imshow('Imagen Depth',self.frameDepth)
+			cv2.drawContours(depth1,[self.persona.contornos],0, (0,255,0), 2) #para pruebas
+		#cv2.imshow('Imagen RGB',self.frameRGB)
+		#cv2.imshow('Imagen RGB',depth1) #para pruebas
+		#cv2.imshow('Imagen Depth',self.frameDepth)
 
 
 if __name__=="__main__":
